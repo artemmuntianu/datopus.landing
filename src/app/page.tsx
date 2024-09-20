@@ -10,8 +10,7 @@ export default function Page() {
             <RetroGrid />
 
             <section id="hero">
-                <div className="mx-auto w-full max-w-2xl">
-
+                <div className="mx-auto w-full max-w-[55rem]">
                     <div className="flex flex-col items-center justify-center text-center">
                         <div className="space-y-2">
                             <h2 className="text-3xl font-bold tracking-tighter">
@@ -22,14 +21,23 @@ export default function Page() {
                             </p>
                         </div>
                     </div>
-                    <BlurFade delay={BLUR_FADE_DELAY * 1}>
+                    <BlurFade delay={BLUR_FADE_DELAY * 1} yOffset={0}>
                         <ShineBorder
                             className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl"
                             color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
                         >
-                            <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
-                                Shine Border
-                            </span>
+                            <div
+                                style={
+                                    {
+                                        'background': 'url(screen-features-usage.png)',
+                                        'width': '100%',
+                                        'height': '100%',
+                                        'background-size': 'cover',
+                                        'background-repeat': 'no-repeat',
+                                        'background-position': 'top'
+                                    } as React.CSSProperties
+                                }
+                            ></div>
                         </ShineBorder>
                     </BlurFade>
                 </div>
