@@ -12,8 +12,8 @@ const fontSans = FontSans({
 
 const DATA = {
     url: 'https://datopus.io',
-    name: 'datopus',
-    description: 'datopus'
+    name: 'Datopus',
+    description: 'Datopus'
 };
 
 export const metadata: Metadata = {

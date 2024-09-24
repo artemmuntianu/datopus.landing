@@ -1,15 +1,27 @@
+import { Button } from "./ui/button";
+
 export function Header() {
     return (
         <header className="fixed left-0 top-0 z-50 w-full animate-fade-in border-b backdrop-blur-[12px] [--animation-delay:600ms]">
-            <div className="container flex h-[3.5rem] items-center justify-between">
-                <a className="text-md flex items-center" href="/">Datopus</a>
+            <div className="flex h-[3.5rem] max-w-[1000px] mr-auto ml-auto items-center justify-between">
+                <a href="/" className="inline-flex mr-[10px]">
+                    <img src="logo.svg" style={{ 'height': '2rem' }} alt="Datopus"></img>
+                </a>
+                <div>
+                    <Button variant="ghost" asChild={true}>
+                        <a href="/#solutions">Solutions</a>
+                    </Button>
+                    <Button variant="ghost" asChild={true}>
+                        <a href="/#features">Features</a>
+                    </Button>
+                    <Button variant="ghost" asChild={true}>
+                        <a href="/#howitworks">How it works</a>
+                    </Button>
+                </div>
                 <div className="ml-auto flex h-full items-center">
-                    <a className="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80 h-9 px-4 py-2 mr-6 text-sm" href="/signup">
-                        Explore Demos
-                    </a>
-                    <a className="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80 h-9 px-4 py-2 mr-6 text-sm" href="/signup">
-                        Join Waitlist
-                    </a>
+                    <Button variant="default" asChild={true}>
+                        <a href="/waitlist">Join Waitlist</a>
+                    </Button>
                 </div>
             </div>
         </header>
