@@ -11,55 +11,72 @@ import { BentoCard, BentoGrid } from "@/components/magicui/bento-grid";
 const features = [
     {
         Icon: FileTextIcon,
-        name: "Save your files",
-        description: "We automatically save your files as you type.",
+        name: "Customer-facing dashboard",
+        description: "Increase trust of your customers by providing access to data of their users",
         href: "/",
         cta: "Learn more",
         background: <img className="absolute -right-20 -top-20 opacity-60" />,
-        className: "lg:row-start-1 lg:row-end-4 lg:col-start-2 lg:col-end-3",
+        className: "row-start-1 row-span-2 col-start-1",
     },
     {
-        Icon: InputIcon,
-        name: "Full text search",
-        description: "Search through all your files in one place.",
+        Icon: FileTextIcon,
+        name: "Data ownership & GDPR compliance",
+        description: "Tracked data is saved in your Google Analytics account for free",
         href: "/",
         cta: "Learn more",
         background: <img className="absolute -right-20 -top-20 opacity-60" />,
-        className: "lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-3",
+        className: "row-start-1 col-start-2",
     },
     {
-        Icon: GlobeIcon,
-        name: "Multilingual",
-        description: "Supports 100+ languages and counting.",
+        Icon: FileTextIcon,
+        name: "Monitoring",
+        description: "Be alerted of spikes and drops in feature usage metrics",
         href: "/",
         cta: "Learn more",
         background: <img className="absolute -right-20 -top-20 opacity-60" />,
-        className: "lg:col-start-1 lg:col-end-2 lg:row-start-3 lg:row-end-4",
+        className: "row-start-4 row-span-2 col-start-1",
     },
     {
-        Icon: CalendarIcon,
-        name: "Calendar",
-        description: "Use the calendar to filter your files by date.",
+        Icon: FileTextIcon,
+        name: "User-flow diagram",
+        description: "Analyze the user flow to understand user behavior and improve your product by decreasing churn rate",
         href: "/",
         cta: "Learn more",
         background: <img className="absolute -right-20 -top-20 opacity-60" />,
-        className: "lg:col-start-3 lg:col-end-3 lg:row-start-1 lg:row-end-2",
+        className: "row-start-5 col-start-2",
     },
     {
-        Icon: BellIcon,
-        name: "Notifications",
-        description:
-            "Get notified when someone shares a file or mentions you in a comment.",
+        Icon: FileTextIcon,
+        name: "Self-service data exploration",
+        description: "Analyze how different segments use specific features",
         href: "/",
         cta: "Learn more",
         background: <img className="absolute -right-20 -top-20 opacity-60" />,
-        className: "lg:col-start-3 lg:col-end-3 lg:row-start-2 lg:row-end-4",
+        className: "row-start-4 col-start-2",
+    },
+    {
+        Icon: FileTextIcon,
+        name: "Embedded analytics",
+        description: "Centralize your reports from Looker Studio, Google Sheets, PDF files, and more in a single safe place",
+        href: "/",
+        cta: "Learn more",
+        background: <img className="absolute -right-20 -top-20 opacity-60" />,
+        className: "row-start-2 row-span-2 col-start-2",
+    },
+    {
+        Icon: FileTextIcon,
+        name: "Scalable to any number of users",
+        description: "Pay much less with dataset-based subscription price. Yes, there is no payment for MAU (Monthly Active Users)",
+        href: "/",
+        cta: "Learn more",
+        background: <img className="absolute -right-20 -top-20 opacity-60" />,
+        className: "row-start-3 col-start-1",
     },
 ];
 
 export async function FeaturesSection() {
     return (
-        <BentoGrid className="lg:grid-rows-3">
+        <BentoGrid className="grid-rows-5 grid-cols-2">
             {features.map((feature) => (
                 <BentoCard key={feature.name} {...feature} />
             ))}

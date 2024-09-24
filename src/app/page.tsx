@@ -3,6 +3,7 @@ import ShineBorder from "@/components/magicui/shine-border";
 import FlickeringGrid from "../components/magicui/flickering-grid";
 import { Button } from "../components/ui/button";
 import { FeaturesSection } from "./features_section";
+import { HowItWorksSection } from "./howitworks_section";
 
 const BLUR_FADE_DELAY = 0.02;
 
@@ -50,7 +51,7 @@ export default function Page() {
                 <div className="mx-auto max-w-screen-lg px-4 py-16">
                     <div className="mx-auto space-y-5 py-6 text-center">
                         <h2 className="text-primary font-mono text-[14px] font-medium tracking-tight">The Problem</h2>
-                        <h2 className="mx-auto mb-2 max-w-3xl text-balance text-[42px] font-medium leading-tight tracking-tighter">Elevating requires insights</h2>
+                        <h2 className="mx-auto mb-2 max-w-3xl text-balance text-[36px] font-medium leading-tight tracking-tighter">Elevating Requires Insights</h2>
                     </div>
                     <div className="mt-12 flex h-full flex-col items-center justify-between gap-8 text-center md:flex-row md:gap-0">
                         <div className="flex size-full flex-col justify-center gap-4 md:w-1/3">
@@ -83,29 +84,24 @@ export default function Page() {
                 </div>
             </section>
 
-            <section id="solutions">
+            <section id="solution">
                 <div className="mx-auto max-w-screen-lg px-4 py-16">
                     <div className="mx-auto space-y-5 py-6 text-center">
                         <h2 className="text-primary font-mono text-[14px] font-medium tracking-tight">The Solution</h2>
-                        <h2 className="mx-auto mb-2 max-w-3xl text-balance text-[42px] font-medium leading-tight tracking-tighter">Subtext</h2>
-                    </div>
-                </div>
-            </section>
-            <section id="features">
-                <div className="mx-auto max-w-screen-lg px-4 py-16">
-                    <div className="mx-auto space-y-5 py-6 text-center">
-                        <h2 className="text-primary font-mono text-[14px] font-medium tracking-tight">Features</h2>
-                        <h2 className="mx-auto mb-2 max-w-3xl text-balance text-[42px] font-medium leading-tight tracking-tighter">Subtext</h2>
+                        <h2 className="mx-auto mb-2 max-w-3xl text-balance text-[36px] font-medium leading-tight tracking-tighter">Cheaper, Faster, More Intuitive Analytics Portal</h2>
+                        <h2 className="mx-auto mb-2 max-w-3xl text-balance text-[24px] font-medium leading-tight tracking-tighter">See How Our Features Solve Your Challenges</h2>
                     </div>
                     <FeaturesSection />
                 </div>
             </section>
+
             <section id="howitworks">
-                <div className="mx-auto max-w-screen-lg px-4 py-16">
+                <div className="mx-auto px-4 py-16">
                     <div className="mx-auto space-y-5 py-6 text-center">
                         <h2 className="text-primary font-mono text-[14px] font-medium tracking-tight">How it works</h2>
-                        <h2 className="mx-auto mb-2 max-w-3xl text-balance text-[42px] font-medium leading-tight tracking-tighter">Subtext</h2>
+                        <h2 className="mx-auto mb-2 max-w-3xl text-balance text-[36px] font-medium leading-tight tracking-tighter">3 Steps to Make Your Product Better</h2>
                     </div>
+                    <HowItWorksSection />
                 </div>
             </section>
 
