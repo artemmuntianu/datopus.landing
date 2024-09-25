@@ -1,4 +1,4 @@
-import { MixerVerticalIcon } from "@radix-ui/react-icons";
+import { MixerVerticalIcon, RocketIcon } from "@radix-ui/react-icons";
 
 export async function HowItWorksSection() {
 	return (
@@ -71,7 +71,7 @@ export async function HowItWorksSection() {
 							</div>
 						</div>
 						<div className="flex w-full items-start">
-							<p className="text-base font-normal text-[#526068]">
+							<p className="text-base font-normal text-gray-600">
 								Install our script and connect your Google Analytics account
 							</p>
 						</div>
@@ -230,8 +230,8 @@ export async function HowItWorksSection() {
 							</svg>
 						</div>
 						<div className="flex w-full items-start">
-							<p className="text-base font-normal text-[#526068]">
-								Understand users&apos; needs and build a product people will love
+							<p className="text-base font-normal text-gray-600">
+								Gather qualitative and quantitative data to inform product-wise decisions
 							</p>
 						</div>
 					</div>
@@ -251,10 +251,11 @@ export async function HowItWorksSection() {
 							Improve
 						</p>
 						<div className="relative flex size-full items-center justify-center rounded-t-xl bg-transparent">
-							<MixerVerticalIcon className="absolute left-1/2 top-1/2 z-0 size-20 -translate-x-1/2 -translate-y-1/2 text-[gray]" />
+							{/*<MixerVerticalIcon className="absolute left-1/2 top-1/2 z-0 size-20 -translate-x-1/2 -translate-y-1/2 text-[gray]" />*/}
+							<RocketIcon className="absolute left-1/2 top-1/2 z-0 size-20 -translate-x-1/2 -translate-y-1/2 text-[gray]" />
 						</div>
 						<div className="flex w-full items-start">
-							<p className="text-base font-normal text-[#526068]">
+							<p className="text-base font-normal text-gray-600">
 								Translate findings into actionable steps for product development
 							</p>
 						</div>

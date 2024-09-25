@@ -4,6 +4,7 @@ import FlickeringGrid from "../components/magicui/flickering-grid";
 import { Button } from "../components/ui/button";
 import { FeaturesSection } from "./features_section";
 import { HowItWorksSection } from "./howitworks_section";
+import { ClockIcon, DashboardIcon, Share1Icon } from "@radix-ui/react-icons";
 
 const BLUR_FADE_DELAY = 0.02;
 
@@ -53,31 +54,31 @@ export default function Page() {
                         <h2 className="text-primary font-mono text-[14px] font-medium tracking-tight">The Problem</h2>
                         <h2 className="mx-auto mb-2 max-w-3xl text-balance text-[36px] font-medium leading-tight tracking-tighter">Elevating Requires Insights</h2>
                     </div>
-                    <div className="mt-12 flex h-full flex-col items-center justify-between gap-8 text-center md:flex-row md:gap-0">
+                    <div className="mt-12 flex h-full flex-col items-center justify-between gap-8 text-center text-gray-600 md:flex-row md:gap-0">
                         <div className="flex size-full flex-col justify-center gap-4 md:w-1/3">
-                            <div className="text-primary mx-auto mb-2 text-4xl font-bold">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-target size-20 stroke-1"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                            <div className="mx-auto mb-2">
+                                <ClockIcon className="size-16" />
                             </div>
-                            <p className="text-sm text-gray-600">
-                                The lack of Product Analytics leads to wasting time on low-performing features
+                            <p className="text-sm">
+                                The <i>lack</i> of Product Analytics leads to <i>wasting</i> time on <i>low-performing</i> features
                             </p>
                         </div>
                         <div className="mx-4 hidden h-[150px] w-px bg-gradient-to-b from-transparent via-black/40 to-transparent md:block"></div>
                         <div className="flex size-full flex-col justify-center gap-4 md:w-1/3">
-                            <div className="text-primary mx-auto mb-2 text-4xl font-bold">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-target size-20 stroke-1"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                            <div className="mx-auto mb-2">
+                                <Share1Icon className="size-16" />
                             </div>
-                            <p className="text-sm text-gray-600">
-                                As a product&apos;s user base expands, the cost of Business Intelligence software rises
+                            <p className="text-sm">
+                                As a product&apos;s user base expands, the <i>cost</i> of Business Intelligence software <i>rises</i>
                             </p>
                         </div>
                         <div className="mx-4 hidden h-[150px] w-px bg-gradient-to-b from-transparent via-black/40 to-transparent md:block"></div>
                         <div className="flex size-full flex-col justify-center gap-4 md:w-1/3">
-                            <div className="text-primary mx-auto mb-2 text-4xl font-bold">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-target size-20 stroke-1"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                            <div className="mx-auto mb-2">
+                                <DashboardIcon className="size-16" />
                             </div>
-                            <p className="text-sm text-gray-600">
-                                Creating a custom Product Analytics tool drains resources from product development
+                            <p className="text-sm">
+                                Creating a <i>custom</i> Product Analytics tool <i>drains resources</i> from product development
                             </p>
                         </div>
                     </div>
@@ -99,7 +100,7 @@ export default function Page() {
                 <div className="mx-auto px-4 py-16">
                     <div className="mx-auto space-y-5 py-6 text-center">
                         <h2 className="text-primary font-mono text-[14px] font-medium tracking-tight">How it works</h2>
-                        <h2 className="mx-auto mb-2 max-w-3xl text-balance text-[36px] font-medium leading-tight tracking-tighter">3 Steps to Make Your Product Better</h2>
+                        <h2 className="mx-auto mb-2 max-w-3xl text-balance text-[36px] font-medium leading-tight tracking-tighter">Become a Data-Led Organization in 3 Steps</h2>
                     </div>
                     <HowItWorksSection />
                 </div>
