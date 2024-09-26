@@ -37,7 +37,7 @@ const features = [
         name: "User-flow diagram",
         descriptionNode:
             <p className="pointer-events-none max-w-lg text-neutral-400">
-                Analyze the user flow to understand user behavior and improve your product by decreasing churn rate
+                Analyze the user flow to understand user behavior and decrease churn rate by improving your product
             </p>,
         href: "/",
         cta: "Learn more",
@@ -47,7 +47,7 @@ const features = [
         name: "Self-service data exploration",
         descriptionNode:
             <p className="pointer-events-none max-w-lg text-neutral-400">
-                Analyze how different segments use specific features by leveraging built-in and custom properties
+                Analyze how different segments use specific features
             </p>,
         href: "/",
         cta: "Learn more",

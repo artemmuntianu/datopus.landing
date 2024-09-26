@@ -19,8 +19,11 @@ export default function Page() {
                             <h2 className="text-3xl font-bold">
                                 Optimize Your Product Features for Success
                             </h2>
-                            <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                            <p className="text-muted-foreground text-xl/relaxed">
                                 Comprehensive Product Analytics to stay within budget
+                            </p>
+                            <p className="text-muted-foreground">
+                                No payment for events, sessions and users
                             </p>
                         </div>
                         <Button variant="secondary" asChild={true} className="my-[3.5rem]">
@@ -66,19 +69,19 @@ export default function Page() {
                         <div className="mx-4 hidden h-[150px] w-px bg-gradient-to-b from-transparent via-black/40 to-transparent md:block"></div>
                         <div className="flex size-full flex-col justify-center gap-4 md:w-1/3">
                             <div className="mx-auto mb-2">
-                                <Share1Icon className="size-16" />
+                                <DashboardIcon className="size-16" />
                             </div>
                             <p className="text-sm">
-                                As a product&apos;s user base expands, the <i>cost</i> of Business Intelligence software <i>rises</i>
+                                Creating a <i>custom</i> Product Analytics tool <i>drains resources</i> from product development
                             </p>
                         </div>
                         <div className="mx-4 hidden h-[150px] w-px bg-gradient-to-b from-transparent via-black/40 to-transparent md:block"></div>
                         <div className="flex size-full flex-col justify-center gap-4 md:w-1/3">
                             <div className="mx-auto mb-2">
-                                <DashboardIcon className="size-16" />
+                                <Share1Icon className="size-16" />
                             </div>
                             <p className="text-sm">
-                                Creating a <i>custom</i> Product Analytics tool <i>drains resources</i> from product development
+                                As a product&apos;s user base expands, the <i>cost</i> of Business Intelligence software <i>rises</i>
                             </p>
                         </div>
                     </div>
@@ -88,15 +91,21 @@ export default function Page() {
             <section id="solution">
                 <div className="mx-auto max-w-screen-lg px-4 py-16">
                     <div className="mx-auto space-y-5 py-6 text-center">
-                        <h2 className="text-primary font-mono text-[14px] font-medium tracking-tight">The Solution</h2>
-                        <h2 className="mx-auto mb-2 max-w-3xl text-balance text-[36px] font-medium leading-tight tracking-tighter">Cheaper, Faster, More Intuitive Analytics Portal</h2>
-                        <h2 className="mx-auto mb-2 max-w-3xl text-balance text-[24px] font-medium leading-tight tracking-tighter">See How Our Features Solve Your Challenges</h2>
+                        <h2 className="text-primary font-mono text-[14px] font-medium tracking-tight">
+                            The Solution
+                        </h2>
+                        <h2 className="mx-auto mb-2 max-w-3xl text-balance text-[36px] font-medium leading-tight tracking-tighter">
+                            Affordable, Faster, More Intuitive Analytics Portal
+                        </h2>
+                        <h2 className="mx-auto mb-2 max-w-3xl text-balance text-[24px] font-medium leading-tight tracking-tighter">
+                            See How Our Features Solve Your Challenges
+                        </h2>
                     </div>
                     <FeaturesSection />
                 </div>
             </section>
 
-            <section id="howitworks">
+            <section id="how-it-works">
                 <div className="mx-auto px-4 py-16">
                     <div className="mx-auto space-y-5 py-6 text-center">
                         <h2 className="text-primary font-mono text-[14px] font-medium tracking-tight">How it works</h2>
