@@ -32,7 +32,7 @@ export default function Page() {
                             className="relative flex w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background shadow-xl"
                             color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
                         >
-                            <img src='screen-features-usage.png'></img>
+                            <img src='features_flow.png'></img>
                         </ShineBorder>
                     </BlurFade>
                     <FlickeringGrid

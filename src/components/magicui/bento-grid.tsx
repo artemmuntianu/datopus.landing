@@ -25,15 +25,15 @@ const BentoGrid = ({
 const BentoCard = ({
     name,
     className,
-    background,
-    description,
+    backgroundNode,
+    descriptionNode,
     href,
     cta,
 }: {
     name: string;
     className: string;
-    background: ReactNode;
-    description: string;
+    backgroundNode?: ReactNode;
+    descriptionNode: ReactNode,
     href: string;
     cta: string;
 }) => (
@@ -48,14 +48,14 @@ const BentoCard = ({
             className
         )}
     >
-        <div className="pointer-events-none transform-gpu transition-all duration-300 group-hover:-translate-y-10">
+        <div className="transform-gpu transition-all duration-300 group-hover:-translate-y-10">
             <div className="z-10 flex flex-col gap-1 p-6 ">
-                <h3 className="text-xl font-semibold text-neutral-700 dark:text-neutral-300">
+                <h3 className="pointer-events-none text-xl font-semibold text-neutral-700 dark:text-neutral-300">
                     {name}
                 </h3>
-                <p className="max-w-lg text-neutral-400">{description}</p>
+                {descriptionNode}
             </div>
-            {background}
+            {backgroundNode}
         </div>
         <div
             className={cn(
@@ -69,7 +69,6 @@ const BentoCard = ({
                 </a>
             </Button>
         </div>
-        <div className="pointer-events-none absolute inset-0 transform-gpu transition-all duration-300 group-hover:bg-black/[.03] group-hover:dark:bg-neutral-800/10" />
     </div>
 );
 
