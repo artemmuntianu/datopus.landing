@@ -4,8 +4,8 @@ const features = [
     {
         name: "Customer-facing dashboard",
         descriptionNode:
-            <p className="pointer-events-none max-w-lg text-neutral-400">
-                Increase trust of your customers by providing access to data of their users
+            <p className="pointer-events-none max-w-lg text-muted-foreground font-segoe">
+                Increase trust of your customers by providing access to data of their users.
             </p>,
         href: "/",
         cta: "Learn more",
@@ -15,8 +15,8 @@ const features = [
     {
         name: "Data ownership & GDPR compliance",
         descriptionNode:
-            <p className="pointer-events-none max-w-lg text-neutral-400">
-                Tracked data is saved in your Google Analytics account for free
+            <p className="pointer-events-none max-w-lg text-muted-foreground font-segoe">
+                Tracked data is saved in your Google Analytics account for free.
             </p>,
         href: "/",
         cta: "Learn more",
@@ -25,8 +25,8 @@ const features = [
     {
         name: "Monitoring",
         descriptionNode:
-            <p className="pointer-events-none max-w-lg text-neutral-400">
-                Be alerted of spikes and drops in feature usage metrics
+            <p className="pointer-events-none max-w-lg text-muted-foreground font-segoe">
+                Be alerted of spikes and drops in feature usage metrics.
             </p>,
         href: "/",
         cta: "Learn more",
@@ -36,8 +36,8 @@ const features = [
     {
         name: "User-flow diagram",
         descriptionNode:
-            <p className="pointer-events-none max-w-lg text-neutral-400">
-                Analyze the user flow to understand user behavior and decrease churn rate by improving your product
+            <p className="pointer-events-none max-w-lg text-muted-foreground font-segoe">
+                Analyze the user flow to understand user behavior and decrease churn rate by improving your product.
             </p>,
         href: "/",
         cta: "Learn more",
@@ -46,8 +46,8 @@ const features = [
     {
         name: "Self-service data exploration",
         descriptionNode:
-            <p className="pointer-events-none max-w-lg text-neutral-400">
-                Analyze how different segments use specific features
+            <p className="pointer-events-none max-w-lg text-muted-foreground font-segoe">
+                Analyze how different segments use specific features.
             </p>,
         href: "/",
         cta: "Learn more",
@@ -57,8 +57,8 @@ const features = [
     {
         name: "Embedded analytics",
         descriptionNode:
-            <p className="pointer-events-none max-w-lg text-neutral-400">
-                Centralize your reports from Looker Studio, Google Sheets, PDF files, and more in a single safe place
+            <p className="pointer-events-none max-w-lg text-muted-foreground font-segoe">
+                Centralize your reports from Looker Studio, Google Sheets, PDF files, and more in a single safe place.
             </p>,
         href: "/",
         cta: "Learn more",
@@ -68,8 +68,8 @@ const features = [
     {
         name: "Scalable to any number of users",
         descriptionNode:
-            <p className="pointer-events-none max-w-lg text-neutral-400">
-                Pay much less with dataset-based subscription price. YES, there is no payment for MAU (Monthly Active Users)
+            <p className="pointer-events-none max-w-lg text-muted-foreground font-segoe">
+                Pay much less with dataset-based subscription price. YES, there is no payment for MAU (Monthly Active Users).
             </p>,
         href: "/",
         cta: "Learn more",
@@ -78,7 +78,7 @@ const features = [
     {
         name: "Custom tracking",
         descriptionNode:
-            <p className="max-w-lg text-neutral-400">
+            <p className="max-w-lg text-muted-foreground font-segoe">
                 Determine up to 10 feature characteristics of your choice. Includes
                 &nbsp;<a href='https://support.google.com/analytics/table/13948007' target="_blank" className="text-primary underline-offset-4 hover:underline">standard</a>&nbsp; 
                 (user, device, traffic, geography, attribution) and

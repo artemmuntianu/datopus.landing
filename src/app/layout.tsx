@@ -15,7 +15,7 @@ const DATA = {
     url: 'https://datopus.io',
     name: 'Datopus',
     description: 'Datopus'
-};
+}
 
 export const metadata: Metadata = {
     metadataBase: new URL(DATA.url),
@@ -50,8 +50,8 @@ export const metadata: Metadata = {
     verification: {
         google: "",
         yandex: "",
-    },
-};
+    }
+}
 
 export default function RootLayout({
     children,
@@ -73,5 +73,5 @@ export default function RootLayout({
                 </TooltipProvider>
             </body>
         </html>
-    );
+    )
 }
