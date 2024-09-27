@@ -17,7 +17,7 @@ export default async function BlogPage() {
                 {posts
                     .sort((a, b) => new Date(a.metadata.publishedAt) > new Date(b.metadata.publishedAt) ? -1 : 1)
                     .map((post, id) => (
-                        <BlurFade delay={BLUR_FADE_DELAY * 2 + id * 0.05} key={post.slug}>
+                        <BlurFade delay={BLUR_FADE_DELAY * 2 + id * 0.05} key={post.slug} className="[&:not(:last-child)]:border-b">
                             <div className="changelog-article flex flex-col gap-6 py-12 sm:gap-8 lg:flex-row lg:items-start lg:gap-12 lg:py-16 xl:gap-20">
                                 <div className="w-full shrink-0 space-y-4 lg:sticky lg:max-w-sm lg:top-8">
                                     <p className="article-publish-date text-base font-medium text-secondary-500">

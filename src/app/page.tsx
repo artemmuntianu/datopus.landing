@@ -88,10 +88,10 @@ export default function Page() {
                 </div>
             </section>
 
-            <section id="solution" className="mx-auto max-w-screen-lg px-4 py-16">
+            <section id="solutions" className="mx-auto max-w-screen-lg px-4 py-16">
                 <div className="mx-auto space-y-5 py-6 text-center">
                     <h2 className="text-primary font-mono text-[14px] font-medium tracking-tight">
-                        The Solution
+                        The Solutions
                     </h2>
                     <h2 className="mx-auto mb-2 max-w-3xl text-balance text-[36px] font-medium leading-tight tracking-tighter">
                         Affordable, Faster, More Intuitive Analytics Portal
@@ -105,10 +105,31 @@ export default function Page() {
 
             <section id="how-it-works" className="mx-auto px-4 py-16">
                 <div className="mx-auto space-y-5 py-6 text-center">
-                    <h2 className="text-primary font-mono text-[14px] font-medium tracking-tight">How it works</h2>
-                    <h2 className="mx-auto mb-2 max-w-3xl text-balance text-[36px] font-medium leading-tight tracking-tighter">Become a Data-Led Organization in 3 Steps</h2>
+                    <h2 className="text-primary font-mono text-[14px] font-medium tracking-tight">
+                        How it works
+                    </h2>
+                    <h2 className="mx-auto mb-2 max-w-3xl text-balance text-[36px] font-medium leading-tight tracking-tighter">
+                        Become a Data-Led Organization in 3 Steps
+                    </h2>
                 </div>
                 <HowItWorksSection />
+            </section>
+
+            <section id="cta" className="px-2 py-28 bg-[hsl(var(--primary)/10%)]">
+                <div className="mx-auto space-y-5 pb-6 text-center">
+                    <h2 className="mx-auto mb-2 max-w-3xl text-balance text-5xl font-medium leading-tight tracking-tighter">
+                        Ready for Demo?
+                    </h2>
+                </div>
+                <div className="flex items-center justify-center gap-[0.5rem]">
+                    <Input type="email" placeholder="Enter your email address" className="h-12 bg-white" />
+                    <Button variant="default" asChild={true} className="h-12 group text-white">
+                        <a href="/signup">
+                            Explore the Demo
+                            <ChevronRightIcon className="ml-1 size-4 transition-transform duration-300 group-hover:translate-x-1" />
+                        </a>
+                    </Button>
+                </div>
             </section>
 
         </main>

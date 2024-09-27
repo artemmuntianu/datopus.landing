@@ -10,10 +10,10 @@ export function Header() {
                 </a>
                 <div>
                     <Button variant="ghost" asChild={true}>
-                        <a href="#solution">Solution</a>
+                        <a href="/#solutions">Solutions</a>
                     </Button>
                     <Button variant="ghost" asChild={true}>
-                        <a href="#how-it-works">How it works</a>
+                        <a href="/#how-it-works">How it works</a>
                     </Button>
                     <Button variant="ghost" asChild={true}>
                         <a href="/blog">Blog</a>

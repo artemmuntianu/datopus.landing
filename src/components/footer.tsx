@@ -16,16 +16,16 @@ export function Footer() {
                     <div>
                         <ul className="">
                             <li className="my-2">
-                                <a href="#solution" className="text-gray-600">Solution</a>
+                                <a href="/#solutions" className="text-gray-600">Solutions</a>
                             </li>
                             <li className="my-2">
-                                <a href="#how-it-works" className="text-gray-600">How it works</a>
+                                <a href="/#how-it-works" className="text-gray-600">How it works</a>
                             </li>
                             <li className="my-2">
                                 <a href="/blog" className="text-gray-600">Blog</a>
                             </li>
                             <li className="my-2">
-                                <a href="#pricing" className="text-gray-600">Pricing</a>
+                                <a href="/#pricing" className="text-gray-600">Pricing</a>
                             </li>
                         </ul>
                     </div>
