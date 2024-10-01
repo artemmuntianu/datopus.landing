@@ -9,11 +9,13 @@ export default async function BlogPage() {
     const posts = await getBlogPosts();
 
     return (
-        <main className="flex flex-col max-w-screen-lg mx-auto min-h-[100dvh] mt-[3.5rem]">
+        <main className="flex flex-col min-h-[100dvh] mt-[3.5rem] [background-image:linear-gradient(to_bottom,hsl(var(--primary)/10%),transparent)] [background-size:auto_50rem] [background-repeat:no-repeat]">
             <BlurFade delay={BLUR_FADE_DELAY}>
-                <h1 className="font-medium text-3xl my-8">Datopus Blog</h1>
+                <h1 className="font-medium text-3xl text-center my-8">
+                    Datopus Blog
+                </h1>
             </BlurFade>
-            <section className="mx-auto space-y-10">
+            <section className="max-w-screen-lg mx-auto space-y-10">
                 {posts
                     .sort((a, b) => new Date(a.metadata.publishedAt) > new Date(b.metadata.publishedAt) ? -1 : 1)
                     .map((post, id) => (

@@ -20,7 +20,7 @@ const features = [
             </p>,
         href: "/",
         cta: "Learn more",
-        className: "row-start-1 col-start-2",
+        className: "row-start-5 col-start-2",
     },
     {
         name: "Monitoring",
@@ -31,7 +31,7 @@ const features = [
         href: "/",
         cta: "Learn more",
         backgroundNode: <img src='features_monitoring.png' className="w-[calc(100%-3rem)] mx-6 border rounded-[0.25rem] [mask-image:linear-gradient(to_bottom,white,transparent)]" />,
-        className: "row-start-4 row-span-2 col-start-1",
+        className: "row-start-3 row-span-2 col-start-1",
     },
     {
         name: "User-flow diagram",
@@ -41,7 +41,7 @@ const features = [
             </p>,
         href: "/",
         cta: "Learn more",
-        className: "row-start-4 col-start-2",
+        className: "row-start-6 col-start-2",
     },
     {
         name: "Self-service data exploration",
@@ -52,7 +52,7 @@ const features = [
         href: "/",
         cta: "Learn more",
         backgroundNode: <img src='features_usage.png' className="w-[calc(100%-3rem)] mx-6 border rounded-[0.25rem] [mask-image:linear-gradient(to_bottom,white,transparent)]" />,
-        className: "row-start-5 row-span-2 col-start-2",
+        className: "row-start-3 row-span-2 col-start-2",
     },
     {
         name: "Embedded analytics",
@@ -63,7 +63,7 @@ const features = [
         href: "/",
         cta: "Learn more",
         backgroundNode: <img src='embedded_analytics.png' className="w-[calc(100%-3rem)] mx-6 border rounded-[0.25rem] [mask-image:linear-gradient(to_bottom,white,transparent)]" />,
-        className: "row-start-2 row-span-2 col-start-2",
+        className: "row-start-1 row-span-2 col-start-2",
     },
     {
         name: "Scalable to any number of users",
@@ -73,7 +73,7 @@ const features = [
             </p>,
         href: "/",
         cta: "Learn more",
-        className: "row-start-3 col-start-1",
+        className: "row-start-5 col-start-1",
     },
     {
         name: "Custom tracking",
