@@ -91,7 +91,7 @@ const features = [
     }
 ];
 
-export async function FeaturesSection() {
+export function FeaturesSection() {
     return (
         <BentoGrid className="grid-rows-6 grid-cols-2">
             {features.map((feature) => (

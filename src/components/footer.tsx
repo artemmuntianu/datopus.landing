@@ -1,34 +1,35 @@
 import { LinkedInLogoIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
+import Link from "next/link";
 
 export function Footer() {
     return (
         <footer className="border-t">
             <div className="mx-auto flex max-w-6xl flex-col items-center justify-between bg-white px-4 py-8 md:flex-row">
                 <div className="flex flex-col items-center md:items-start">
-                    <a href="/" title="Datopus" className="mb-4 flex items-center space-x-2">
+                    <Link href="/" title="Datopus" className="mb-4 flex items-center space-x-2">
                         <Image src="/logo.svg" alt="Datopus" width={0} height={0} style={{ 'width': 'auto', 'height': '2rem' }} />
                         <span className="text-xl font-bold">Datopus</span>
-                    </a>
+                    </Link>
                     {/*<address className="text-muted-foreground text-sm not-italic"></address>*/}
                 </div>
                 <div className="mt-8 grid grid-cols-2 gap-8 md:mt-0">
                     <div>
-                        <ul className="">
+                        <ul>
                             <li className="my-2">
-                                <a href="/#solutions" className="text-gray-600">Solutions</a>
+                                <Link href="/#solutions" className="text-gray-600">Solutions</Link>
                             </li>
                             <li className="my-2">
-                                <a href="/#how-it-works" className="text-gray-600">How it works</a>
+                                <Link href="/#how-it-works" className="text-gray-600">How it works</Link>
                             </li>
                             <li className="my-2">
-                                <a href="/blog" className="text-gray-600">Blog</a>
+                                <Link href="/blog" className="text-gray-600">Blog</Link>
                             </li>
                             <li>
                                 <a href="https://datopus.mintlify.app" className="text-gray-600">Documentation</a>
                             </li>
                             <li className="my-2">
-                                <a href="/pricing" className="text-gray-600">Pricing</a>
+                                <Link href="/pricing" className="text-gray-600">Pricing</Link>
                             </li>
                         </ul>
                     </div>
@@ -51,13 +52,13 @@ export function Footer() {
                 </div>
             </div>
             <div className="mx-auto grid size-full max-w-6xl grid-cols-1 justify-between gap-1 border-t py-3 md:grid-cols-2">
-                <span className="text-muted-foreground text-xs tracking-tight">Copyright 2024 <a href="/">Datopus</a> - Optimize Product Features for Success</span>
+                <span className="text-muted-foreground text-xs tracking-tight">Copyright 2024 <Link href="/">Datopus</Link> - Optimize Product Features for Success</span>
                 <ul className="text-muted-foreground flex justify-start text-xs tracking-tight md:justify-end">
                     <li className="mr-3 md:mx-4">
-                        <a href="https://www.datopus.io/terms" target="_blank" rel="noopener noreferrer">Terms and conditions</a>
+                        <Link href="/terms" target="_blank" rel="noopener noreferrer">Terms and conditions</Link>
                     </li>
                     <li className="mr-3 md:mx-4">
-                        <a href="https://www.datopus.io/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+                        <Link href="/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</Link>
                     </li>
                 </ul>
             </div>
