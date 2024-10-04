@@ -5,7 +5,7 @@ import { useState, useTransition } from "react";
 import { Input } from "../components/ui/input";
 import { Button } from "./ui/button";
 
-export function ExploreDemoForm() {
+export function JoinWaitlistForm() {
 
     const [isPending, startTransition] = useTransition();
     const [isSuccess, setIsSuccess] = useState(false);
@@ -37,14 +37,14 @@ export function ExploreDemoForm() {
 
     return isSuccess
         ? (
-            <div className="bg-white leading-[3rem] px-5 shadow-sm rounded-md text-sm">We appreciate your curiosity! <a href="http://localhost:4200" className="text-primary underline-offset-4 hover:underline">Here is a link to the demo.</a></div>
+            <div className="bg-white leading-[3rem] px-5 shadow-sm rounded-md text-sm">Welcome to the waitlist! We&apos;ll keep you updated on when the beta version is available.</div>
         )
         : (
             <form onSubmit={submit} method="post">
-                <Input type="hidden" name="action" value="demo" />
+                <Input type="hidden" name="action" value="waitlist" />
                 <Input type="email" name="email" required placeholder="Enter your email address" className="h-12 bg-white" />
                 <Button disabled={isPending} type="submit" variant="default" className="ml-2 h-12 group text-white">
-                    Explore the Demo
+                    Join Waitlist
                     <ChevronRightIcon className="ml-1 size-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </Button>
             </form>

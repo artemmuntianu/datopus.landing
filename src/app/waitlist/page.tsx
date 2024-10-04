@@ -1,7 +1,5 @@
 import BlurFade from "@/components/magicui/blur-fade";
-import { ChevronRightIcon } from "lucide-react";
-import { Button } from "../../components/ui/button";
-import { Input } from "../../components/ui/input";
+import { JoinWaitlistForm } from "../../components/join_waitlist_form";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -22,13 +20,7 @@ export default function WaitlistPage() {
 							</h1>
 						</div>
 						<div className="flex items-center justify-center gap-[0.5rem] mt-[3.5rem]">
-							<Input type="email" placeholder="Enter your email address" className="h-12 bg-white" />
-							<Button variant="default" asChild={true} className="h-12 group text-white">
-								<a href="/signup">
-									Join Waitlist
-									<ChevronRightIcon className="ml-1 size-4 transition-transform duration-300 group-hover:translate-x-1" />
-								</a>
-							</Button>
+							<JoinWaitlistForm />
 						</div>
 					</div>
 				</section>

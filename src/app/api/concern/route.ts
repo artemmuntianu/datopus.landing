@@ -71,7 +71,7 @@ export async function POST(req: NextRequest) {
             .insert({
                 email,
                 demo_requested: action == 'demo' ? new Date().toISOString() : null,
-                waitlist_requested: action == 'waitlist' ? new Date().toISOString() : null,
+                waitlist_requested: action == 'waitlist' ? new Date().toISOString() : null
             });
         if (error) {
             console.error(error);
