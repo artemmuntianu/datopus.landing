@@ -1,25 +1,92 @@
 import { MailtrapClient } from "mailtrap"
+import { createSupabaseClient } from "../../../lib/supabase/server";
+import { NextRequest } from "next/server";
 
-export async function GET() {
-    const TOKEN = "5cc9cff8175823a19a96e9cc1c20b5b6";
-    const SENDER_EMAIL = "noreply@datopus.io";
-    const RECIPIENT_EMAIL = "artemmuntianu@gmail.com";
+export async function POST(req: NextRequest) {
+    const { email, action } = await req.json();
+    const sbClient = createSupabaseClient();
 
-    const client = new MailtrapClient({
-        token: TOKEN,
-        testInboxId: 3176650
-    });
+    let authResp = await sbClient
+        .auth
+        .signInWithPassword({
+            email: 'landing_page_api@datopus.io',
+            password: 'Q3#7@9E'
+        });
+    if (authResp.error) {
+        console.error(authResp.error);
+        return Response.error();
+    }
 
-    const sender = { name: "Datopus", email: SENDER_EMAIL };
+    let { error, data } = await sbClient
+        .from('landing_page_users')
+        .select()
+        .eq('email', email)
+        .limit(1)
+        .maybeSingle();
+    if (error) {
+        console.error(error);
+        return Response.error();
+    }
+
+    if (data) {
+        switch (action) {
+            case 'demo':
+                {
+                    if (data.demo_requested !== null)
+                        return Response.json({ msg: 'duplicate' });
+
+                    let { error } = await sbClient
+                        .from('landing_page_users')
+                        .update({
+                            demo_requested: new Date().toISOString()
+                        })
+                        .eq('email', email);
+                    if (error) {
+                        console.error(error);
+                        return Response.error();
+                    }
+                }
+                break;
+            case 'waitlist':
+                {
+                    if (data.waitlist_requested !== null)
+                        return Response.json({ msg: 'duplicate' });
+
+                    let { error } = await sbClient
+                        .from('landing_page_users')
+                        .update({
+                            waitlist_requested: new Date().toISOString()
+                        })
+                        .eq('email', email);
+                    if (error) {
+                        console.error(error);
+                        return Response.error();
+                    }
+                }
+                break;
+        }
+    } else {
+        let { error } = await sbClient
+            .from('landing_page_users')
+            .insert({
+                email,
+                demo_requested: action == 'demo' ? new Date().toISOString() : null,
+                waitlist_requested: action == 'waitlist' ? new Date().toISOString() : null,
+            });
+        if (error) {
+            console.error(error);
+            return Response.error();
+        }
+    }
+
+    return Response.json({ msg: 'success' });
+}
+
+/*
+export async function POST() {
     let resp;
-    await client
-        .testing
-        .send({
-            from: sender,
-            to: [{ email: RECIPIENT_EMAIL }],
-            subject: "Hello from Datopus!",
-            text: "Welcome to Datopus!"
-        })
+
+    sendEmailAsync()
         .then((val) => {
             console.log(val);
             resp = new Response(null, {
@@ -35,4 +102,28 @@ export async function GET() {
         });
 
     return resp;
+}
+*/
+
+function sendEmailAsync() {
+    const TOKEN = "5cc9cff8175823a19a96e9cc1c20b5b6";
+    const SENDER_EMAIL = "noreply@datopus.io";
+    const RECIPIENT_EMAIL = "artemmuntianu@gmail.com";
+
+    const client = new MailtrapClient({
+        token: TOKEN,
+        testInboxId: 3176650
+    });
+
+    const sender = { name: "Datopus", email: SENDER_EMAIL };
+    const recipients = [{ email: RECIPIENT_EMAIL }];
+
+    return client
+        .testing
+        .send({
+            from: sender,
+            to: recipients,
+            subject: "Hello from Datopus!",
+            text: "Welcome to Datopus!"
+        });
 }

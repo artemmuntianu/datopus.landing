@@ -6,6 +6,7 @@ import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
 import { FeaturesSection } from "./features_section";
 import { HowItWorksSection } from "./howitworks_section";
+import { ExploreDemoForm } from "../components/explore_demo_form";
 
 const BLUR_FADE_DELAY = 0.02;
 
@@ -24,13 +25,7 @@ export default function Page() {
                         </p>
                     </div>
                     <div className="flex items-center justify-center gap-[0.5rem] mt-[3.5rem]">
-                        <Input type="email" placeholder="Enter your email address" className="h-12 bg-white" />
-                        <Button variant="default" asChild={true} className="h-12 group text-white">
-                            <a href="/signup">
-                                Explore the Demo
-                                <ChevronRightIcon className="ml-1 size-4 transition-transform duration-300 group-hover:translate-x-1" />
-                            </a>
-                        </Button>
+                        <ExploreDemoForm />
                     </div>
                 </div>
                 <BlurFade delay={BLUR_FADE_DELAY * 1} yOffset={0}>
@@ -122,13 +117,7 @@ export default function Page() {
                     </h2>
                 </div>
                 <div className="flex items-center justify-center gap-[0.5rem]">
-                    <Input type="email" placeholder="Enter your email address" className="h-12 bg-white" />
-                    <Button variant="default" asChild={true} className="h-12 group text-white">
-                        <a href="/signup">
-                            Explore the Demo
-                            <ChevronRightIcon className="ml-1 size-4 transition-transform duration-300 group-hover:translate-x-1" />
-                        </a>
-                    </Button>
+                    <ExploreDemoForm />
                 </div>
             </section>
 
