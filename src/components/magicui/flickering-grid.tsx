@@ -43,8 +43,8 @@ const FlickeringGrid: React.FC<FlickeringGridProps> = ({
       if (!ctx) return "rgba(255, 0, 0,";
       ctx.fillStyle = color;
       ctx.fillRect(0, 0, 1, 1);
-      const [r, g, b] = ctx.getImageData(0, 0, 1, 1).data;
-      return `rgba(${r}, ${g}, ${b},`;
+      const imgData = ctx.getImageData(0, 0, 1, 1).data;
+        return `rgba(${imgData[0]}, ${imgData[1]}, ${imgData[2]},`;
     };
     return toRGBA(color);
   }, [color]);
