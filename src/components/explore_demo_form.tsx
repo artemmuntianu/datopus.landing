@@ -37,7 +37,7 @@ export function ExploreDemoForm() {
 
     return isSuccess
         ? (
-            <div className="bg-white leading-[3rem] px-5 shadow-sm rounded-md text-sm">We appreciate your curiosity! <a href="https://app.datopus.io" className="text-primary underline-offset-4 hover:underline">Here is a link to the demo.</a></div>
+            <div className="bg-white leading-[3rem] px-5 shadow-sm rounded-md text-sm">We appreciate your curiosity! <a href="https://app.datopus.io/demo-use-cases" className="text-primary underline-offset-4 hover:underline">Here is a link to the demo.</a></div>
         )
         : (
             <form onSubmit={submit} method="post">
