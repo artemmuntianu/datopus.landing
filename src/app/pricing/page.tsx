@@ -24,13 +24,13 @@ export default function PricingPage() {
                                 </p>
                             </div>
                         </div>
-                        <div className="grid auto-rows-fr gap-3">
+                        <div className="grid gap-3">
                             <div className="min-h-5 hidden block">
                             </div>
                             <div className="min-h-5 hidden block">
                             </div>
                         </div>
-                        <div className="grid auto-rows-fr gap-3.5 text-sm text-gray-600 dark:text-gray-400">
+                        <div className="grid gap-3.5 text-sm text-gray-600 dark:text-gray-400">
                             <div className="flex items-center gap-2">
                                 {Icons.magicRect({ className: "size-4" })}
                                 <span>Beautiful out of the box</span>
@@ -112,13 +112,13 @@ export default function PricingPage() {
                                 </p>
                             </div>
                         </div>
-                        <div className="grid auto-rows-fr gap-3">
+                        <div className="grid gap-3">
                             <div className="min-h-5 hidden block">
                             </div>
                             <div className="min-h-5 hidden block">
                             </div>
                         </div>
-                        <div className="grid auto-rows-fr gap-3.5 text-sm text-gray-600 dark:text-gray-400">
+                        <div className="grid gap-3.5 text-sm text-gray-600 dark:text-gray-400">
                             <div className="flex items-center gap-2">
                                 {Icons.magicRect({ className: "size-4" })}
                                 <span>Beautiful out of the box</span>
@@ -149,7 +149,19 @@ export default function PricingPage() {
                             </div>
                             <div className="flex items-center gap-2">
                                 {Icons.check({ className: "size-4" })}
-                                <span>Datasources included: 10</span>
+                                <ul>
+                                    <li>Datasources included: 10</li>
+                                    <li>
+                                        <table className="ml-5">
+                                            <tbody>
+                                                <tr><td className="text-right">11-100:&nbsp;</td><td>$3 per datasource</td></tr>
+                                                <tr><td className="text-right">101-200:&nbsp;</td><td>$2.5 per datasource</td></tr>
+                                                <tr><td className="text-right">201-300:&nbsp;</td><td>$2 per datasource</td></tr>
+                                                <tr><td className="text-right">301+:&nbsp;</td><td>$1.5 per datasource</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </section>
