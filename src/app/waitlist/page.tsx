@@ -12,7 +12,7 @@ export default function WaitlistPage() {
 				</h2>
 			</BlurFade>
 			<BlurFade delay={BLUR_FADE_DELAY + 1 * BLUR_FADE_DELAY}>
-				<section className="max-w-[1400px] mx-auto w-full">
+				<section className="max-w-screen-xl mx-auto w-full">
 					<div className="flex flex-col items-center justify-center text-center my-[3.5rem]">
 						<div className="space-y-5">
 							<h1 className="text-4xl">

@@ -43,7 +43,7 @@ export function ExploreDemoForm() {
             <form onSubmit={submit} method="post">
                 <Input type="hidden" name="action" value="demo" />
                 <Input type="email" name="email" required placeholder="Enter your email address" className="h-12 bg-white" />
-                <Button disabled={isPending} type="submit" variant="default" className="ml-2 h-12 group text-white">
+                <Button disabled={isPending} type="submit" variant="default" className="max-[410px]:mt-2 ml-2 h-12 group text-white">
                     Explore the Demo
                     <ChevronRightIcon className="ml-1 size-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </Button>

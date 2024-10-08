@@ -14,10 +14,10 @@ export default function Page() {
     return (
         <main className="flex flex-col min-h-[100dvh] mt-[3.5rem] space-y-10 [background-image:linear-gradient(to_bottom,hsl(var(--primary)/10%),transparent)] [background-size:auto_50rem] [background-repeat:no-repeat]">
 
-            <section id="hero" className="max-w-[1400px] mx-auto w-full">
+            <section id="hero" className="max-w-screen-xl mx-auto w-full">
                 <div className="flex flex-col items-center justify-center text-center my-[3.5rem]">
                     <div className="space-y-5">
-                        <h1 className="text-6xl">
+                        <h1 className="max-[470px]:text-5xl text-6xl">
                             Comprehensive Product Analytics <br /> to stay within budget
                         </h1>
                         <p className="text-muted-foreground text-xl/relaxed font-segoe">
@@ -36,16 +36,16 @@ export default function Page() {
                         <img src='features_flow.png'></img>
                     </ShineBorder>
                 </BlurFade>
-                <FlickeringGrid
-                    className="ml-[50px]"
-                    color="#666"
-                    squareSize={3}
-                    gridGap={6}
-                    maxOpacity={0.5}
-                    flickerChance={0.1}
-                    width={1300}
-                    height={40}
-                />
+                <div className="mx-[15pt]">
+                    <FlickeringGrid
+                        color="#999"
+                        squareSize={4}
+                        gridGap={2}
+                        maxOpacity={0.5}
+                        flickerChance={0.1}
+                        height={40}
+                    />
+                </div>
             </section>
 
             <section id="problem" className="mx-auto max-w-screen-lg px-4 py-16">
@@ -98,7 +98,7 @@ export default function Page() {
                 <FeaturesSection />
             </section>
 
-            <section id="how-it-works" className="mx-auto px-4 py-16">
+            <section id="how-it-works" className="max-[1200px]:hidden mx-auto px-4 py-16">
                 <div className="mx-auto space-y-5 py-6 text-center">
                     <h2 className="text-primary font-mono text-[14px] font-medium tracking-tight">
                         How it works
@@ -110,14 +110,16 @@ export default function Page() {
                 <HowItWorksSection />
             </section>
 
-            <section id="cta" className="px-2 py-28 bg-[hsl(var(--primary)/10%)]">
-                <div className="mx-auto space-y-5 pb-6 text-center">
-                    <h2 className="mx-auto mb-2 max-w-3xl text-balance text-5xl font-medium leading-tight tracking-tighter">
-                        Ready for Demo?
-                    </h2>
-                </div>
-                <div className="flex items-center justify-center gap-[0.5rem]">
-                    <ExploreDemoForm />
+            <section id="cta" className="w-full py-28 bg-[hsl(var(--primary)/10%)]">
+                <div className="flex flex-col items-center justify-center text-center my-[3.5rem]">
+                    <div className="mx-auto space-y-5 pb-6 text-center">
+                        <h2 className="mx-auto mb-2 max-w-3xl text-balance text-5xl font-medium leading-tight tracking-tighter">
+                            Ready for Demo?
+                        </h2>
+                    </div>
+                    <div className="flex items-center justify-center gap-[0.5rem]">
+                        <ExploreDemoForm />
+                    </div>
                 </div>
             </section>
 

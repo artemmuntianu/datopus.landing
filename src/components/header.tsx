@@ -5,7 +5,7 @@ import Link from "next/link";
 export function Header() {
     return (
         <header className="fixed left-0 top-0 z-50 w-full border-b backdrop-blur-[12px]">
-            <div className="flex h-[3.5rem] max-w-[1000px] mr-auto ml-auto items-center justify-between">
+            <div className="flex min-h-[3.5rem] max-w-[1000px] mx-auto px-4 items-center justify-between">
                 <Link href="/" className="inline-flex mr-[10px]">
                     <Image src="/logo.svg" alt="Datopus" width={0} height={0}  style={{ 'width': 'auto', 'height': '2rem' }} />
                 </Link>
@@ -13,7 +13,7 @@ export function Header() {
                     <Button variant="ghost" asChild={true}>
                         <Link href="/#solutions">Solutions</Link>
                     </Button>
-                    <Button variant="ghost" asChild={true}>
+                    <Button variant="ghost" asChild={true} className="max-[1200px]:hidden">
                         <Link href="/#how-it-works">How it works</Link>
                     </Button>
                     <Button variant="ghost" asChild={true}>
