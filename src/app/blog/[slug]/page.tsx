@@ -44,15 +44,15 @@ export async function generateMetadata({
             images: [
                 {
                     url: ogImage,
-                },
-            ],
+                }
+            ]
         },
         twitter: {
             card: "summary_large_image",
             title,
             description,
             images: [ogImage],
-        },
+        }
     };
 }
 
@@ -102,10 +102,7 @@ export default async function Blog({
                         </p>
                     </Suspense>
                 </div>
-                <article
-                    className="prose dark:prose-invert"
-                    dangerouslySetInnerHTML={{ __html: post.source }}
-                ></article>
+                <article dangerouslySetInnerHTML={{ __html: post.source }}></article>
             </section>
         </main>
     );

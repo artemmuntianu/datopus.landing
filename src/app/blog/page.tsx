@@ -32,9 +32,18 @@ export default async function BlogPage() {
                                     </a>
                                 </div>
                                 <div className="flex-1 space-y-5">
-                                    <a className="aspect-w-2 aspect-h-1 block overflow-hidden shadow rounded-2xl" href={`/blog/${post.slug}`}>
-                                        <img alt={post.metadata.title} src={post.metadata.image} className="h-full w-full object-cover transition-all duration-200 hover:scale-110"></img>
-                                    </a>
+
+                                    {(post.metadata.image)
+                                        ? (
+                                            <a className="aspect-w-2 aspect-h-1 block overflow-hidden shadow rounded-2xl" href={`/blog/${post.slug}`}>
+                                                <img alt={post.metadata.title} src={post.metadata.image} className="h-full w-full object-cover transition-all duration-200 hover:scale-110"></img>
+                                            </a>
+                                        )
+                                        : (
+                                            <div></div>
+                                        )
+                                    }
+
                                     <a className="block" href={`/blog/${post.slug}`}>
                                         <p className="article-excerpt text-lg font-normal text-secondary-600 line-clamp-3 lg:line-clamp-none">{post.metadata.summary}</p>
                                     </a>

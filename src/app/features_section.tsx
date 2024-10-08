@@ -7,7 +7,7 @@ const features = [
             <p className="pointer-events-none max-w-lg text-muted-foreground font-segoe">
                 Increase trust of your customers by providing access to data of their users.
             </p>,
-        href: "/",
+        href: "/blog/feature-customer-facing-dashboard",
         cta: "Learn more",
         backgroundNode: <img src='dashboard.png' className="w-[calc(100%-3rem)] mx-6 border rounded-[0.25rem] [mask-image:linear-gradient(to_bottom,white,transparent)]" />,
         className: "row-start-1 row-span-2 col-start-1",
@@ -18,7 +18,7 @@ const features = [
             <p className="pointer-events-none max-w-lg text-muted-foreground font-segoe">
                 Tracked data is saved in your Google Analytics account for free.
             </p>,
-        href: "/",
+        href: "/blog/feature-data-ownership-gdpr-compliance",
         cta: "Learn more",
         className: "row-start-5 col-start-2",
     },
@@ -28,7 +28,7 @@ const features = [
             <p className="pointer-events-none max-w-lg text-muted-foreground font-segoe">
                 Be alerted of spikes and drops in feature usage metrics.
             </p>,
-        href: "/",
+        href: "/blog/feature-monitoring",
         cta: "Learn more",
         backgroundNode: <img src='features_monitoring.png' className="w-[calc(100%-3rem)] mx-6 border rounded-[0.25rem] [mask-image:linear-gradient(to_bottom,white,transparent)]" />,
         className: "row-start-3 row-span-2 col-start-1",
@@ -39,7 +39,7 @@ const features = [
             <p className="pointer-events-none max-w-lg text-muted-foreground font-segoe">
                 Analyze the user flow to understand user behavior and decrease churn rate by improving your product.
             </p>,
-        href: "/",
+        href: "/blog/feature-user-flow-diagram",
         cta: "Learn more",
         className: "row-start-6 col-start-2",
     },
@@ -49,7 +49,7 @@ const features = [
             <p className="pointer-events-none max-w-lg text-muted-foreground font-segoe">
                 Analyze how different segments use specific features.
             </p>,
-        href: "/",
+        href: "/blog/feature-self-service-data-exploration",
         cta: "Learn more",
         backgroundNode: <img src='features_usage.png' className="w-[calc(100%-3rem)] mx-6 border rounded-[0.25rem] [mask-image:linear-gradient(to_bottom,white,transparent)]" />,
         className: "row-start-3 row-span-2 col-start-2",
@@ -60,7 +60,7 @@ const features = [
             <p className="pointer-events-none max-w-lg text-muted-foreground font-segoe">
                 Centralize your reports from Looker Studio, Google Sheets, PDF files, and more in a single safe place.
             </p>,
-        href: "/",
+        href: "/blog/feature-embedded-analytics",
         cta: "Learn more",
         backgroundNode: <img src='embedded_analytics.png' className="w-[calc(100%-3rem)] mx-6 border rounded-[0.25rem] [mask-image:linear-gradient(to_bottom,white,transparent)]" />,
         className: "row-start-1 row-span-2 col-start-2",
@@ -71,7 +71,7 @@ const features = [
             <p className="pointer-events-none max-w-lg text-muted-foreground font-segoe">
                 Pay much less with dataset-based subscription price. YES, there is no payment for MAU (Monthly Active Users).
             </p>,
-        href: "/",
+        href: "/blog/feature-scalable-to-any-number-of-users",
         cta: "Learn more",
         className: "row-start-5 col-start-1",
     },
@@ -85,7 +85,7 @@ const features = [
                 &nbsp;<a href='https://support.google.com/analytics/answer/14240153' target="_blank" className="text-primary underline-offset-4 hover:underline">custom</a>&nbsp;
                 Google Analytics dimensions.
             </p>,
-        href: "/",
+        href: "/blog/feature-custom-tracking",
         cta: "Learn more",
         className: "row-start-6 col-start-1",
     }

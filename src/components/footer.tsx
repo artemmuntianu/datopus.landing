@@ -55,10 +55,10 @@ export function Footer() {
                 <span className="text-muted-foreground text-xs tracking-tight">Copyright 2024 <Link href="/">Datopus</Link> - Optimize Product Features for Success</span>
                 <ul className="text-muted-foreground flex justify-start text-xs tracking-tight md:justify-end">
                     <li className="mr-3 md:mx-4">
-                        <Link href="/terms" target="_blank" rel="noopener noreferrer">Terms and conditions</Link>
+                        <Link href="/terms">Terms and conditions</Link>
                     </li>
                     <li className="mr-3 md:mx-4">
-                        <Link href="/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</Link>
+                        <Link href="/privacy-policy">Privacy Policy</Link>
                     </li>
                 </ul>
             </div>
