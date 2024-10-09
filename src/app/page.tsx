@@ -12,7 +12,7 @@ const BLUR_FADE_DELAY = 0.02;
 
 export default function Page() {
     return (
-        <main className="flex flex-col min-h-[100dvh] mt-[3.5rem] space-y-10 [background-image:linear-gradient(to_bottom,hsl(var(--primary)/10%),transparent)] [background-size:auto_50rem] [background-repeat:no-repeat]">
+        <main className="flex flex-col min-h-[100dvh] mt-[3.5rem] space-y-10 [background-image:linear-gradient(to_bottom,hsl(var(--primary)/10%),transparent)] [background-size:100%_50rem] [background-repeat:no-repeat]">
 
             <section id="hero" className="max-w-screen-xl mx-auto w-full">
                 <div className="flex flex-col items-center justify-center text-center my-[3.5rem]">
