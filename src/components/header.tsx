@@ -7,7 +7,7 @@ export function Header() {
         <header className="fixed left-0 top-0 z-50 w-full border-b backdrop-blur-[12px]">
             <div className="flex min-h-[3.5rem] max-w-screen-lg mx-auto px-4 items-center justify-between">
                 <Link href="/" className="inline-flex mr-[10px]">
-                    <Image src="/logo.svg" alt="Datopus" width={0} height={0}  style={{ 'width': 'auto', 'height': '2rem' }} />
+                    <Image src="/logo.svg" alt="Datopus" width="28" height="32" />
                 </Link>
                 <div>
                     <Button variant="ghost" asChild={true}>

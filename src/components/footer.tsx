@@ -8,7 +8,7 @@ export function Footer() {
             <div className="mx-auto flex max-w-6xl flex-col items-center justify-between bg-white px-4 py-8 md:flex-row">
                 <div className="flex flex-col items-center md:items-start">
                     <Link href="/" title="Datopus" className="mb-4 flex items-center space-x-2">
-                        <Image src="/logo.svg" alt="Datopus" width={0} height={0} style={{ 'width': 'auto', 'height': '2rem' }} />
+                        <Image src="/logo.svg" alt="Datopus" width="28" height="32" />
                         <span className="text-xl font-bold">Datopus</span>
                     </Link>
                     {/*<address className="text-muted-foreground text-sm not-italic"></address>*/}
