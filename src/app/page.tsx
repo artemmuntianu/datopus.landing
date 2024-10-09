@@ -1,12 +1,10 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import ShineBorder from "@/components/magicui/shine-border";
-import { ChevronRightIcon, ClockIcon, DashboardIcon, Share1Icon } from "@radix-ui/react-icons";
+import { ClockIcon, DashboardIcon, Share1Icon } from "@radix-ui/react-icons";
+import { ExploreDemoForm } from "../components/explore_demo_form";
 import FlickeringGrid from "../components/magicui/flickering-grid";
-import { Button } from "../components/ui/button";
-import { Input } from "../components/ui/input";
 import { FeaturesSection } from "./features_section";
 import { HowItWorksSection } from "./howitworks_section";
-import { ExploreDemoForm } from "../components/explore_demo_form";
 
 const BLUR_FADE_DELAY = 0.02;
 
@@ -18,7 +16,7 @@ export default function Page() {
                 <div className="flex flex-col items-center justify-center text-center my-[3.5rem]">
                     <div className="space-y-5">
                         <h1 className="max-[470px]:text-5xl text-6xl">
-                            Comprehensive Product Analytics <br /> to stay within budget
+                            Analytics for High-Traffic Products
                         </h1>
                         <p className="text-muted-foreground text-xl/relaxed font-segoe">
                             No payment for events, sessions and users
