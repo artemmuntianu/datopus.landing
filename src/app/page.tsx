@@ -16,7 +16,7 @@ export default function Page() {
                 <div className="flex flex-col items-center justify-center text-center my-[3.5rem]">
                     <div className="space-y-5">
                         <h1 className="max-[470px]:text-5xl text-6xl">
-                            Analytics for High-Traffic Products
+                            Analytics Platform for High-Traffic Products
                         </h1>
                         <p className="text-muted-foreground text-xl/relaxed font-segoe">
                             No payment for events, sessions and users

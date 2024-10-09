@@ -3,8 +3,9 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
-import "./globals.css";
 import { Footer } from "../components/footer";
+import "./globals.css";
+import { CSPostHogProvider } from './providers';
 
 const fontSans = FontSans({
     subsets: ["latin"],
@@ -60,18 +61,20 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" suppressHydrationWarning>
-            <body
-                className={cn(
-                    "min-h-screen bg-background font-sans antialiased mx-auto",
-                    fontSans.variable
-                )}
-            >
-                <TooltipProvider delayDuration={0}>
-                    <Header />
-                    {children}
-                    <Footer />
-                </TooltipProvider>
-            </body>
+            <CSPostHogProvider>
+                <body
+                    className={cn(
+                        "min-h-screen bg-background font-sans antialiased mx-auto",
+                        fontSans.variable
+                    )}
+                >
+                    <TooltipProvider delayDuration={0}>
+                        <Header />
+                        {children}
+                        <Footer />
+                    </TooltipProvider>
+                </body>
+            </CSPostHogProvider>
         </html>
     )
 }
