@@ -70,8 +70,8 @@ export default async function Blog({
     }
 
     return (
-        <main className="flex flex-col max-w-screen-lg mx-auto min-h-[100dvh] mt-[3.5rem]">
-            <section id="blog">
+        <main className="flex flex-col min-h-[100dvh] mt-[3.5rem] [background-image:linear-gradient(to_bottom,hsl(var(--primary)/10%),transparent)] [background-size:100%_50rem] [background-repeat:no-repeat]">
+            <section className="max-w-screen-xl mx-auto px-4">
                 <script
                     type="application/ld+json"
                     suppressHydrationWarning

@@ -48,7 +48,7 @@ export default function Page() {
                 </div>
             </section>
 
-            <section id="problem" className="mx-auto max-w-screen-lg px-4 py-16">
+            <section id="problem" className="mx-auto max-w-screen-xl px-4 py-16">
                 <div className="mx-auto space-y-5 py-6 text-center">
                     <h2 className="text-primary font-mono text-[14px] font-medium tracking-tight">The Problem</h2>
                     <h2 className="mx-auto mb-2 max-w-3xl text-balance text-[36px] font-medium leading-tight tracking-tighter">Elevating Requires Insights</h2>
@@ -83,7 +83,7 @@ export default function Page() {
                 </div>
             </section>
 
-            <section id="solutions" className="mx-auto max-w-screen-lg px-4 py-16">
+            <section id="solutions" className="mx-auto max-w-screen-xl px-4 py-16">
                 <div className="mx-auto space-y-5 py-6 text-center">
                     <h2 className="text-primary font-mono text-[14px] font-medium tracking-tight">
                         The Solutions

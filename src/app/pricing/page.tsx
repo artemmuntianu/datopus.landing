@@ -11,7 +11,7 @@ export default function PricingPage() {
                     Pricing
                 </h1>
             </BlurFade>
-            <div className="max-[950px]:grid-cols-1 mx-auto px-4 mb-4 grid max-w-screen-lg gap-3 grid-cols-3">
+            <div className="max-[950px]:grid-cols-1 mx-auto px-4 mb-4 grid max-w-screen-xl gap-3 grid-cols-3">
                 <BlurFade delay={BLUR_FADE_DELAY + 2 * 0.05}>
                     <section className="relative flex h-fit flex-col gap-5 rounded-2xl border p-5 bg-white border-gray-200 dark:border-gray-800">
                         <div className="flex flex-col gap-5">

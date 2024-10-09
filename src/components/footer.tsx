@@ -5,7 +5,7 @@ import Link from "next/link";
 export function Footer() {
     return (
         <footer className="border-t">
-            <div className="mx-auto flex max-w-6xl flex-col items-center justify-between bg-white px-4 py-8 md:flex-row">
+            <div className="mx-auto flex max-w-screen-xl flex-col items-center justify-between bg-white px-4 py-8 md:flex-row">
                 <div className="flex flex-col items-center md:items-start">
                     <Link href="/" title="Datopus" className="mb-4 flex items-center space-x-2">
                         <Image src="/logo.svg" alt="Datopus" width="28" height="32" />
@@ -51,13 +51,13 @@ export function Footer() {
                     </div>
                 </div>
             </div>
-            <div className="mx-auto grid size-full max-w-6xl grid-cols-1 justify-between gap-1 border-t py-3 md:grid-cols-2">
+            <div className="mx-auto grid size-full max-w-screen-xl grid-cols-1 justify-between gap-1 border-t py-3 md:grid-cols-2">
                 <span className="text-muted-foreground text-xs tracking-tight">Copyright 2024 <Link href="/">Datopus</Link> - Optimize Product Features for Success</span>
                 <ul className="text-muted-foreground flex justify-start text-xs tracking-tight md:justify-end">
                     <li className="mr-3 md:mx-4">
                         <Link href="/terms">Terms and conditions</Link>
                     </li>
-                    <li className="mr-3 md:mx-4">
+                    <li>
                         <Link href="/privacy-policy">Privacy Policy</Link>
                     </li>
                 </ul>
