@@ -19,7 +19,7 @@ export function Footer() {
                             <li className="my-2">
                                 <Link href="/#solutions" className="text-gray-600">Solutions</Link>
                             </li>
-                            <li className="my-2">
+                            <li className="max-[1200px]:hidden my-2">
                                 <Link href="/#how-it-works" className="text-gray-600">How it works</Link>
                             </li>
                             <li className="my-2">
