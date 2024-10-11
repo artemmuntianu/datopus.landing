@@ -1,5 +1,4 @@
 import { Header } from "@/components/header";
-import { TooltipProvider } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
@@ -68,11 +67,9 @@ export default function RootLayout({
                         fontSans.variable
                     )}
                 >
-                    <TooltipProvider delayDuration={0}>
-                        <Header />
-                        {children}
-                        <Footer />
-                    </TooltipProvider>
+                    <Header />
+                    {children}
+                    <Footer />
                 </body>
             </CSPostHogProvider>
         </html>

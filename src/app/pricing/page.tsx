@@ -17,7 +17,7 @@ export default function PricingPage() {
                         <div className="flex flex-col gap-5">
                             <p className="min-h-[40px] text-sm text-gray-600 dark:text-gray-400">For individuals getting started with product analytics</p>
                             <div className="flex flex-col">
-                                <h3 className="flex items-center font-semibold text-gray-900 dark:text-gray-100">Startup</h3>
+                                <h3 className="flex items-center font-semibold text-gray-900 dark:text-gray-100">Starter</h3>
                                 <p>
                                     <span className="align-baseline text-2xl font-semibold text-gray-900 dark:text-gray-100">$0</span>
                                     <span className="align-baseline text-sm text-gray-600 dark:text-gray-400">/month</span>
@@ -45,7 +45,7 @@ export default function PricingPage() {
                             </div>
                             <div className="flex items-center gap-2">
                                 {Icons.check({ className: "size-4" })}
-                                <span>1,000 users limited</span>
+                                <span>10,000 users limited</span>
                             </div>
                         </div>
                     </section>
@@ -57,7 +57,7 @@ export default function PricingPage() {
                             <div className="flex flex-col">
                                 <h3 className="flex items-center font-semibold text-gray-900 dark:text-gray-100">B2C</h3>
                                 <p>
-                                    <span className="align-baseline text-2xl font-semibold text-gray-900 dark:text-gray-100">$29</span>
+                                    <span className="align-baseline text-2xl font-semibold text-gray-900 dark:text-gray-100">$49</span>
                                     <span className="align-baseline text-sm text-gray-600 dark:text-gray-400">/month</span>
                                 </p>
                             </div>
@@ -107,7 +107,7 @@ export default function PricingPage() {
                             <div className="flex flex-col">
                                 <h3 className="flex items-center font-semibold text-gray-900 dark:text-gray-100">B2B</h3>
                                 <p>
-                                    <span className="align-baseline text-2xl font-semibold text-gray-900 dark:text-gray-100">$59</span>
+                                    <span className="align-baseline text-2xl font-semibold text-gray-900 dark:text-gray-100">$99</span>
                                     <span className="align-baseline text-sm text-gray-600 dark:text-gray-400">/month</span>
                                 </p>
                             </div>
@@ -150,14 +150,13 @@ export default function PricingPage() {
                             <div className="flex items-center gap-2">
                                 {Icons.check({ className: "size-4" })}
                                 <ul>
-                                    <li>Datasources included: 10</li>
+                                    <li>Datasources included: 3 SM, 3 MD, 3 LG</li>
                                     <li>
                                         <table className="ml-5">
                                             <tbody>
-                                                <tr><td className="text-right">11-100:&nbsp;</td><td>$3 per datasource</td></tr>
-                                                <tr><td className="text-right">101-200:&nbsp;</td><td>$2.5 per datasource</td></tr>
-                                                <tr><td className="text-right">201-300:&nbsp;</td><td>$2 per datasource</td></tr>
-                                                <tr><td className="text-right">301+:&nbsp;</td><td>$1.5 per datasource</td></tr>
+                                                <tr><td className="text-right">SM:&nbsp;</td><td>$5 / datasource</td></tr>
+                                                <tr><td className="text-right">MD:&nbsp;</td><td>$7 / datasource</td></tr>
+                                                <tr><td className="text-right">LG:&nbsp;</td><td>$10 / datasource</td></tr>
                                             </tbody>
                                         </table>
                                     </li>
