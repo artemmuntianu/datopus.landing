@@ -26,7 +26,7 @@ export function Footer() {
                                 <Link href="/blog" className="text-gray-600">Blog</Link>
                             </li>
                             <li>
-                                <a href="https://datopus.mintlify.app" className="text-gray-600">Documentation</a>
+                                <a href="https://docs.datopus.io" className="text-gray-600">Documentation</a>
                             </li>
                             <li className="my-2">
                                 <Link href="/pricing" className="text-gray-600">Pricing</Link>

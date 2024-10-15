@@ -20,7 +20,7 @@ export function Header() {
                         <Link href="/blog">Blog</Link>
                     </Button>
                     <Button variant="ghost" asChild>
-                        <a href="https://datopus.mintlify.app">Documentation</a>
+                        <a href="https://docs.datopus.io">Documentation</a>
                     </Button>
                     <Button variant="ghost" asChild>
                         <Link href="/pricing">Pricing</Link>
