@@ -74,7 +74,7 @@ const features = [
         name: "Custom tracking",
         descriptionNode:
             <p className="max-w-lg text-muted-foreground font-segoe">
-                Determine up to 10 feature characteristics of your choice. Includes
+                Determine feature characteristics of your choice. Includes
                 &nbsp;<a href='https://support.google.com/analytics/table/13948007' target="_blank" className="text-primary underline-offset-4 hover:underline">standard</a>&nbsp;
                 (user, device, traffic, geography, attribution) and
                 &nbsp;<a href='https://support.google.com/analytics/answer/14240153' target="_blank" className="text-primary underline-offset-4 hover:underline">custom</a>&nbsp;
