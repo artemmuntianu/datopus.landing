@@ -5,6 +5,7 @@ import { ExploreDemoForm } from "../components/explore_demo_form";
 import FlickeringGrid from "../components/magicui/flickering-grid";
 import { FeaturesSection } from "./features_section";
 import { HowItWorksSection } from "./howitworks_section";
+import WordRotate from "../components/ui/word-rotate";
 
 const BLUR_FADE_DELAY = 0.02;
 
@@ -16,10 +17,11 @@ export default function Page() {
                 <div className="flex flex-col items-center justify-center text-center my-[3.5rem]">
                     <div className="space-y-5">
                         <h1 className="max-[470px]:text-5xl text-6xl">
-                            Analytics Platform for High Traffic Websites
+                            Analytics Platform for High Traffic 
+                            <WordRotate words={["Websites", "Plugins", "Products"]} />
                         </h1>
                         <p className="text-muted-foreground text-xl/relaxed font-segoe">
-                            No payment for events, sessions and users
+                            No charging for events, sessions and users
                         </p>
                     </div>
                     <div className="flex items-center justify-center gap-[0.5rem] mt-[3.5rem]">
