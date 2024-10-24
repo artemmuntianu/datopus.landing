@@ -71,7 +71,7 @@ export default async function Blog({
 
     return (
         <main className="flex flex-col min-h-[100dvh] mt-[3.5rem] [background-image:linear-gradient(to_bottom,hsl(var(--primary)/10%),transparent)] [background-size:100%_50rem] [background-repeat:no-repeat]">
-            <section className="max-w-screen-xl mx-auto px-4">
+            <section className="max-w-screen-xl mx-auto mb-8">
                 <script
                     type="application/ld+json"
                     suppressHydrationWarning
@@ -94,8 +94,8 @@ export default async function Blog({
                         }),
                     }}
                 />
-                <h1 className="font-medium text-3xl my-8">{post.metadata.title}</h1>
-                <div className="flex justify-between items-center mt-2 mb-8 text-sm max-w-[650px]">
+                <h1 className="font-medium text-3xl my-8 px-4">{post.metadata.title}</h1>
+                <div className="flex justify-between items-center mt-2 mb-8 px-4 text-sm max-w-[650px]">
                     <Suspense fallback={<p className="h-5" />}>
                         <p className="text-sm text-neutral-600 dark:text-neutral-400">
                             Published on: {formatDate(post.metadata.publishedAt)}
