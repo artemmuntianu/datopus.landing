@@ -9,8 +9,3 @@ ul {
     margin-left: 1em;
     padding: 1em;
 }
-
-article > * {
-    padding-left: 1rem;
-    padding-right: 1rem;
-}

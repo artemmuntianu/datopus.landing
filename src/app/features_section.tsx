@@ -10,7 +10,6 @@ const features_bg = [
         href: "/blog/feature-customer-facing-dashboard",
         cta: "Learn more",
         backgroundNode: <img src='dashboard.png' className="w-[calc(100%-3rem)] mx-6 border rounded-[0.25rem] [mask-image:linear-gradient(to_bottom,white,transparent)]" />,
-        className: "row-start-1 col-start-1",
     },
     {
         name: "Embedded analytics",
@@ -21,7 +20,6 @@ const features_bg = [
         href: "/blog/feature-embedded-analytics",
         cta: "Learn more",
         backgroundNode: <img src='embedded_analytics.png' className="w-[calc(100%-3rem)] mx-6 border rounded-[0.25rem] [mask-image:linear-gradient(to_bottom,white,transparent)]" />,
-        className: "row-start-1 col-start-2",
     },
     {
         name: "Monitoring",
@@ -32,7 +30,6 @@ const features_bg = [
         href: "/blog/feature-monitoring",
         cta: "Learn more",
         backgroundNode: <img src='features_monitoring.png' className="w-[calc(100%-3rem)] mx-6 border rounded-[0.25rem] [mask-image:linear-gradient(to_bottom,white,transparent)]" />,
-        className: "row-start-2 col-start-1",
     },
     {
         name: "Self-service data exploration",
@@ -43,7 +40,6 @@ const features_bg = [
         href: "/blog/feature-self-service-data-exploration",
         cta: "Learn more",
         backgroundNode: <img src='features_usage.png' className="w-[calc(100%-3rem)] mx-6 border rounded-[0.25rem] [mask-image:linear-gradient(to_bottom,white,transparent)]" />,
-        className: "row-start-2 col-start-2",
     }
 ];
 
@@ -56,7 +52,6 @@ const features = [
             </p>,
         href: "/blog/feature-scalable-to-any-number-of-users",
         cta: "Learn more",
-        className: "row-start-1 col-start-1",
     },
     {
         name: "Data ownership & GDPR compliance",
@@ -66,7 +61,6 @@ const features = [
             </p>,
         href: "/blog/feature-data-ownership-gdpr-compliance",
         cta: "Learn more",
-        className: "row-start-1 col-start-2",
     },
     {
         name: "Custom tracking",
@@ -80,7 +74,6 @@ const features = [
             </p>,
         href: "/blog/feature-custom-tracking",
         cta: "Learn more",
-        className: "row-start-2 col-start-1",
     },
     {
         name: "User-flow diagram",
@@ -90,7 +83,6 @@ const features = [
             </p>,
         href: "/blog/feature-user-flow-diagram",
         cta: "Learn more",
-        className: "row-start-2 col-start-2",
     },
     {
         name: "Reliable Reports",
@@ -100,21 +92,20 @@ const features = [
             </p>,
         href: "/blog/feature-reliable-reports",
         cta: "Learn more",
-        className: "row-start-3 col-start-1",
     }
 ];
 
 export function FeaturesSection() {
     return (
         <>
-            <BentoGrid className="grid-rows-2 grid-cols-2">
+            <BentoGrid>
                 {
                     features_bg.map((feature) => (
                         <BentoCard key={feature.name} {...feature} />
                     ))
                 }
             </BentoGrid>
-            <BentoGrid className="grid-rows-3 grid-cols-2 mt-4">
+            <BentoGrid className="mt-[5px]">
                 {
                     features.map((feature) => (
                         <BentoCard key={feature.name} {...feature} />

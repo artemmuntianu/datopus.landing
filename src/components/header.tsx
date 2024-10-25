@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export function Header() {
     return (
-        <header className="fixed left-0 top-0 z-50 w-full border-b backdrop-blur-[12px]">
+        <header className="fixed left-0 top-0 z-50 w-full border-b bg-white">
             <div className="flex min-h-[3.5rem] max-w-screen-xl mx-auto px-4 items-center justify-between">
                 <Link href="/" className="inline-flex mr-[10px]">
                     <Image src="/logo.svg" alt="Datopus" width="28" height="32" />

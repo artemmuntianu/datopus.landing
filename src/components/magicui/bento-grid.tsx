@@ -14,7 +14,7 @@ const BentoGrid = ({
     return (
         <div
             className={cn(
-                "grid w-full gap-4",
+                "flex flex-wrap -m-[5px]",
                 className,
             )}
         >
@@ -25,14 +25,12 @@ const BentoGrid = ({
 
 const BentoCard = ({
     name,
-    className,
     backgroundNode,
     descriptionNode,
     href,
     cta,
 }: {
     name: string;
-    className: string;
     backgroundNode?: ReactNode;
     descriptionNode: ReactNode,
     href: string;
@@ -40,10 +38,7 @@ const BentoCard = ({
 }) => (
     <div
         key={name}
-        className={cn(
-            "group relative flex flex-col justify-between overflow-hidden rounded-xl bg-white [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]",
-            className
-        )}
+        className="group w-full m-[5px] relative flex flex-col justify-between overflow-hidden rounded-xl bg-white lg:w-[calc(50%-10px)] [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]"
     >
         <div>
             <div className="z-10 flex flex-col gap-1 p-6 ">

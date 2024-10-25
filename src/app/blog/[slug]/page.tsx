@@ -71,40 +71,40 @@ export default async function Blog({
     }
 
     return (
-            <main className='flex flex-col min-h-[100dvh] mt-[3.5rem] [background-image:linear-gradient(to_bottom,hsl(var(--primary)/10%),transparent)] [background-size:100%_50rem] [background-repeat:no-repeat]'>
-                <section className='max-w-screen-xl mx-auto mb-8'>
-                    <script
-                        type='application/ld+json'
-                        suppressHydrationWarning
-                        dangerouslySetInnerHTML={{
-                            __html: JSON.stringify({
-                                '@context': 'https://schema.org',
-                                '@type': 'BlogPosting',
-                                headline: post.metadata.title,
-                                datePublished: post.metadata.publishedAt,
-                                dateModified: post.metadata.publishedAt,
-                                description: post.metadata.summary,
-                                image: post.metadata.image
-                                    ? `${DATA.url}${post.metadata.image}`
-                                    : `${DATA.url}/og?title=${post.metadata.title}`,
-                                url: `${DATA.url}/blog/${post.slug}`,
-                                author: {
-                                    '@type': 'Person',
-                                    name: DATA.name,
-                                },
-                            }),
-                        }}
-                    />
-                    <h1 className='font-medium text-3xl my-8 px-4'>{post.metadata.title}</h1>
-                    <div className='flex justify-between items-center mt-2 mb-8 px-4 text-sm max-w-[650px]'>
-                        <Suspense fallback={<p className='h-5' />}>
-                            <p className='text-sm text-neutral-600 dark:text-neutral-400'>
-                                Published on: {formatDate(post.metadata.publishedAt)}
-                            </p>
-                        </Suspense>
-                    </div>
-                    <article dangerouslySetInnerHTML={{ __html: post.source }}></article>
-                </section>
-            </main>
+        <main className='flex flex-col min-h-[100dvh] mt-[3.5rem] [background-image:linear-gradient(to_bottom,hsl(var(--primary)/10%),transparent)] [background-size:100%_50rem] [background-repeat:no-repeat]'>
+            <section className='max-w-screen-lg mx-auto mb-8 px-4'>
+                <script
+                    type='application/ld+json'
+                    suppressHydrationWarning
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify({
+                            '@context': 'https://schema.org',
+                            '@type': 'BlogPosting',
+                            headline: post.metadata.title,
+                            datePublished: post.metadata.publishedAt,
+                            dateModified: post.metadata.publishedAt,
+                            description: post.metadata.summary,
+                            image: post.metadata.image
+                                ? `${DATA.url}${post.metadata.image}`
+                                : `${DATA.url}/og?title=${post.metadata.title}`,
+                            url: `${DATA.url}/blog/${post.slug}`,
+                            author: {
+                                '@type': 'Person',
+                                name: DATA.name,
+                            },
+                        }),
+                    }}
+                />
+                <h1 className='font-medium text-3xl my-8'>{post.metadata.title}</h1>
+                <div className='flex justify-between items-center mt-2 mb-8 text-sm max-w-[650px]'>
+                    <Suspense fallback={<p className='h-5' />}>
+                        <p className='text-sm text-neutral-600 dark:text-neutral-400'>
+                            Published on: {formatDate(post.metadata.publishedAt)}
+                        </p>
+                    </Suspense>
+                </div>
+                <article dangerouslySetInnerHTML={{ __html: post.source }}></article>
+            </section>
+        </main>
     );
 }
