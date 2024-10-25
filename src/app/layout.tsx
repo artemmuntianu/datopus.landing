@@ -1,14 +1,14 @@
-import { Header } from "@/components/header";
-import { cn } from "@/lib/utils";
-import type { Metadata } from "next";
-import { Inter as FontSans } from "next/font/google";
-import { Footer } from "../components/footer";
-import "./globals.css";
+import { Header } from '@/components/header';
+import { cn } from '@/lib/utils';
+import type { Metadata } from 'next';
+import { Inter as FontSans } from 'next/font/google';
+import { Footer } from '../components/footer';
+import './globals.css';
 import { CSPostHogProvider } from './providers';
 
 const fontSans = FontSans({
-    subsets: ["latin"],
-    variable: "--font-sans",
+    subsets: ['latin'],
+    variable: '--font-sans',
 });
 
 const DATA = {
@@ -29,8 +29,8 @@ export const metadata: Metadata = {
         description: DATA.description,
         url: DATA.url,
         siteName: `${DATA.name}`,
-        locale: "en_US",
-        type: "website",
+        locale: 'en_US',
+        type: 'website',
     },
     robots: {
         index: true,
@@ -38,18 +38,18 @@ export const metadata: Metadata = {
         googleBot: {
             index: true,
             follow: true,
-            "max-video-preview": -1,
-            "max-image-preview": "large",
-            "max-snippet": -1,
+            'max-video-preview': -1,
+            'max-image-preview': 'large',
+            'max-snippet': -1,
         },
     },
     twitter: {
         title: `${DATA.name}`,
-        card: "summary_large_image",
+        card: 'summary_large_image',
     },
     verification: {
-        google: "",
-        yandex: "",
+        google: '',
+        yandex: '',
     }
 }
 
@@ -59,11 +59,11 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en" suppressHydrationWarning>
+        <html lang='en' suppressHydrationWarning>
             <CSPostHogProvider>
                 <body
                     className={cn(
-                        "min-h-screen bg-background font-sans antialiased mx-auto",
+                        'min-h-screen bg-background font-sans antialiased mx-auto',
                         fontSans.variable
                     )}
                 >

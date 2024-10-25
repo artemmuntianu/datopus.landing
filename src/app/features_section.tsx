@@ -1,6 +1,4 @@
 import { BentoCard, BentoGrid } from "@/components/magicui/bento-grid";
-import { InfoCircledIcon } from "@radix-ui/react-icons";
-import * as Popover from "@radix-ui/react-popover";
 
 const features_bg = [
     {
@@ -54,7 +52,7 @@ const features = [
         name: "Scalable to any number of users",
         descriptionNode:
             <p className="pointer-events-none max-w-lg text-muted-foreground font-segoe">
-                Pay much less with dataset-based subscription price. YES, there is no payment for MAU (Monthly Active Users).
+                Pay much less with dataset-based subscription price.
             </p>,
         href: "/blog/feature-scalable-to-any-number-of-users",
         cta: "Learn more",
@@ -98,7 +96,7 @@ const features = [
         name: "Reliable Reports",
         descriptionNode:
             <p className="pointer-events-none max-w-lg text-muted-foreground font-segoe">
-                Analyze billions of records without limits such as Data Sampling.
+                Analyze billions of records without Data Sampling limits.
             </p>,
         href: "/blog/feature-reliable-reports",
         cta: "Learn more",
