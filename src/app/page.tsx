@@ -17,11 +17,11 @@ export default function Page() {
                 <div className="flex flex-col items-center justify-center text-center my-[3.5rem]">
                     <div className="space-y-5">
                         <h1 className="max-[470px]:text-5xl text-6xl">
-                            Analytics Platform for High Traffic 
-                            <WordRotate words={["Websites", "Plugins", "Products"]} />
+                            Feature Analytics Platform for
+                            <WordRotate words={["Web Sites", "Web Apps", "Plugins", "Products"]} />
                         </h1>
                         <p className="text-muted-foreground text-xl/relaxed font-segoe">
-                            No charging for events, sessions and users
+                            Using our essential feature analysis tools you create products users love.
                         </p>
                     </div>
                     <div className="flex items-center justify-center gap-[0.5rem] mt-[3.5rem]">
