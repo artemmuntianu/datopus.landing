@@ -6,6 +6,7 @@ import FlickeringGrid from "../components/magicui/flickering-grid";
 import { FeaturesSection } from "./features_section";
 import { HowItWorksSection } from "./howitworks_section";
 import WordRotate from "../components/ui/word-rotate";
+import HeroVideoDialog from "../components/ui/hero-video-dialog";
 
 const BLUR_FADE_DELAY = 0.02;
 
@@ -18,7 +19,7 @@ export default function Page() {
                     <div className="space-y-5">
                         <h1 className="max-[470px]:text-5xl text-6xl">
                             Feature Analytics Platform for
-                            <WordRotate words={["Web Sites", "Web Apps", "Plugins", "Products"]} />
+                            <WordRotate words={["Widgets", "Plugins", "Web Apps", "Web Sites"]} />
                         </h1>
                         <p className="text-muted-foreground text-xl/relaxed font-segoe">
                             Using our essential feature analysis tools you create products users love.
@@ -33,7 +34,13 @@ export default function Page() {
                         className="relative flex w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background shadow-xl"
                         color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
                     >
-                        <img src='features_flow.png'></img>
+                        <HeroVideoDialog
+                            className="block"
+                            animationStyle="fade"
+                            videoSrc="https://www.youtube.com/embed/yscXpPBaeRU?si=5reYAVzObxpIZl8n"
+                            thumbnailSrc="/features_flow.png"
+                            thumbnailAlt="Datopus Feature Analytics Platform"
+                        />
                     </ShineBorder>
                 </BlurFade>
                 <div className="mx-[15pt]">
