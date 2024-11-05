@@ -22,9 +22,6 @@ export default async function BlogPage() {
                         <BlurFade delay={BLUR_FADE_DELAY * 2 + id * 0.05} key={post.slug} className="[&:not(:last-child)]:border-b">
                             <div className="changelog-article flex flex-col gap-6 py-4 sm:gap-8 lg:flex-row lg:items-start lg:gap-12 xl:gap-20">
                                 <div className="w-full shrink-0 space-y-4 lg:sticky lg:max-w-sm lg:top-8">
-                                    <p className="article-publish-date text-base font-medium text-secondary-500">
-                                        <time dateTime={post.metadata.publishedAt} className="pointer-events-none">{formatDate(post.metadata.publishedAt)}</time>
-                                    </p>
                                     <a className="block" href={`/blog/${post.slug}`}>
                                         <h3 className="article-title text-2xl font-bold text-secondary-900 space-x-2.5 sm:text-3xl">
                                             <span>{post.metadata.title}</span>

@@ -26,7 +26,6 @@ export async function generateMetadata({
 
     let {
         title,
-        publishedAt: publishedTime,
         summary: description,
         image,
     } = post.metadata;
@@ -40,7 +39,6 @@ export async function generateMetadata({
             title,
             description,
             type: 'article',
-            publishedTime,
             url: `${DATA.url}/blog/${post.slug}`,
             images: [
                 {
@@ -81,8 +79,6 @@ export default async function Blog({
                             '@context': 'https://schema.org',
                             '@type': 'BlogPosting',
                             headline: post.metadata.title,
-                            datePublished: post.metadata.publishedAt,
-                            dateModified: post.metadata.publishedAt,
                             description: post.metadata.summary,
                             image: post.metadata.image
                                 ? `${DATA.url}${post.metadata.image}`
@@ -96,13 +92,6 @@ export default async function Blog({
                     }}
                 />
                 <h1 className='font-medium text-3xl my-8'>{post.metadata.title}</h1>
-                <div className='flex justify-between items-center mt-2 mb-8 text-sm max-w-[650px]'>
-                    <Suspense fallback={<p className='h-5' />}>
-                        <p className='text-sm text-neutral-600 dark:text-neutral-400'>
-                            Published on: {formatDate(post.metadata.publishedAt)}
-                        </p>
-                    </Suspense>
-                </div>
                 <article dangerouslySetInnerHTML={{ __html: post.source }}></article>
             </section>
         </main>

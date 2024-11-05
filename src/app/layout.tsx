@@ -73,6 +73,8 @@ export default function RootLayout({
                             s0.parentNode.insertBefore(s1, s0);
                         })();`
                 }} />
+                <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+                <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async />
             </head>
             <CSPostHogProvider>
                 <body

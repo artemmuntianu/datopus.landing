@@ -45,7 +45,7 @@ export default function PricingPage() {
                             </div>
                             <div className="flex items-center gap-2">
                                 {Icons.check({ className: "size-4" })}
-                                <span>10,000 users limited</span>
+                                <span>10,000 users/mo limited</span>
                             </div>
                         </div>
                     </section>
@@ -68,7 +68,7 @@ export default function PricingPage() {
                             <div className="min-h-5 hidden block">
                             </div>
                         </div>
-                        <div className="grid auto-rows-fr gap-3.5 text-sm text-gray-600 dark:text-gray-400">
+                        <div className="grid gap-3.5 text-sm text-gray-600 dark:text-gray-400">
                             <div className="flex items-center gap-2">
                                 {Icons.magicRect({ className: "size-4" })}
                                 <span>Beautiful out of the box</span>
@@ -91,11 +91,17 @@ export default function PricingPage() {
                             </div>
                             <div className="flex items-center gap-2">
                                 {Icons.check({ className: "size-4" })}
-                                <span>Data retention: 24 months</span>
+                                <span>24 months data retention</span>
                             </div>
                             <div className="flex items-center gap-2">
                                 {Icons.check({ className: "size-4" })}
-                                <span>Datasources included: 1</span>
+                                <div>
+                                    Datasources:
+                                    <ul className="list-disc ml-6">
+                                        <li>1 included</li>
+                                        <li>No extra</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </section>
@@ -137,30 +143,25 @@ export default function PricingPage() {
                             </div>
                             <div className="flex items-center gap-2">
                                 {Icons.check({ className: "size-4" })}
-                                <span>Customer-facing dashboard</span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                                {Icons.check({ className: "size-4" })}
                                 <span>Unlimited monitors</span>
                             </div>
                             <div className="flex items-center gap-2">
                                 {Icons.check({ className: "size-4" })}
-                                <span>Data retention: 24 months</span>
+                                <span>24 months data retention</span>
                             </div>
                             <div className="flex items-center gap-2">
                                 {Icons.check({ className: "size-4" })}
-                                <ul>
-                                    <li>Datasources included: 3 SM, 3 MD, 3 LG</li>
-                                    <li>
-                                        <table className="ml-5">
-                                            <tbody>
-                                                <tr><td className="text-right">SM:&nbsp;</td><td>$5 / datasource</td></tr>
-                                                <tr><td className="text-right">MD:&nbsp;</td><td>$7 / datasource</td></tr>
-                                                <tr><td className="text-right">LG:&nbsp;</td><td>$10 / datasource</td></tr>
-                                            </tbody>
-                                        </table>
-                                    </li>
-                                </ul>
+                                <div>
+                                    Datasources:
+                                    <ul className="list-disc ml-6">
+                                        <li>10 included</li>
+                                        <li>$10 each extra</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                {Icons.check({ className: "size-4" })}
+                                <span>Customer-facing dashboard</span>
                             </div>
                         </div>
                     </section>

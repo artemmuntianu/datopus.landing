@@ -45,6 +45,16 @@ const features_bg = [
 
 const features = [
     {
+        name: "User-flow diagram",
+        descriptionNode:
+            <p className="pointer-events-none max-w-lg text-muted-foreground font-segoe">
+                Analyze the user flow to understand user behavior and decrease churn rate by improving your product.
+            </p>,
+        href: "/blog/feature-user-flow-diagram",
+        cta: "Learn more",
+        backgroundNode: <img src='features_flow.png' className="w-[calc(100%-3rem)] mx-6 border rounded-[0.25rem] [mask-image:linear-gradient(to_bottom,white,transparent)]" />
+    },
+    {
         name: "Scalable to any number of users",
         descriptionNode:
             <p className="pointer-events-none max-w-lg text-muted-foreground font-segoe">
@@ -54,34 +64,12 @@ const features = [
         cta: "Learn more",
     },
     {
-        name: "Data ownership & GDPR compliance",
-        descriptionNode:
-            <p className="pointer-events-none max-w-lg text-muted-foreground font-segoe">
-                Tracked data is saved in your Google Analytics account for free.
-            </p>,
-        href: "/blog/feature-data-ownership-gdpr-compliance",
-        cta: "Learn more",
-    },
-    {
         name: "Custom tracking",
         descriptionNode:
             <p className="max-w-lg text-muted-foreground font-segoe">
-                Determine feature characteristics of your choice. Includes
-                &nbsp;<a href='https://support.google.com/analytics/table/13948007' target="_blank" className="text-primary underline-offset-4 hover:underline">standard</a>&nbsp;
-                (user, device, traffic, geography, attribution) and
-                &nbsp;<a href='https://support.google.com/analytics/answer/14240153' target="_blank" className="text-primary underline-offset-4 hover:underline">custom</a>&nbsp;
-                Google Analytics dimensions.
+                Determine feature attributes of your choice, including custom and automatically populated dimensions.
             </p>,
         href: "/blog/feature-custom-tracking",
-        cta: "Learn more",
-    },
-    {
-        name: "User-flow diagram",
-        descriptionNode:
-            <p className="pointer-events-none max-w-lg text-muted-foreground font-segoe">
-                Analyze the user flow to understand user behavior and decrease churn rate by improving your product.
-            </p>,
-        href: "/blog/feature-user-flow-diagram",
         cta: "Learn more",
     },
     {

@@ -18,11 +18,11 @@ export default function Page() {
                 <div className="flex flex-col items-center justify-center text-center my-[3.5rem]">
                     <div className="space-y-5">
                         <h1 className="max-[470px]:text-5xl text-6xl">
-                            Feature Analytics Platform for
-                            <WordRotate words={["Widgets", "Plugins", "Web Apps", "Web Sites"]} />
+                            Product Analytics Platform
+                            <WordRotate words={["for Widgets", "for Plugins", "for Web Apps", "for Web Sites"]} />
                         </h1>
                         <p className="text-muted-foreground text-xl/relaxed font-segoe">
-                            Using our essential feature analysis tools you create products users love.
+                            Using our essential product feature analysis tools you create products users love
                         </p>
                     </div>
                     <div className="flex items-center justify-center gap-[0.5rem] mt-[3.5rem]">
@@ -37,9 +37,9 @@ export default function Page() {
                         <HeroVideoDialog
                             className="block"
                             animationStyle="fade"
-                            videoSrc="https://www.youtube.com/embed/yscXpPBaeRU?si=5reYAVzObxpIZl8n"
+                            videoSrc="https://www.youtube.com/embed/DjiYVJyy2vg?si=iZAcJ2QEeYwJ2gSV"
                             thumbnailSrc="/features_flow.png"
-                            thumbnailAlt="Datopus Feature Analytics Platform"
+                            thumbnailAlt="Datopus Product Analytics Platform"
                         />
                     </ShineBorder>
                 </BlurFade>

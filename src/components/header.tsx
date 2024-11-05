@@ -1,6 +1,7 @@
 import Image from "next/image";
-import { Button } from "./ui/button";
 import Link from "next/link";
+import { Button } from "./ui/button";
+import { ButtonScheduleDemo } from "./ui/button-schedule-demo";
 
 export function Header() {
     return (
@@ -27,9 +28,7 @@ export function Header() {
                     </Button>
                 </div>
                 <div className="ml-auto flex h-full items-center">
-                    <Button variant="default" asChild>
-                        <Link href="/waitlist">Join Waitlist</Link>
-                    </Button>
+                    <ButtonScheduleDemo />
                 </div>
             </div>
         </header>
