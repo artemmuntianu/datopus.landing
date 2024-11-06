@@ -41,7 +41,7 @@ const BentoCard = ({
         className="group w-full m-[5px] relative flex flex-col justify-between overflow-hidden rounded-xl bg-white lg:w-[calc(50%-10px)] [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]"
     >
         <div>
-            <div className="z-10 flex flex-col gap-1 p-6 ">
+            <div className="z-10 flex flex-col gap-1 p-6 text-[1.3rem]">
                 <h3 className="pointer-events-none text-xl font-semibold text-neutral-700">
                     {name}
                 </h3>

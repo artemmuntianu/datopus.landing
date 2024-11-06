@@ -72,7 +72,7 @@ export function HowItWorksSection() {
                         </div>
                         <div className="flex w-full items-start">
                             <p className="text-base font-normal text-gray-600">
-                                Install our script and connect your Google Analytics account
+                                Install our script and add html attribute <code>[feature=name]</code> to your features
                             </p>
                         </div>
                     </div>

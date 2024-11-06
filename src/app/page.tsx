@@ -1,12 +1,13 @@
-import BlurFade from "@/components/magicui/blur-fade";
-import ShineBorder from "@/components/magicui/shine-border";
-import { ClockIcon, DashboardIcon, Share1Icon } from "@radix-ui/react-icons";
-import { ExploreDemoForm } from "../components/explore_demo_form";
-import FlickeringGrid from "../components/magicui/flickering-grid";
-import { FeaturesSection } from "./features_section";
-import { HowItWorksSection } from "./howitworks_section";
-import WordRotate from "../components/ui/word-rotate";
-import HeroVideoDialog from "../components/ui/hero-video-dialog";
+import BlurFade from "@/components/magicui/blur-fade"
+import ShineBorder from "@/components/magicui/shine-border"
+import { ClockIcon, DashboardIcon, Share1Icon } from "@radix-ui/react-icons"
+import { ExploreDemoForm } from "../components/explore_demo_form"
+import FlickeringGrid from "../components/magicui/flickering-grid"
+import { FeaturesSection } from "./features_section"
+import { HowItWorksSection } from "./howitworks_section"
+import { FAQSection } from "./faq_section"
+import WordRotate from "../components/ui/word-rotate"
+import HeroVideoDialog from "../components/ui/hero-video-dialog"
 
 const BLUR_FADE_DELAY = 0.02;
 
@@ -65,7 +66,7 @@ export default function Page() {
                         <div className="mx-auto mb-2">
                             <ClockIcon className="size-16" />
                         </div>
-                        <p className="text-[0.9rem]">
+                        <p className="text-[1.5rem]">
                             The <i>lack</i> of Product Analytics leads to <i>wasting</i> time on <i>low-performing</i> features
                         </p>
                     </div>
@@ -74,7 +75,7 @@ export default function Page() {
                         <div className="mx-auto mb-2">
                             <DashboardIcon className="size-16" />
                         </div>
-                        <p className="text-[0.9rem]">
+                        <p className="text-[1.5rem]">
                             Creating a <i>custom</i> Product Analytics tool <i>drains resources</i> from product development
                         </p>
                     </div>
@@ -83,7 +84,7 @@ export default function Page() {
                         <div className="mx-auto mb-2">
                             <Share1Icon className="size-16" />
                         </div>
-                        <p className="text-[0.9rem]">
+                        <p className="text-[1.5rem]">
                             As a product&apos;s user base expands, the <i>cost</i> of Business Intelligence software <i>rises</i>
                         </p>
                     </div>
@@ -96,10 +97,10 @@ export default function Page() {
                         The Solutions
                     </h2>
                     <h2 className="mx-auto mb-2 max-w-3xl text-balance text-[36px] font-medium leading-tight tracking-tighter">
-                        Affordable, Faster, More Intuitive Analytics Portal
+                        More Intuitive Product Analytics Platform
                     </h2>
                     <h2 className="mx-auto mb-2 max-w-3xl text-muted-foreground text-xl/relaxed font-segoe">
-                        See How Our Features Solve Your Challenges
+                        See how our features solve your challenges
                     </h2>
                 </div>
                 <FeaturesSection />
@@ -115,6 +116,13 @@ export default function Page() {
                     </h2>
                 </div>
                 <HowItWorksSection />
+            </section>
+
+            <section id="faq" className="w-full mx-auto max-w-screen-xl px-4 py-16">
+                <div className="mx-auto space-y-5 py-6 text-center">
+                    <h2 className="text-primary font-mono text-[14px] font-medium tracking-tight">Frequently Asked Questions</h2>
+                </div>
+                <FAQSection />
             </section>
 
             <section id="cta" className="w-full py-28 bg-[hsl(var(--primary)/10%)]">
