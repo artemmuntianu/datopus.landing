@@ -28,6 +28,14 @@ export function FAQSection() {
                     <p className="pt-1">Datopus simplifies the integration process by requiring developers to add a specific HTML attribute to identify features and then include a small snippet of code.</p>
                 </AccordionContent>
             </AccordionItem>
+            <AccordionItem value="7">
+                <AccordionTrigger className="text-md">
+                    What does Datopus track exactly?
+                </AccordionTrigger>
+                <AccordionContent className="text-base font-normal text-gray-600 indent-4">
+                    <p className="pt-1">Datopus watches for any activity happening inside a specific HTML element (marked with a special tag <code>feature</code>). It looks at all the smaller parts within this element and records what they do. These events include clicks, mouse movements, form submissions, or any other user interactions within that designated area.</p>
+                </AccordionContent>
+            </AccordionItem>
             <AccordionItem value="5">
                 <AccordionTrigger className="text-md">
                     Does Datopus provide category analytics?
@@ -46,7 +54,7 @@ export function FAQSection() {
             </AccordionItem>
             <AccordionItem value="2">
                 <AccordionTrigger className="text-md">
-                    What is product feature analytics?
+                    What are the benefits of product feature analytics?
                 </AccordionTrigger>
                 <AccordionContent className="text-base font-normal text-gray-600 indent-4">
                     <p className="pt-1">Product feature analytics is the process of collecting, analyzing, and interpreting data about how users interact with and use specific features within a product.</p>
@@ -55,7 +63,7 @@ export function FAQSection() {
             </AccordionItem>
             <AccordionItem value="3">
                 <AccordionTrigger className="text-md">
-                    What is customer-facing analytics?
+                    What are the benefits of customer-facing analytics?
                 </AccordionTrigger>
                 <AccordionContent className="text-base font-normal text-gray-600 indent-4">
                     <p className="pt-1">Customer-facing analytics is a method for showcasing relevant performance data to users within your software or platform. This enables them to improve their decision-making and review their usage trends. For instance, it could involve presenting users with detailed statistics on their website&apos;s traffic, conversion rates, or user engagement metrics, allowing them to optimize their online presence.</p>
