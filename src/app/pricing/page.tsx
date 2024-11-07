@@ -1,5 +1,6 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import { Icons } from "@/components/icons";
+import { ButtonScheduleDemo } from "../../components/ui/button-schedule-demo";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -12,8 +13,8 @@ export default function PricingPage() {
                 </h1>
             </BlurFade>
             <div className="max-[950px]:grid-cols-1 mx-auto px-4 mb-4 grid max-w-screen-xl gap-3 grid-cols-3">
-                <BlurFade delay={BLUR_FADE_DELAY + 2 * 0.05}>
-                    <section className="relative flex h-fit flex-col gap-5 rounded-2xl border p-5 bg-white border-gray-200 dark:border-gray-800">
+                <BlurFade delay={BLUR_FADE_DELAY + 2 * 0.05} className="bg-white border border-gray-200 dark:border-gray-800 flex flex-col p-5 rounded-2xl">
+                    <section className="flex flex-col gap-5 h-full pb-5">
                         <div className="flex flex-col gap-5">
                             <p className="min-h-[40px] text-sm text-gray-600 dark:text-gray-400">For individuals getting started with product analytics</p>
                             <div className="flex flex-col">
@@ -49,9 +50,10 @@ export default function PricingPage() {
                             </div>
                         </div>
                     </section>
+                    <ButtonScheduleDemo />
                 </BlurFade>
-                <BlurFade delay={BLUR_FADE_DELAY + 3 * 0.05}>
-                    <section className="relative flex h-fit flex-col gap-5 rounded-2xl border p-5 bg-white">
+                <BlurFade delay={BLUR_FADE_DELAY + 3 * 0.05} className="bg-white border border-gray-200 dark:border-gray-800 flex flex-col p-5 rounded-2xl">
+                    <section className="flex flex-col gap-5 h-full pb-5">
                         <div className="flex flex-col gap-5">
                             <p className="min-h-[40px] text-sm text-gray-600 dark:text-gray-400 max-w-[230px]">For B2C business</p>
                             <div className="flex flex-col">
@@ -105,9 +107,10 @@ export default function PricingPage() {
                             </div>
                         </div>
                     </section>
+                    <ButtonScheduleDemo />
                 </BlurFade>
-                <BlurFade delay={BLUR_FADE_DELAY + 4 * 0.05}>
-                    <section className="relative flex h-fit flex-col gap-5 rounded-2xl border p-5 bg-white">
+                <BlurFade delay={BLUR_FADE_DELAY + 4 * 0.05} className="bg-white border border-gray-200 dark:border-gray-800 flex flex-col p-5 rounded-2xl">
+                    <section className="flex flex-col gap-5 h-full pb-5">
                         <div className="flex flex-col gap-5">
                             <p className="min-h-[40px] text-sm text-gray-600 dark:text-gray-400 max-w-[230px]">For B2B business</p>
                             <div className="flex flex-col">
@@ -165,6 +168,7 @@ export default function PricingPage() {
                             </div>
                         </div>
                     </section>
+                    <ButtonScheduleDemo />
                 </BlurFade>
             </div>
         </main>
