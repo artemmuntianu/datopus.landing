@@ -1,15 +1,9 @@
 import { Header } from '@/components/header';
 import { cn } from '@/lib/utils';
 import type { Metadata } from 'next';
-import { Inter as FontSans } from 'next/font/google';
 import { Footer } from '../components/footer';
 import './globals.css';
 import { CSPostHogProvider } from './providers';
-
-const fontSans = FontSans({
-    subsets: ['latin'],
-    variable: '--font-sans',
-});
 
 const DATA = {
     url: 'https://datopus.io',
@@ -78,10 +72,7 @@ export default function RootLayout({
             </head>
             <CSPostHogProvider>
                 <body
-                    className={cn(
-                        'min-h-screen bg-background font-sans antialiased mx-auto',
-                        fontSans.variable
-                    )}
+                    className={cn('min-h-screen bg-background font-sans antialiased mx-auto')}
                 >
                     <Header />
                     {children}

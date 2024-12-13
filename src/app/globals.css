@@ -103,7 +103,3 @@ code {
     code[data-line-numbers-max-digits="3"] > [data-line]::before {
         width: 3rem;
     }
-
-.font-segoe {
-    font-family: 'Segoe UI'
-}

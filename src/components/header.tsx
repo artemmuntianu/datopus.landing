@@ -23,11 +23,12 @@ export function Header() {
                     <Button variant="ghost" asChild>
                         <a href="https://docs.datopus.io">Documentation</a>
                     </Button>
+                    
+                </div>
+                <div className="ml-auto flex h-full items-center">
                     <Button variant="ghost" asChild>
                         <Link href="/pricing">Pricing</Link>
                     </Button>
-                </div>
-                <div className="ml-auto flex h-full items-center">
                     <ButtonScheduleDemo />
                 </div>
             </div>

@@ -42,7 +42,8 @@ export function JoinWaitlistForm() {
         : (
             <form onSubmit={submit} method="post">
                 <Input type="hidden" name="action" value="waitlist" />
-                <Input type="email" name="email" required placeholder="Enter your email address" className="h-12 bg-white" />
+                <Input type="email" name="email" required placeholder="Enter your email address" className="
+bg-white" />
                 <Button disabled={isPending} type="submit" variant="default" className="max-[410px]:mt-2 ml-2 h-12 group text-white">
                     Join Waitlist
                     <ChevronRightIcon className="ml-1 size-4 transition-transform duration-300 group-hover:translate-x-1" />

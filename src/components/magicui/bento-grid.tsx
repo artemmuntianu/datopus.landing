@@ -42,7 +42,7 @@ const BentoCard = ({
     >
         <div>
             <div className="z-10 flex flex-col gap-1 p-6 text-[1.3rem]">
-                <h3 className="pointer-events-none text-xl font-semibold text-neutral-700">
+                <h3 className="pointer-events-none text-xl font-semibold text-primary">
                     {name}
                 </h3>
                 {descriptionNode}

@@ -28,9 +28,6 @@ export function Footer() {
                             <li>
                                 <a href="https://docs.datopus.io" className="text-gray-600">Documentation</a>
                             </li>
-                            <li className="my-2">
-                                <Link href="/pricing" className="text-gray-600">Pricing</Link>
-                            </li>
                         </ul>
                     </div>
                     <div>

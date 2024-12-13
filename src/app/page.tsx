@@ -3,11 +3,12 @@ import ShineBorder from "@/components/magicui/shine-border"
 import { ClockIcon, DashboardIcon, Share1Icon } from "@radix-ui/react-icons"
 import { ExploreDemoForm } from "../components/explore_demo_form"
 import FlickeringGrid from "../components/magicui/flickering-grid"
+import { ButtonExploreDemo } from "../components/ui/button-explore-demo"
+import HeroVideoDialog from "../components/ui/hero-video-dialog"
+import WordRotate from "../components/ui/word-rotate"
+import { FAQSection } from "./faq_section"
 import { FeaturesSection } from "./features_section"
 import { HowItWorksSection } from "./howitworks_section"
-import { FAQSection } from "./faq_section"
-import WordRotate from "../components/ui/word-rotate"
-import HeroVideoDialog from "../components/ui/hero-video-dialog"
 
 const BLUR_FADE_DELAY = 0.02;
 
@@ -22,12 +23,12 @@ export default function Page() {
                             Product Analytics Platform
                             <WordRotate words={["for Widgets", "for Plugins", "for Web Apps", "for Web Sites"]} />
                         </h1>
-                        <p className="text-muted-foreground text-xl/relaxed font-segoe">
+                        <p className="text-muted-foreground text-xl/relaxed">
                             Using our essential product feature analysis tools you create products users love
                         </p>
                     </div>
                     <div className="flex items-center justify-center gap-[0.5rem] mt-[3.5rem]">
-                        <ExploreDemoForm />
+                        <ButtonExploreDemo />
                     </div>
                 </div>
                 <BlurFade delay={BLUR_FADE_DELAY * 1} yOffset={0}>
@@ -44,20 +45,10 @@ export default function Page() {
                         />
                     </ShineBorder>
                 </BlurFade>
-                <div className="mx-[15pt]">
-                    <FlickeringGrid
-                        color="#999"
-                        squareSize={4}
-                        gridGap={2}
-                        maxOpacity={0.5}
-                        flickerChance={0.1}
-                        height={40}
-                    />
-                </div>
             </section>
 
             <section id="problem" className="mx-auto max-w-screen-xl px-4 py-16">
-                <div className="mx-auto space-y-5 py-6 text-center">
+                <div className="mx-auto space-y-5 py-6 text-center bg-[hsl(var(--primary)/10%)] rounded-lg">
                     <h2 className="text-primary font-mono text-[14px] font-medium tracking-tight">The Problem</h2>
                     <h2 className="mx-auto mb-2 max-w-3xl text-balance text-[36px] font-medium leading-tight tracking-tighter">Elevating Requires Insights</h2>
                 </div>
@@ -92,22 +83,22 @@ export default function Page() {
             </section>
 
             <section id="solutions" className="mx-auto max-w-screen-xl px-4 py-16">
-                <div className="mx-auto space-y-5 py-6 text-center">
+                <div className="mb-5 mx-auto space-y-5 py-6 text-center bg-[hsl(var(--primary)/10%)] rounded-lg">
                     <h2 className="text-primary font-mono text-[14px] font-medium tracking-tight">
                         The Solutions
                     </h2>
                     <h2 className="mx-auto mb-2 max-w-3xl text-balance text-[36px] font-medium leading-tight tracking-tighter">
                         More Intuitive Product Analytics Platform
                     </h2>
-                    <h2 className="mx-auto mb-2 max-w-3xl text-muted-foreground text-xl/relaxed font-segoe">
+                    <h2 className="mx-auto mb-2 max-w-3xl text-muted-foreground text-xl/relaxed">
                         See how our features solve your challenges
                     </h2>
                 </div>
-                <FeaturesSection />
+                <FeaturesSection/>
             </section>
 
             <section id="how-it-works" className="max-[1200px]:hidden mx-auto px-4 py-16">
-                <div className="mx-auto space-y-5 py-6 text-center">
+                <div className="mx-auto space-y-5 py-6 text-center bg-[hsl(var(--primary)/10%)] rounded-lg">
                     <h2 className="text-primary font-mono text-[14px] font-medium tracking-tight">
                         How it works
                     </h2>
@@ -119,7 +110,7 @@ export default function Page() {
             </section>
 
             <section id="faq" className="w-full mx-auto max-w-screen-xl px-4 py-16">
-                <div className="mx-auto space-y-5 py-6 text-center">
+                <div className="mx-auto space-y-5 py-6 text-center bg-[hsl(var(--primary)/10%)] rounded-lg">
                     <h2 className="text-primary font-mono text-[14px] font-medium tracking-tight">Frequently Asked Questions</h2>
                 </div>
                 <FAQSection />
@@ -133,7 +124,7 @@ export default function Page() {
                         </h2>
                     </div>
                     <div className="flex items-center justify-center gap-[0.5rem]">
-                        <ExploreDemoForm />
+                        <ButtonExploreDemo />
                     </div>
                 </div>
             </section>

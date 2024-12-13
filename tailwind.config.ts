@@ -18,7 +18,7 @@ const config = {
         },
         extend: {
             fontFamily: {
-                sans: ["var(--font-sans)", ...fontFamily.sans]
+                sans: ['"Segoe UI"', ...fontFamily.sans]
             },
             colors: {
                 border: 'hsl(var(--border))',
