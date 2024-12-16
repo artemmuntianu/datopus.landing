@@ -1,8 +1,6 @@
 import { getBlogPosts, getPost } from '@/data/blog';
-import { formatDate } from '@/lib/utils';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { Suspense } from 'react';
 import './styles.css';
 
 const DATA = {
@@ -69,8 +67,8 @@ export default async function Blog({
     }
 
     return (
-        <main className='flex flex-col min-h-[100dvh] mt-[3.5rem] [background-image:linear-gradient(to_bottom,hsl(var(--primary)/10%),transparent)] [background-size:100%_50rem] [background-repeat:no-repeat]'>
-            <section className='max-w-screen-lg mx-auto mb-8 px-4'>
+        <main className='flex flex-col min-h-[100dvh] mt-[3.5rem]'>
+            <section className='max-w-[55rem] text-lg mx-auto mb-8 px-4'>
                 <script
                     type='application/ld+json'
                     suppressHydrationWarning
