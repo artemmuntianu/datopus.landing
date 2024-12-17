@@ -1,10 +1,15 @@
-ol {
+.blog-article {
+    border-left-width: 1px;
+    border-right-width: 1px;
+}
+
+.blog-article ol {
     list-style: decimal;
     margin-left: 1em;
     padding: 1em;
 }
 
-ul {
+.blog-article ul {
     list-style-type: disc;
     margin-left: 1em;
     padding: 1em;
