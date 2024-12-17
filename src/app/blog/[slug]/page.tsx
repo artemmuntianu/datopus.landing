@@ -2,6 +2,7 @@ import { getBlogPosts, getPost } from '@/data/blog';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import './styles.css';
+import { ButtonExploreDemo } from '../../../components/ui/button-explore-demo';
 
 const DATA = {
     url: 'https://datopus.io',
@@ -91,6 +92,18 @@ export default async function Blog({
                 />
                 <h1 className='font-medium text-3xl my-8'>{post.metadata.title}</h1>
                 <article dangerouslySetInnerHTML={{ __html: post.source }}></article>
+            </section>
+            <section id="cta" className="w-full py-18 bg-[hsl(var(--primary)/10%)]">
+                <div className="flex flex-col items-center justify-center text-center my-[3.5rem]">
+                    <div className="mx-auto space-y-5 pb-6 text-center">
+                        <h2 className="mx-auto mb-2 max-w-3xl text-balance text-5xl font-medium leading-tight tracking-tighter">
+                            Ready for Demo?
+                        </h2>
+                    </div>
+                    <div className="flex items-center justify-center gap-[0.5rem]">
+                        <ButtonExploreDemo />
+                    </div>
+                </div>
             </section>
         </main>
     );

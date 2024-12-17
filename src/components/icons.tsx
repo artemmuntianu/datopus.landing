@@ -1,4 +1,4 @@
-import { CheckIcon, GlobeIcon, MailIcon } from "lucide-react";
+import { CheckIcon, CreditCardIcon, GlobeIcon, MailIcon } from "lucide-react";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
@@ -6,6 +6,7 @@ export const Icons = {
     globe: (props: IconProps) => <GlobeIcon {...props} />,
     email: (props: IconProps) => <MailIcon {...props} />,
     check: (props: IconProps) => <CheckIcon {...props} />,
+    creditCard: (props: IconProps) => <CreditCardIcon {...props} />,
     magicRect: (props: IconProps) => (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" {...props}>
             <g fill="currentColor">

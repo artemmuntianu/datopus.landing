@@ -1,7 +1,8 @@
-'use client'
+﻿'use client'
 
 import { ChevronRightIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
+import { Icons } from "../icons";
 import { Button } from "./button";
 
 export function ButtonExploreDemo() {
@@ -12,7 +13,10 @@ export function ButtonExploreDemo() {
                     Explore Live Demo  <ChevronRightIcon className="inline ml-1 size-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </Link>
             </Button>
-            <p className="text-sm text-muted-foreground">No credit card required</p>
+            <p className="text-sm text-muted-foreground flex items-center justify-center gap-1 mt-1">
+                {Icons.creditCard({ className: "size-4" })}
+                <span>No credit card needed</span>
+            </p>
         </div>
     )
 }
