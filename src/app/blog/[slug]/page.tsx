@@ -69,7 +69,7 @@ export default async function Blog({
 
     return (
         <main className='flex flex-col mt-[3.5rem]'>
-            <section className='blog-article min-h-[100dvh] max-w-[55rem] text-lg mx-auto pb-8 px-4'>
+            <section className='blog-article min-h-[100dvh] text-lg mx-auto pb-8 px-4 md:max-w-[55rem]'>
                 <script
                     type='application/ld+json'
                     suppressHydrationWarning

@@ -1,7 +1,6 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import { getBlogPosts } from "@/data/blog";
 import { ChevronRightIcon } from "@radix-ui/react-icons";
-import { formatDate } from "../../lib/utils";
 
 const BLUR_FADE_DELAY = 0.04;
 
