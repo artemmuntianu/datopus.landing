@@ -49,10 +49,10 @@ export function Footer() {
                 </div>
             </div>
             <div className="mx-auto grid size-full max-w-screen-xl grid-cols-1 justify-between gap-1 border-t py-3 md:grid-cols-2">
-                <span className="text-muted-foreground text-xs tracking-tight">Copyright 2024 <Link href="/">Datopus</Link> - Optimize Product Features for Success</span>
+                <span className="text-muted-foreground text-xs tracking-tight">Copyright 2025 <Link href="/">Datopus</Link> - Optimize Product Features for Success</span>
                 <ul className="text-muted-foreground flex justify-start text-xs tracking-tight md:justify-end">
                     <li className="mr-3 md:mx-4">
-                        <Link href="/terms">Terms and conditions</Link>
+                        <Link href="/terms">Terms</Link>
                     </li>
                     <li>
                         <Link href="/privacy-policy">Privacy Policy</Link>
