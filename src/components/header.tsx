@@ -25,9 +25,12 @@ export function Header() {
                     </Button>
                     
                 </div>
-                <div className="ml-auto flex h-full items-center">
+                <div className="ml-auto flex h-full items-center gap-[0.5rem]">
                     <Button variant="ghost" asChild>
                         <Link href="/pricing">Pricing</Link>
+                    </Button>
+                    <Button variant="outline" asChild>
+                        <Link href="https://app.datopus.io">GET STARTED</Link>
                     </Button>
                     <ButtonScheduleDemo />
                 </div>

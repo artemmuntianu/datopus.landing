@@ -97,7 +97,7 @@ export default async function Blog({
                 <div className="flex flex-col items-center justify-center text-center my-[3.5rem]">
                     <div className="mx-auto space-y-5 pb-6 text-center">
                         <h2 className="mx-auto mb-2 max-w-3xl text-balance text-5xl font-medium leading-tight tracking-tighter">
-                            Ready for Demo?
+                            Ready?
                         </h2>
                     </div>
                     <div className="flex items-center justify-center gap-[0.5rem]">
