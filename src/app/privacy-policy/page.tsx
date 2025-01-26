@@ -33,7 +33,8 @@ export default function PrivacyPolicyPage() {
                     <h2 className="text-xl font-semibold mb-2">3. Sharing of Information</h2>
                     <ul className="list-disc pl-6 space-y-2">
                         <li>We do not sell or rent your information to third parties.</li>
-                        <li>We may share information with trusted service providers who assist in operating our platform (e.g., hosting and data storage).</li>
+                        <li>We may share information with trusted service providers strictly for the purpose of providing or improving the functionality of our platform (e.g., hosting, data storage, or processing services). These service providers are bound by confidentiality agreements and are prohibited from using your data for any other purposes.</li>
+                        <li>We do not transfer Google user data to third parties for reasons other than providing or improving the functionality of Service.</li>
                         <li>We may disclose information if required by law or to protect our legal rights.</li>
                     </ul>
                 </section>
