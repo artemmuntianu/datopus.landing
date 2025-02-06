@@ -22,7 +22,7 @@ export function FAQSection() {
                     <p className="pt-1">Here are the main steps:</p>
                     <ul className="list-disc pl-12  indent-0">
                         <li>Identify and name features</li>
-                        <li>Add HTML attribute <code>[feature=name]</code> to features</li>
+                        <li>Add HTML attribute <code>[data-ds-feature=name]</code> to features</li>
                         <li>Integrate the Datopus snippet</li>
                     </ul>
                     <p className="pt-1">Datopus simplifies the integration process by requiring developers to add a specific HTML attribute to identify features and then include a small snippet of code.</p>
@@ -33,7 +33,7 @@ export function FAQSection() {
                     What does Datopus track exactly?
                 </AccordionTrigger>
                 <AccordionContent className="text-base font-normal text-gray-600 indent-4">
-                    <p className="pt-1">Datopus watches for any activity happening inside a specific HTML element (marked with a special tag <code>feature</code>). It looks at all the smaller parts within this element and records what they do. These events include clicks, mouse movements, form submissions, or any other user interactions within that designated area.</p>
+                    <p className="pt-1">Datopus watches for any activity happening inside a specific HTML element that marked with a special tag <code>[data-ds-feature]</code>. It looks at all the smaller parts within this element and records what they do. These events include clicks, mouse movements, form submissions, or any other user interactions within that designated area.</p>
                 </AccordionContent>
             </AccordionItem>
             <AccordionItem value="5">

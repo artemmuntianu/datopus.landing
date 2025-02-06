@@ -24,7 +24,7 @@ export default function Page() {
                             <WordRotate words={["for Widgets", "for Plugins", "for Web Apps", "for Web Sites"]} />
                         </h1>
                         <p className="text-muted-foreground text-xl/relaxed">
-                            Using our essential product feature analysis tools you create products users love
+                            <code>min</code> churning users <code>max</code> conversion rates
                         </p>
                     </div>
                     <div className="flex items-center justify-center gap-[0.5rem] mt-[3.5rem]">
@@ -50,7 +50,7 @@ export default function Page() {
             <section id="problem" className="mx-auto max-w-screen-xl px-4 py-16">
                 <div className="mx-auto space-y-5 py-6 text-center bg-[hsl(var(--primary)/10%)] rounded-lg">
                     <h2 className="text-primary font-mono text-[14px] font-medium tracking-tight">The Problem</h2>
-                    <h2 className="mx-auto mb-2 max-w-3xl text-balance text-[36px] font-medium leading-tight tracking-tighter">Elevating Requires Insights</h2>
+                    <h2 className="mx-auto mb-2 max-w-3xl text-balance text-[36px] font-medium leading-tight tracking-tighter">Business requires insights, but</h2>
                 </div>
                 <div className="mt-12 flex h-full flex-col items-center justify-between gap-8 text-center text-gray-600 md:flex-row md:gap-0">
                     <div className="flex size-full flex-col justify-center gap-4 md:w-1/3">
@@ -58,7 +58,7 @@ export default function Page() {
                             <ClockIcon className="size-16" />
                         </div>
                         <p className="text-[1.5rem]">
-                            The <i>lack</i> of Product Analytics leads to <i>wasting</i> time on <i>low-performing</i> features
+                            Event Tracking Plan demand time to implement and maintain
                         </p>
                     </div>
                     <div className="mx-4 hidden h-[150px] w-px bg-gradient-to-b from-transparent via-black/40 to-transparent md:block"></div>
@@ -67,7 +67,7 @@ export default function Page() {
                             <DashboardIcon className="size-16" />
                         </div>
                         <p className="text-[1.5rem]">
-                            Creating a <i>custom</i> Product Analytics tool <i>drains resources</i> from product development
+                            Product and Growth teams barely understand the collected data
                         </p>
                     </div>
                     <div className="mx-4 hidden h-[150px] w-px bg-gradient-to-b from-transparent via-black/40 to-transparent md:block"></div>
@@ -76,7 +76,7 @@ export default function Page() {
                             <Share1Icon className="size-16" />
                         </div>
                         <p className="text-[1.5rem]">
-                            As a product&apos;s user base expands, the <i>cost</i> of Business Intelligence software <i>rises</i>
+                            The cost of analytics software tied up to MAU
                         </p>
                     </div>
                 </div>
@@ -85,13 +85,13 @@ export default function Page() {
             <section id="solutions" className="mx-auto max-w-screen-xl px-4 py-16">
                 <div className="mb-5 mx-auto space-y-5 py-6 text-center bg-[hsl(var(--primary)/10%)] rounded-lg">
                     <h2 className="text-primary font-mono text-[14px] font-medium tracking-tight">
-                        The Solutions
+                        The Solution
                     </h2>
                     <h2 className="mx-auto mb-2 max-w-3xl text-balance text-[36px] font-medium leading-tight tracking-tighter">
-                        More Intuitive Product Analytics Platform
+                        Plug&play analytics platform
                     </h2>
                     <h2 className="mx-auto mb-2 max-w-3xl text-muted-foreground text-xl/relaxed">
-                        See how our features solve your challenges
+                        See how we solve your challenges
                     </h2>
                 </div>
                 <FeaturesSection/>
@@ -103,7 +103,7 @@ export default function Page() {
                         How it works
                     </h2>
                     <h2 className="mx-auto mb-2 max-w-3xl text-balance text-[36px] font-medium leading-tight tracking-tighter">
-                        Become a Data-Led Organization in 3 Steps
+                        Become a data-led organization in 3 steps
                     </h2>
                 </div>
                 <HowItWorksSection />

@@ -51,6 +51,10 @@ pre {
 
 code {
     @apply text-sm md:text-base !leading-loose;
+    padding: 2px 4px;
+    border-radius: 4px;
+    background: #333;
+    color: rgb(255, 165, 0);
 }
 
 pre > code {
