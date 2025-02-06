@@ -40,7 +40,7 @@ export default function PricingPage() {
                             </div>
                             <hr />
                             <div className="flex items-center gap-2">
-                                <span className="text-gray-900">Our Pro plan includes</span>
+                                <span className="text-gray-900">Our <b>Pro</b> plan includes:</span>
                             </div>
                             <div className="flex items-center gap-2">
                                 {Icons.magicRect({ className: "size-4" })}
@@ -69,7 +69,7 @@ export default function PricingPage() {
                             <Link href="https://app.datopus.io">Get started</Link>
                         </Button>
                     </div> 
-                    <div className="text-center text-sm mt-2 text-gray-600">Free trial 30 days</div>
+                    <div className="text-center text-sm mt-2 text-gray-600">30-day free trial</div>
                 </BlurFade>
                 <BlurFade delay={BLUR_FADE_DELAY + 3 * 0.05} className="bg-white border border-gray-200 flex flex-col p-5 rounded-2xl">
                     <section className="flex flex-col gap-3 h-full pb-5">
@@ -96,7 +96,7 @@ export default function PricingPage() {
                             </div>
                             <hr />
                             <div className="flex items-center gap-2">
-                                <span className="text-gray-900">Everything in Pro, and</span>
+                                <span className="text-gray-900">Everything in <b>Pro</b>, and:</span>
                             </div>
                             <div className="flex items-center gap-2">
                                 {Icons.check({ className: "size-4" })}
@@ -117,7 +117,7 @@ export default function PricingPage() {
                             <Link href="https://app.datopus.io">Get started</Link>
                         </Button>
                     </div> 
-                    <div className="text-center text-sm mt-2 text-gray-600">Free trial 30 days</div>
+                    <div className="text-center text-sm mt-2 text-gray-600">30-day free trial</div>
                 </BlurFade>
                 <BlurFade delay={BLUR_FADE_DELAY + 4 * 0.05} className="bg-white border border-gray-200 flex flex-col p-5 rounded-2xl">
                     <section className="flex flex-col gap-3 h-full pb-5">
@@ -144,7 +144,7 @@ export default function PricingPage() {
                             </div>
                             <hr />
                             <div className="flex items-center gap-2">
-                                <span className="text-gray-900">Everything in Premium B2C, and</span>
+                                <span className="text-gray-900">Everything in <b>Premium B2C</b>, and:</span>
                             </div>
                             <div className="flex items-center gap-2">
                                 {Icons.check({ className: "size-4" })}
@@ -161,7 +161,7 @@ export default function PricingPage() {
                             <Link href="https://app.datopus.io">Get started</Link>
                         </Button>
                     </div> 
-                    <div className="text-center text-sm mt-2 text-gray-600">Free trial 30 days</div>
+                    <div className="text-center text-sm mt-2 text-gray-600">30-day free trial</div>
                 </BlurFade>
             </div>
         </main>
