@@ -12,7 +12,7 @@ export function Header() {
                 </Link>
                 <div>
                     <Button variant="ghost" asChild>
-                        <Link href="/#solutions">Solutions</Link>
+                        <Link href="/#platform">Platform</Link>
                     </Button>
                     <Button variant="ghost" asChild className="max-[1200px]:hidden">
                         <Link href="/#how-it-works">How it works</Link>

@@ -23,8 +23,8 @@ export default function Page() {
                             Product Analytics Platform
                             <WordRotate words={["for Widgets", "for Plugins", "for Web Apps", "for Web Sites"]} />
                         </h1>
-                        <p className="text-muted-foreground text-xl/relaxed">
-                            <code>min</code> churning users <code>max</code> conversion rates
+                        <p className="text-muted-foreground text-2xl/relaxed">
+                            <code>+30%</code> conversions &nbsp;&nbsp;<code>2x</code> retention &nbsp;&nbsp;<code>-40%</code> churn
                         </p>
                     </div>
                     <div className="flex items-center justify-center gap-[0.5rem] mt-[3.5rem]">
@@ -50,7 +50,10 @@ export default function Page() {
             <section id="problem" className="mx-auto max-w-screen-xl px-4 py-16">
                 <div className="mx-auto space-y-5 py-6 text-center bg-[hsl(var(--primary)/10%)] rounded-lg">
                     <h2 className="text-primary font-mono text-[14px] font-medium tracking-tight">The Problem</h2>
-                    <h2 className="mx-auto mb-2 max-w-3xl text-balance text-[36px] font-medium leading-tight tracking-tighter">Business requires insights, but</h2>
+                    <h2 className="mx-auto mb-2 max-w-4xl text-balance text-[48px] font-medium leading-tight tracking-tighter">Do Not Let It Slow You Down</h2>
+                    <h2 className="mx-auto mb-2 max-w-4xl text-muted-foreground text-2xl/relaxed">
+                        The lack of event auto-capture, inconsistency in event naming, and per-event charges make analytics 3x more complicated.
+                    </h2>
                 </div>
                 <div className="mt-12 flex h-full flex-col items-center justify-between gap-8 text-center text-gray-600 md:flex-row md:gap-0">
                     <div className="flex size-full flex-col justify-center gap-4 md:w-1/3">
@@ -58,7 +61,7 @@ export default function Page() {
                             <ClockIcon className="size-16" />
                         </div>
                         <p className="text-[1.5rem]">
-                            Event Tracking Plan demand time to implement and maintain
+                            Event Tracking Plan demand time to implement and maintain.
                         </p>
                     </div>
                     <div className="mx-4 hidden h-[150px] w-px bg-gradient-to-b from-transparent via-black/40 to-transparent md:block"></div>
@@ -67,7 +70,7 @@ export default function Page() {
                             <DashboardIcon className="size-16" />
                         </div>
                         <p className="text-[1.5rem]">
-                            Product and Growth teams barely understand the collected data
+                            Product and Growth teams barely understand the collected data.
                         </p>
                     </div>
                     <div className="mx-4 hidden h-[150px] w-px bg-gradient-to-b from-transparent via-black/40 to-transparent md:block"></div>
@@ -76,22 +79,22 @@ export default function Page() {
                             <Share1Icon className="size-16" />
                         </div>
                         <p className="text-[1.5rem]">
-                            The cost of analytics software tied up to MAU
+                            The cost of analytics software tied up to amount of users and events.
                         </p>
                     </div>
                 </div>
             </section>
 
-            <section id="solutions" className="mx-auto max-w-screen-xl px-4 py-16">
+            <section id="platform" className="mx-auto max-w-screen-xl px-4 py-16">
                 <div className="mb-5 mx-auto space-y-5 py-6 text-center bg-[hsl(var(--primary)/10%)] rounded-lg">
                     <h2 className="text-primary font-mono text-[14px] font-medium tracking-tight">
                         The Solution
                     </h2>
-                    <h2 className="mx-auto mb-2 max-w-3xl text-balance text-[36px] font-medium leading-tight tracking-tighter">
-                        Plug&play analytics platform
+                    <h2 className="mx-auto mb-2 max-w-4xl text-balance text-[48px] font-medium leading-tight tracking-tighter">
+                        Unlock the Power of Plug&Run Analytics Platform
                     </h2>
-                    <h2 className="mx-auto mb-2 max-w-3xl text-muted-foreground text-xl/relaxed">
-                        See how we solve your challenges
+                    <h2 className="mx-auto mb-2 max-w-4xl text-muted-foreground text-2xl/relaxed">
+                        Understand user behavior across the product journey with powerful custom reports, and address every product question - no coding required.
                     </h2>
                 </div>
                 <FeaturesSection/>
@@ -102,8 +105,8 @@ export default function Page() {
                     <h2 className="text-primary font-mono text-[14px] font-medium tracking-tight">
                         How it works
                     </h2>
-                    <h2 className="mx-auto mb-2 max-w-3xl text-balance text-[36px] font-medium leading-tight tracking-tighter">
-                        Become a data-led organization in 3 steps
+                    <h2 className="mx-auto mb-2 max-w-4xl text-balance text-[48px] font-medium leading-tight tracking-tighter">
+                        Become a data-led company in 3 steps
                     </h2>
                 </div>
                 <HowItWorksSection />
@@ -119,8 +122,8 @@ export default function Page() {
             <section id="cta" className="w-full py-28 bg-[hsl(var(--primary)/10%)]">
                 <div className="flex flex-col items-center justify-center text-center my-[3.5rem]">
                     <div className="mx-auto space-y-5 pb-6 text-center">
-                        <h2 className="mx-auto mb-2 max-w-3xl text-balance text-5xl font-medium leading-tight tracking-tighter">
-                            Ready?
+                        <h2 className="mx-auto mb-2 max-w-4xl text-balance text-5xl font-medium leading-tight tracking-tighter">
+                            Unite Your Whole Team Around Your Product Growth Goals
                         </h2>
                     </div>
                     <div className="flex items-center justify-center gap-[0.5rem]">

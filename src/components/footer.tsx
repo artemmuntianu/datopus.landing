@@ -17,7 +17,7 @@ export function Footer() {
                     <div>
                         <ul>
                             <li className="my-2">
-                                <Link href="/#solutions" className="text-gray-600">Solutions</Link>
+                                <Link href="/#platform" className="text-gray-600">Platform</Link>
                             </li>
                             <li className="max-[1200px]:hidden my-2">
                                 <Link href="/#how-it-works" className="text-gray-600">How it works</Link>
