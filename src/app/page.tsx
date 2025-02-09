@@ -1,8 +1,6 @@
 import BlurFade from "@/components/magicui/blur-fade"
 import ShineBorder from "@/components/magicui/shine-border"
 import { ClockIcon, DashboardIcon, Share1Icon } from "@radix-ui/react-icons"
-import { ExploreDemoForm } from "../components/explore_demo_form"
-import FlickeringGrid from "../components/magicui/flickering-grid"
 import { ButtonExploreDemo } from "../components/ui/button-explore-demo"
 import HeroVideoDialog from "../components/ui/hero-video-dialog"
 import WordRotate from "../components/ui/word-rotate"
@@ -20,11 +18,13 @@ export default function Page() {
                 <div className="flex flex-col items-center justify-center text-center my-[3.5rem]">
                     <div className="space-y-5">
                         <h1 className="max-[470px]:text-5xl text-6xl">
-                            Product Analytics Platform
-                            <WordRotate words={["for Widgets", "for Plugins", "for Web Apps", "for Web Sites"]} />
+                            Plug&Run Analytics
+                            <WordRotate words={["for Product Team", "for Growth Team", "for Data Team", "for Devs"]} />
                         </h1>
-                        <p className="text-muted-foreground text-2xl/relaxed">
-                            <code>+30%</code> conversions &nbsp;&nbsp;<code>2x</code> retention &nbsp;&nbsp;<code>-40%</code> churn
+                        <p className="flex flex-col justify-center text-muted-foreground text-2xl/relaxed md:flex-row md:gap-[0.5rem]">
+                            <span><code>+30%</code> conversions</span>
+                            <span><code>2x</code> retention</span>
+                            <span><code>-40%</code> churn</span>
                         </p>
                     </div>
                     <div className="flex items-center justify-center gap-[0.5rem] mt-[3.5rem]">
@@ -33,7 +33,7 @@ export default function Page() {
                 </div>
                 <BlurFade delay={BLUR_FADE_DELAY * 1} yOffset={0}>
                     <ShineBorder
-                        className="relative flex w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background shadow-xl"
+                        className="relative flex flex-col w-full items-center justify-center overflow-hidden rounded-lg border bg-background shadow-xl"
                         color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
                     >
                         <HeroVideoDialog
@@ -49,8 +49,12 @@ export default function Page() {
 
             <section id="problem" className="mx-auto max-w-screen-xl px-4 py-16">
                 <div className="mx-auto space-y-5 py-6 text-center bg-[hsl(var(--primary)/10%)] rounded-lg">
-                    <h2 className="text-primary font-mono text-[14px] font-medium tracking-tight">The Problem</h2>
-                    <h2 className="mx-auto mb-2 max-w-4xl text-balance text-[48px] font-medium leading-tight tracking-tighter">Do Not Let It Slow You Down</h2>
+                    <h2 className="text-primary font-mono text-[14px] font-medium tracking-tight">
+                        The Problem
+                    </h2>
+                    <h2 className="mx-auto mb-2 max-w-4xl text-balance text-[48px] font-medium leading-tight tracking-tighter">
+                        Do Not Let It Slow You Down
+                    </h2>
                     <h2 className="mx-auto mb-2 max-w-4xl text-muted-foreground text-2xl/relaxed">
                         The lack of event auto-capture, inconsistency in event naming, and per-event charges make analytics 3x more complicated.
                     </h2>
@@ -114,7 +118,9 @@ export default function Page() {
 
             <section id="faq" className="w-full mx-auto max-w-screen-xl px-4 py-16">
                 <div className="mx-auto space-y-5 py-6 text-center bg-[hsl(var(--primary)/10%)] rounded-lg">
-                    <h2 className="text-primary font-mono text-[14px] font-medium tracking-tight">Frequently Asked Questions</h2>
+                    <h2 className="text-primary font-mono text-[14px] font-medium tracking-tight">
+                        Frequently Asked Questions
+                    </h2>
                 </div>
                 <FAQSection />
             </section>

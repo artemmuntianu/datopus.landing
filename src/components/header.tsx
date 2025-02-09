@@ -10,7 +10,7 @@ export function Header() {
                 <Link href="/" className="inline-flex mr-[10px]">
                     <Image src="/logo.svg" alt="Datopus" width="28" height="32" />
                 </Link>
-                <div>
+                <div className="flex flex-col md:flex-row md:gap-[0.5rem]">
                     <Button variant="ghost" asChild>
                         <Link href="/#platform">Platform</Link>
                     </Button>
@@ -23,9 +23,8 @@ export function Header() {
                     <Button variant="ghost" asChild>
                         <a href="https://docs.datopus.io">Documentation</a>
                     </Button>
-                    
                 </div>
-                <div className="ml-auto flex h-full items-center gap-[0.5rem]">
+                <div className="ml-auto flex flex-col h-full items-center md:flex-row md:gap-[0.5rem]">
                     <Button variant="ghost" asChild>
                         <Link href="/pricing">Pricing</Link>
                     </Button>
