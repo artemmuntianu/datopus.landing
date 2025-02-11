@@ -68,7 +68,7 @@ export default async function Blog({
     }
 
     return (
-        <main className='flex flex-col mt-[3.5rem]'>
+        <main className='flex flex-col mt-[6.5rem] md:mt-[3.5rem]'>
             <section className='blog-article min-h-[100dvh] text-lg mx-auto pb-8 px-4 md:max-w-[55rem]'>
                 <script
                     type='application/ld+json'
