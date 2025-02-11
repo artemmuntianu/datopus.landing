@@ -29,7 +29,7 @@ export function Header() {
                         <Link href="/pricing">Pricing</Link>
                     </Button>
                     <Button variant="outline" asChild>
-                        <Link href="https://app.datopus.io">GET STARTED</Link>
+                        <Link href="https://app.datopus.io/auth">GET STARTED</Link>
                     </Button>
                     <ButtonScheduleDemo />
                 </div>
