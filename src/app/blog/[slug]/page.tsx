@@ -1,11 +1,58 @@
-import { getPost } from '@/data/post';
+import { getPost, getPosts } from '@/data/post';
+import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { ButtonExploreDemo } from '../../../components/ui/button-explore-demo';
 import './styles.css';
 
 const DATA = {
     url: 'https://datopus.io',
-    name: 'Artem M'
+    name: 'Artem M',
+    dirRelativePath: 'content/blog',
+}
+
+export async function generateStaticParams() {
+    const posts = await getPosts(DATA.dirRelativePath);
+    return posts.map((post) => ({ slug: post.slug }));
+}
+
+export async function generateMetadata({
+    params,
+}: {
+    params: {
+        slug: string;
+    }
+}): Promise<Metadata | undefined> {
+    let post = await getPost(DATA.dirRelativePath, params.slug);
+
+    let {
+        title,
+        summary: description,
+        image,
+    } = post.metadata;
+
+    let ogImage = image ? `${DATA.url}${image}` : `${DATA.url}/og?title=${title}`;
+
+    return {
+        title,
+        description,
+        openGraph: {
+            title,
+            description,
+            type: 'article',
+            url: `${DATA.url}/blog/${post.slug}`,
+            images: [
+                {
+                    url: ogImage,
+                }
+            ]
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title,
+            description,
+            images: [ogImage],
+        }
+    };
 }
 
 export default async function BlogPost({
@@ -15,7 +62,7 @@ export default async function BlogPost({
         slug: string;
     }
 }) {
-    const post = await getPost("content\\blog", params.slug);
+    const post = await getPost(DATA.dirRelativePath, params.slug);
 
     if (!post) {
         notFound();

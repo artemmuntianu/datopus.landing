@@ -5,7 +5,7 @@ import { ChevronRightIcon } from "@radix-ui/react-icons";
 const BLUR_FADE_DELAY = 0.04;
 
 export default async function UseCasesAllPosts() {
-    const posts = await getPosts("content\\use-cases");
+    const posts = await getPosts("content/use-cases");
 
     return (
         <main className="flex flex-col min-h-[100dvh] mt-[6.5rem] md:mt-[3.5rem] [background-image:linear-gradient(to_bottom,hsl(var(--primary)/10%),transparent)] [background-size:100%_50rem] [background-repeat:no-repeat]">
