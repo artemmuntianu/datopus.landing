@@ -8,14 +8,14 @@ const DATA = {
     name: 'Artem M'
 }
 
-export default async function BlogPost({
+export default async function UseCasesPost({
     params,
 }: {
     params: {
         slug: string;
     }
 }) {
-    const post = await getPost("content\\blog", params.slug);
+    const post = await getPost("content\\use-cases", params.slug);
 
     if (!post) {
         notFound();
@@ -36,7 +36,7 @@ export default async function BlogPost({
                             image: post.metadata.image
                                 ? `${DATA.url}${post.metadata.image}`
                                 : `${DATA.url}/og?title=${post.metadata.title}`,
-                            url: `${DATA.url}/blog/${post.slug}`,
+                            url: `${DATA.url}/use-cases/${post.slug}`,
                             author: {
                                 '@type': 'Person',
                                 name: DATA.name,
