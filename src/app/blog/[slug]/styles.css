@@ -81,14 +81,13 @@
         max-width: 100%;
     }
 
-.md\:max-w-25 {
-    @media (min-width: 768px) {
+@media (min-width: 768px) {
+
+    .md\:max-w-25 {
         max-width: 25rem;
     }
-}
 
-.md\:max-w-35 {
-    @media (min-width: 768px) {
+    .md\:max-w-35 {
         max-width: 35rem;
     }
 }
