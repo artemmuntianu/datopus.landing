@@ -57,8 +57,8 @@ export function Header() {
                                     }}
                                 >
                                     {
-                                        [...features, ...features_bg].map((feature) => (
-                                            <Link href={feature.href} className="block py-2 px-4 hover:text-primary" onClick={() => setIsPlatformOpen(false)}>{feature.name}</Link>
+                                        [...features, ...features_bg].map((feature, index) => (
+                                            <Link key={index} href={feature.href} className="block py-2 px-4 hover:text-primary" onClick={() => setIsPlatformOpen(false)}>{feature.name}</Link>
                                         ))
                                     }
                                 </div>
