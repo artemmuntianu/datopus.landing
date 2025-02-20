@@ -81,6 +81,80 @@
         max-width: 100%;
     }
 
+    .blog-article table {
+        border-collapse: collapse;
+        table-layout: fixed;
+    }
+
+        .blog-article table th,
+        .blog-article table caption {
+            text-align: start;
+        }
+
+        .blog-article table caption {
+            margin-block: 0.75rem;
+        }
+
+        .blog-article table thead th:not(:first-child),
+        .blog-article table td {
+            text-align: center;
+        }
+
+        .blog-article table thead {
+            border-block-end: 2px solid;
+            background: whitesmoke;
+        }
+
+        .blog-article table tfoot {
+            border-block: 2px solid;
+            background: whitesmoke;
+        }
+
+        .blog-article table th,
+        .blog-article table td {
+            border: 1px solid lightgrey;
+            padding: 0.25rem 0.75rem;
+            vertical-align: baseline;
+        }
+
+            .blog-article table th:first-child {
+                position: sticky;
+                inset-inline-start: 0;
+                border-inline-end: none;
+            }
+
+        .blog-article table tbody th {
+            background: white;
+        }
+
+        .blog-article table thead th,
+        .blog-article table tfoot th {
+            background: whitesmoke;
+        }
+
+        .blog-article table thead th {
+            vertical-align: bottom;
+        }
+
+        .blog-article table td:first-of-type,
+        .blog-article table :where(thead, tfoot) th:nth-child(2) {
+            text-align: start;
+        }
+
+        .blog-article table th:first-of-type {
+            width: 10rem;
+        }
+
+        .blog-article table th:first-child::after {
+            content: '';
+            position: absolute;
+            inset-block-start: 0;
+            inset-inline-end: 0;
+            width: 1px;
+            height: 100%;
+            background: lightgrey;
+        }
+
 @media (min-width: 768px) {
 
     .md\:max-w-25 {

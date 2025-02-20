@@ -72,7 +72,7 @@ export function HowItWorksSection() {
                         </div>
                         <div className="flex w-full items-start">
                             <p className="text-base font-normal text-gray-600 text-balance text-center">
-                                Install our script and add html attribute <code>[data-ds-feature=name]</code> to your body tag.
+                                Install our script to track all user activity automatically.
                             </p>
                         </div>
                     </div>
@@ -231,7 +231,7 @@ export function HowItWorksSection() {
                         </div>
                         <div className="flex w-full items-start">
                             <p className="text-base font-normal text-gray-600 text-balance text-center">
-                                Gather qualitative and quantitative data to inform product-wise decisions.
+                                Use our analytics portal to gain valuable insights into user behavior.
                             </p>
                         </div>
                     </div>
@@ -255,7 +255,7 @@ export function HowItWorksSection() {
                         </div>
                         <div className="flex w-full items-start">
                             <p className="text-base font-normal text-gray-600 text-balance text-center">
-                                Translate findings into actionable steps for product development.
+                                Turn insights into concrete steps to improve your product.
                             </p>
                         </div>
                     </div>

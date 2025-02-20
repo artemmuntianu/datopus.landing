@@ -6,7 +6,7 @@ declare const Calendly: any;
 
 export function ButtonScheduleDemo() {
     return (
-        <Button className="text-primary" variant="outline" onClick={handleScheduleDemo}>
+        <Button variant="outline" onClick={handleScheduleDemo}>
             Contact us
         </Button>
     )

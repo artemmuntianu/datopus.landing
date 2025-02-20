@@ -2,12 +2,12 @@ import { getPost, getPosts } from '@/data/post';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { ButtonExploreDemo } from '../../../components/ui/button-explore-demo';
-import './styles.css';
+import '../../mdx-styles.css';
 
 const DATA = {
     url: 'https://datopus.io',
     name: 'Artem M',
-    dirRelativePath: 'content/use-cases',
+    dirRelativePath: 'content/case-studies',
 }
 
 export async function generateStaticParams() {
@@ -39,7 +39,7 @@ export async function generateMetadata({
             title,
             description,
             type: 'article',
-            url: `${DATA.url}/use-cases/${post.slug}`,
+            url: `${DATA.url}/case-studies/${post.slug}`,
             images: [
                 {
                     url: ogImage,
@@ -69,7 +69,7 @@ export default async function UseCasesPost({
     }
 
     return (
-        <main className='flex flex-col mt-[6.5rem] md:mt-[3.5rem]'>
+        <main className='flex flex-col mt-[3.5rem]'>
             <section className='blog-article min-h-[100dvh] text-lg mx-auto pb-8 px-4 md:max-w-[55rem]'>
                 <script
                     type='application/ld+json'
@@ -83,7 +83,7 @@ export default async function UseCasesPost({
                             image: post.metadata.image
                                 ? `${DATA.url}${post.metadata.image}`
                                 : `${DATA.url}/og?title=${post.metadata.title}`,
-                            url: `${DATA.url}/use-cases/${post.slug}`,
+                            url: `${DATA.url}/case-studies/${post.slug}`,
                             author: {
                                 '@type': 'Person',
                                 name: DATA.name,

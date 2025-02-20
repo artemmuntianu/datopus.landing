@@ -13,7 +13,7 @@ const BLUR_FADE_DELAY = 0.02;
 
 export default function Page() {
     return (
-        <main className="flex flex-col min-h-[100dvh] mt-[6.5rem] md:mt-[3.5rem] space-y-10 [background-image:linear-gradient(to_bottom,hsl(var(--primary)/10%),transparent)] [background-size:100%_50rem] [background-repeat:no-repeat]">
+        <main className="flex flex-col min-h-[100dvh] mt-[3.5rem] space-y-10 [background-image:linear-gradient(to_bottom,hsl(var(--primary)/10%),transparent)] [background-size:100%_50rem] [background-repeat:no-repeat]">
 
             <section id="hero" className="max-w-screen-xl mx-auto w-full">
                 <div className="flex flex-col items-center justify-center text-center my-[3.5rem]">
@@ -28,7 +28,7 @@ export default function Page() {
                             <span><code>-40%</code> churn</span>
                         </p>
                     </div>
-                    <div className="flex items-center justify-center gap-[0.5rem] mt-[6.5rem] md:mt-[3.5rem]">
+                    <div className="flex items-center justify-center gap-[0.5rem] mt-[3.5rem]">
                         <ButtonExploreDemo />
                     </div>
                 </div>

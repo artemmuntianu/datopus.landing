@@ -8,7 +8,7 @@ export default async function PlatformAllPosts() {
     const posts = await getPosts("content/platform");
 
     return (
-        <main className="flex flex-col min-h-[100dvh] mt-[6.5rem] md:mt-[3.5rem] [background-image:linear-gradient(to_bottom,hsl(var(--primary)/10%),transparent)] [background-size:100%_50rem] [background-repeat:no-repeat]">
+        <main className="flex flex-col min-h-[100dvh] mt-[3.5rem] [background-image:linear-gradient(to_bottom,hsl(var(--primary)/10%),transparent)] [background-size:100%_50rem] [background-repeat:no-repeat]">
             <BlurFade delay={BLUR_FADE_DELAY}>
                 <h1 className="font-medium text-3xl text-center my-8">
                     Datopus Platform

@@ -1,6 +1,7 @@
 import { BentoCard, BentoGrid } from "@/components/magicui/bento-grid";
+import Link from "next/link";
 
-const features_bg = [
+export const features_bg = [
     {
         name: "Self-service Data Exploration",
         descriptionNode:
@@ -62,7 +63,7 @@ const features_bg = [
     }
 ];
 
-const features = [
+export const features = [
     {
         name: "Event Autocapture for Google Analytics",
         descriptionNode:

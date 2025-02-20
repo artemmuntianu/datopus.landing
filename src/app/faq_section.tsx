@@ -21,9 +21,8 @@ export function FAQSection() {
                 <AccordionContent className="text-base font-normal indent-4">
                     <p className="pt-1">Here are the main steps:</p>
                     <ul className="list-disc pl-12  indent-0">
-                        <li>Identify and name features</li>
-                        <li>Add HTML attribute <code>[data-ds-feature=name]</code> to features</li>
                         <li>Integrate the Datopus snippet</li>
+                        <li>[optional] Add HTML attribute <code>[data-ds-feature=name]</code> to features</li>
                     </ul>
                     <p className="pt-1">Datopus simplifies the integration process by requiring developers to add a specific HTML attribute to identify features and then include a small snippet of code.</p>
                 </AccordionContent>
