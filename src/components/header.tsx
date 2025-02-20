@@ -36,7 +36,7 @@ export function Header() {
                                 href="/#platform"
                                 onMouseEnter={() => setIsPlatformOpen(true)}
                                 onMouseLeave={(e) => {
-                                    if (!e.currentTarget.contains(e.relatedTarget)) {
+                                    if (!e.currentTarget.contains(e.relatedTarget as Node)) {
                                         setIsPlatformOpen(false);
                                     }
                                 }}
@@ -51,7 +51,7 @@ export function Header() {
                                     className="absolute left-0 bg-white shadow-md p-2 w-max"
                                     onMouseEnter={() => setIsPlatformOpen(true)}
                                     onMouseLeave={(e) => {
-                                        if (!e.currentTarget.contains(e.relatedTarget)) {
+                                        if (!e.currentTarget.contains(e.relatedTarget as Node)) {
                                             setIsPlatformOpen(false);
                                         }
                                     }}
@@ -69,7 +69,7 @@ export function Header() {
                                 href="/case-studies"
                                 onMouseEnter={() => setIsCaseStudiesOpen(true)}
                                 onMouseLeave={(e) => {
-                                    if (!e.currentTarget.contains(e.relatedTarget)) {
+                                    if (!e.currentTarget.contains(e.relatedTarget as Node)) {
                                         setIsCaseStudiesOpen(false);
                                     }
                                 }}
@@ -84,7 +84,7 @@ export function Header() {
                                     className="absolute left-0 bg-white shadow-md p-2 w-max"
                                     onMouseEnter={() => setIsCaseStudiesOpen(true)}
                                     onMouseLeave={(e) => {
-                                        if (!e.currentTarget.contains(e.relatedTarget)) {
+                                        if (!e.currentTarget.contains(e.relatedTarget as Node)) {
                                             setIsCaseStudiesOpen(false);
                                         }
                                     }}
