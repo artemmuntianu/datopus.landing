@@ -21,10 +21,7 @@ export function Header() {
                 </Link>
 
                 {/* Mobile Menu Toggle */}
-                <button
-                    className="md:hidden p-2 rounded-lg focus:outline-none"
-                    onClick={() => setIsMenuOpen(!isMenuOpen)}
-                >
+                <button className="md:hidden p-2 rounded-lg focus:outline-none" onClick={() => setIsMenuOpen(!isMenuOpen)}>
                     {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
                 </button>
 
@@ -90,7 +87,7 @@ export function Header() {
                                     }}
                                 >
                                     <Link href="/case-studies/company-is-selecting-an-analytics-platform-for-its-multi-tenant-saas-product" className="block py-2 px-4 hover:text-primary" onClick={() => setIsCaseStudiesOpen(false)}>
-                                        Case Study: Company is Selecting an Analytics Platform for its Multi-Tenant SaaS Product
+                                        Case Study: The company is looking for ways to reduce user churn in their multi-tenant SaaS product
                                     </Link>
                                 </div>
                             )}
@@ -112,12 +109,12 @@ export function Header() {
                             </Link>
                         </div>
                         <div className="relative group">
-                            <a href="https://docs.datopus.io">
+                            <Link href="https://docs.datopus.io">
                                 <Button variant="ghost" className="h-[3.5rem]">
                                     Documentation
                                     <div className="hidden group-hover:block absolute left-0 bottom-0 bg-primary h-1 w-full"></div>
                                 </Button>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     <div className="ml-auto h-[3.5rem] items-center flex gap-[0.5rem]">
@@ -141,6 +138,7 @@ export function Header() {
             {isMenuOpen && (
                 <div className="md:hidden absolute top-[3.5rem] left-0 w-full bg-white shadow-md flex flex-col p-4 space-y-2">
                     <Link href="/#platform" className="block py-2" onClick={() => setIsMenuOpen(false)}>Platform</Link>
+                    <Link href="/case-studies" className="block py-2" onClick={() => setIsMenuOpen(false)}>Case studies</Link>
                     <Link href="/blog" className="block py-2" onClick={() => setIsMenuOpen(false)}>Blog</Link>
                     <Link href="https://docs.datopus.io" className="block py-2" onClick={() => setIsMenuOpen(false)}>Documentation</Link>
                     <Link href="/pricing" className="block py-2" onClick={() => setIsMenuOpen(false)}>Pricing</Link>
