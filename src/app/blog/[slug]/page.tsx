@@ -94,10 +94,10 @@ export default async function BlogPost({
                 <h1 className='font-medium text-3xl my-8'>{post.metadata.title}</h1>
                 <article dangerouslySetInnerHTML={{ __html: post.source }}></article>
             </section>
-            <section id="cta" className="w-full py-18 bg-[hsl(var(--primary)/10%)]">
+            <section id="cta" className="w-full py-18 bg-blue-600">
                 <div className="flex flex-col items-center justify-center text-center my-[3.5rem]">
                     <div className="mx-auto space-y-5 pb-6 text-center">
-                        <h2 className="mx-auto mb-2 max-w-3xl text-balance text-5xl font-medium leading-tight tracking-tighter">
+                        <h2 className="mx-auto mb-2 max-w-3xl text-balance text-5xl text-white font-medium leading-tight tracking-tighter">
                             Ready?
                         </h2>
                     </div>

@@ -2,13 +2,13 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 export function FAQSection() {
     return (
-        <Accordion type="single">
+        <Accordion type="single" className="mx-auto max-w-screen-xl px-4">
             <AccordionItem value="1">
                 <AccordionTrigger className="text-md">
                     How does Datopus differ from other analytics platforms?
                 </AccordionTrigger>
                 <AccordionContent className="text-base font-normal indent-4">
-                    <p className="pt-1">At the heart of Datopus&apos;s philosophy is the belief that product analytics should be easily integrated into a company&apos;s existing processes and understandable to all employees, executives and investors. We achieve this by organizing analytics around product features.</p>
+                    <p className="pt-1">At the heart of Datopus&apos;s philosophy is the belief that feature analytics should be easily integrated into a company&apos;s existing processes and understandable to all employees, executives and investors. We achieve this by organizing analytics around product features.</p>
                     <p className="pt-1">Any application can be decomposed into a set of product features. A feature can consist of other features and/or controls, such as buttons, forms, links, etc.</p>
                     <p className="pt-1">In this way, Datopus tracks how users interact with features and provides reports on their usage and the impact of each feature on critical metrics such as <u>User Conversion Rate</u> and <u>User Churn Rate</u>. This is a radical difference from the commonly used Page Views and Button Clicks.</p>
                     <p className="pt-1">Datopus customers gain a completely new perspective on their digital product.</p>

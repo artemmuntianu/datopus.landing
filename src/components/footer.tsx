@@ -19,13 +19,22 @@ export function Footer() {
                             <li className="my-2">
                                 <Link href="/#platform" className="text-gray-600">Platform</Link>
                             </li>
+                            <li className="my-2">
+                                <Link href="/case-studies" className="text-gray-600">Case studies</Link>
+                            </li>
                             <li className="max-[1200px]:hidden my-2">
                                 <Link href="/#how-it-works" className="text-gray-600">How it works</Link>
                             </li>
                             <li className="my-2">
                                 <Link href="/blog" className="text-gray-600">Blog</Link>
                             </li>
-                            <li>
+                            <li className="my-2">
+                                <Link href="/pricing" className="text-gray-600">Pricing</Link>
+                            </li>
+                            <li className="my-2">
+                                <Link href="/affiliate" className="text-gray-600">Affiliate Program</Link>
+                            </li>
+                            <li className="my-2">
                                 <a href="https://docs.datopus.io" className="text-gray-600">Documentation</a>
                             </li>
                         </ul>
@@ -48,7 +57,7 @@ export function Footer() {
                     </div>
                 </div>
             </div>
-            <div className="mx-auto grid size-full max-w-screen-xl grid-cols-1 justify-between gap-1 border-t py-3 md:grid-cols-2">
+            <div className="mx-auto grid size-full max-w-screen-xl grid-cols-1 justify-between gap-1 border-t py-3 px-4 md:grid-cols-2">
                 <span className="text-muted-foreground text-xs tracking-tight">Copyright 2025 <Link href="/">Datopus</Link> - Optimize Product Features for Success</span>
                 <ul className="text-muted-foreground flex justify-start text-xs tracking-tight md:justify-end">
                     <li className="mr-3 md:mx-4">

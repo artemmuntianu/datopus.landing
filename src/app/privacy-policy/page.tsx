@@ -10,7 +10,7 @@ export default function PrivacyPolicyPage() {
             <div className="mx-auto max-w-screen-xl px-4 space-y-6">
                 <section>
                     <h2 className="text-2xl font-semibold mb-4">Introduction</h2>
-                    <p className="leading-relaxed">Datopus (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) values your privacy. This Privacy Policy outlines how we collect, use, and protect your information when you use our product analytics platform (&quot;Service&quot;). By using our Service, you agree to the practices described in this policy.</p>
+                    <p className="leading-relaxed">Datopus (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) values your privacy. This Privacy Policy outlines how we collect, use, and protect your information when you use our feature analytics platform (&quot;Service&quot;). By using our Service, you agree to the practices described in this policy.</p>
                 </section>
                 <section>
                     <h2 className="text-xl font-semibold mb-2">1. Information We Collect</h2>

@@ -2,7 +2,7 @@ import { ClockIcon, DashboardIcon, Share1Icon } from "@radix-ui/react-icons";
 
 export function ProblemSection() {
     return (
-        <div className="mt-12 flex h-full flex-col items-center justify-between gap-8 text-center text-gray-600 md:flex-row md:gap-0">
+        <div className="mx-auto max-w-screen-xl px-4 mt-12 flex h-full flex-col items-center justify-between gap-8 text-center text-black md:flex-row md:gap-0">
             <div className="flex size-full flex-col justify-center gap-4 md:w-1/3">
                 <div className="mx-auto mb-2">
                     <ClockIcon className="size-16" />

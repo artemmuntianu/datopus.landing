@@ -2,7 +2,6 @@ import BlurFade from "@/components/magicui/blur-fade"
 import ShineBorder from "@/components/magicui/shine-border"
 import { ButtonExploreDemo } from "../components/ui/button-explore-demo"
 import HeroVideoDialog from "../components/ui/hero-video-dialog"
-import WordRotate from "../components/ui/word-rotate"
 import { FAQSection } from "./faq_section"
 import { FeaturesSection } from "./features_section"
 import { HowItWorksSection } from "./howitworks_section"
@@ -15,21 +14,24 @@ export default function Page() {
     return (
         <main className="flex flex-col min-h-[100dvh] mt-[3.5rem] space-y-10 [background-image:linear-gradient(to_bottom,hsl(var(--primary)/10%),transparent)] [background-size:100%_50rem] [background-repeat:no-repeat]">
 
-            <section id="hero" className="max-w-screen-xl mx-auto w-full">
-                <div className="flex flex-col items-center justify-center text-center my-[3.5rem]">
-                    <div className="space-y-5">
-                        <h1 className="max-[470px]:text-5xl text-6xl">
-                            Plug&Run Analytics
-                            <WordRotate words={["for Product Team", "for Growth Team", "for Data Team", "for Devs"]} />
+            <section id="hero" className="max-w-screen-xl mx-auto">
+                <div className="flex flex-col items-center justify-center text-center my-[3.5rem] px-4">
+                    <div className="space-y-10">
+                        <h1 className="max-[470px]:text-[4rem] text-[5rem] leading-none font-bold">
+                            Plug&Run<br />Feature Analytics
+                            {/*<WordRotate words={["for Product Team", "for Growth Team", "for Data Team", "for Devs"]} />*/}
                         </h1>
-                        <p className="flex flex-col justify-center text-muted-foreground text-2xl/relaxed md:flex-row md:gap-[0.5rem]">
-                            <span><code>+30%</code> conversions</span>
-                            <span><code>2x</code> retention</span>
-                            <span><code>-40%</code> churn</span>
-                        </p>
+                        <h2 className="max-[470px]:text-[2rem] text-[3rem] leading-none">
+                            Modern analytics for modern digital products.
+                        </h2>
                     </div>
-                    <div className="flex items-center justify-center gap-[0.5rem] mt-[3.5rem]">
-                        <ButtonExploreDemo />
+                    <p className="flex flex-col justify-center text-muted-foreground text-2xl/relaxed md:flex-row md:gap-[0.5rem] my-[3.5rem]">
+                        <span><code>+30%</code> conversions</span>
+                        <span><code>2x</code> retention</span>
+                        <span><code>-40%</code> churn</span>
+                    </p>
+                    <div className="flex items-center justify-center gap-[0.5rem]">
+                        <ButtonExploreDemo creditCardClass="text-muted-foreground" />
                     </div>
                 </div>
                 <BlurFade delay={BLUR_FADE_DELAY * 1} yOffset={0}>
@@ -42,17 +44,14 @@ export default function Page() {
                             animationStyle="fade"
                             videoSrc="https://www.youtube.com/embed/DjiYVJyy2vg?si=iZAcJ2QEeYwJ2gSV"
                             thumbnailSrc="/features_flow.png"
-                            thumbnailAlt="Datopus Product Analytics Platform"
+                            thumbnailAlt="Datopus Feature Analytics Platform"
                         />
                     </ShineBorder>
                 </BlurFade>
             </section>
 
-            <section id="problem" className="mx-auto max-w-screen-xl px-4 py-16">
-                <div className="mx-auto space-y-5 py-6 text-center bg-[hsl(var(--primary)/10%)] rounded-lg">
-                    <h2 className="text-primary font-mono text-[14px] font-medium tracking-tight">
-                        The Problem
-                    </h2>
+            <section id="problem" className="py-16 bg-[hsl(var(--primary)/5%)]">
+                <div className="mx-auto space-y-5 py-6 px-4 text-center">
                     <h2 className="mx-auto mb-2 max-w-4xl text-balance text-[48px] font-medium leading-tight tracking-tighter">
                         Do Not Let It Slow You Down
                     </h2>
@@ -63,13 +62,10 @@ export default function Page() {
                 <ProblemSection />
             </section>
 
-            <section id="platform" className="mx-auto max-w-screen-xl px-4 py-16">
-                <div className="mb-5 mx-auto space-y-5 py-6 text-center bg-[hsl(var(--primary)/10%)] rounded-lg">
-                    <h2 className="text-primary font-mono text-[14px] font-medium tracking-tight">
-                        The Solution
-                    </h2>
+            <section id="platform" className="py-16">
+                <div className="mb-5 mx-auto space-y-5 py-6 px-4 text-center">
                     <h2 className="mx-auto mb-2 max-w-4xl text-balance text-[48px] font-medium leading-tight tracking-tighter">
-                        Unlock the Power of Plug&Run Analytics Platform
+                        Unlock the Power of Feature Analytics
                     </h2>
                     <h2 className="mx-auto mb-2 max-w-4xl font-light text-2xl/relaxed">
                         Understand user behavior across the product journey with powerful custom reports, and address every product question - no coding required.
@@ -78,11 +74,8 @@ export default function Page() {
                 <FeaturesSection />
             </section>
 
-            <section id="security-standards" className="w-full mx-auto max-w-screen-xl px-4 py-16">
-                <div className="mb-5 mx-auto space-y-5 py-6 text-center bg-[hsl(var(--primary)/10%)] rounded-lg">
-                    <h2 className="text-primary font-mono text-[14px] font-medium tracking-tight">
-                        Security Standards at Datopus
-                    </h2>
+            <section id="security-standards" className="py-16 bg-[hsl(var(--primary)/5%)]">
+                <div className="mb-5 mx-auto space-y-5 py-6 px-4 text-center">
                     <h2 className="mx-auto mb-2 max-w-4xl text-balance text-[48px] font-medium leading-tight tracking-tighter">
                         We take our customers and their users&apos; data very seriously
                     </h2>
@@ -93,11 +86,8 @@ export default function Page() {
                 <SecurityStandardsSection />
             </section>
 
-            <section id="how-it-works" className="max-[1200px]:hidden mx-auto px-4 py-16">
-                <div className="mx-auto space-y-5 py-6 text-center bg-[hsl(var(--primary)/10%)] rounded-lg">
-                    <h2 className="text-primary font-mono text-[14px] font-medium tracking-tight">
-                        How it works
-                    </h2>
+            <section id="how-it-works" className="max-[1200px]:hidden py-16">
+                <div className="mx-auto space-y-5 py-6 px-4 text-center">
                     <h2 className="mx-auto mb-2 max-w-4xl text-balance text-[48px] font-medium leading-tight tracking-tighter">
                         Become a data-led company in 3 steps
                     </h2>
@@ -105,8 +95,8 @@ export default function Page() {
                 <HowItWorksSection />
             </section>
 
-            <section className="w-full mx-auto max-w-screen-xl px-4 py-16">
-                <div className="flex items-center space-x-[72px] mx-auto md:space-x-[0px] md:space-y-[72px] md:items-stretch">
+            <section className="py-16 bg-[hsl(var(--primary)/5%)]">
+                <div className="mx-auto max-w-screen-xl px-4 flex items-center space-x-[72px] md:space-x-[0px] md:space-y-[72px] md:items-stretch">
                     <div className="flex items-center space-x-[32px] flex-shrink w-[25%] md:w-full">
                         <img
                             alt="Product Manager at TechFlow"
@@ -135,19 +125,19 @@ export default function Page() {
                 </div>
             </section>
 
-            <section id="faq" className="w-full mx-auto max-w-screen-xl px-4 py-16">
-                <div className="mx-auto space-y-5 py-6 text-center bg-[hsl(var(--primary)/10%)] rounded-lg">
-                    <h2 className="text-primary font-mono text-[14px] font-medium tracking-tight">
+            <section id="faq" className="py-16">
+                <div className="mx-auto space-y-5 py-6 px-4 text-center">
+                    <h2 className="mx-auto mb-2 max-w-4xl text-balance text-[48px] font-medium leading-tight tracking-tighter">
                         Frequently Asked Questions
                     </h2>
                 </div>
                 <FAQSection />
             </section>
 
-            <section id="cta" className="w-full py-28 bg-[hsl(var(--primary)/10%)]">
+            <section id="cta" className="w-full py-28 bg-blue-600">
                 <div className="flex flex-col items-center justify-center text-center my-[3.5rem]">
                     <div className="mx-auto space-y-5 pb-6 text-center">
-                        <h2 className="mx-auto mb-2 max-w-4xl text-balance text-5xl font-medium leading-tight tracking-tighter">
+                        <h2 className="mx-auto mb-2 max-w-4xl text-balance text-5xl font-medium leading-tight tracking-tighter text-white">
                             Unite Your Whole Team Around Your Product Growth Goals
                         </h2>
                     </div>

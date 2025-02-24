@@ -3,14 +3,14 @@ import Link from "next/link";
 
 export const features_bg = [
     {
-        name: "Self-service Data Exploration",
+        name: "Event Autocapture for Google Analytics",
         descriptionNode:
             <p className="pointer-events-none max-w-lg font-light">
-                Analyze how different user segments use specific features.
+                Autocapture lets you track all events in your web app automatically right into your Google Analytics account, no coding required. You don&apos;t have to chase your developers to track events!
             </p>,
-        href: "/platform/feature-self-service-data-exploration",
+        href: "/platform/feature-event-autocapture",
         cta: "Learn more",
-        backgroundNode: <img src='features_usage.png' className="w-[calc(100%-3rem)] mx-6 border rounded-[0.25rem] [mask-image:linear-gradient(to_bottom,white,transparent)]" />,
+        backgroundNode: <img src='https://datopus.blob.core.windows.net/blog/feature-event-autocapture-1.png' className="w-[calc(100%-3rem)] mx-6 border rounded-[0.25rem] [mask-image:linear-gradient(to_bottom,white,transparent)]" />,
     },
     {
         name: "User Journeys",
@@ -21,6 +21,16 @@ export const features_bg = [
         href: "/platform/feature-user-flow-diagram",
         cta: "Learn more",
         backgroundNode: <img src='features_flow.png' className="w-[calc(100%-3rem)] mx-6 border rounded-[0.25rem] [mask-image:linear-gradient(to_bottom,white,transparent)]" />
+    },
+    {
+        name: "Self-service Data Exploration",
+        descriptionNode:
+            <p className="pointer-events-none max-w-lg font-light">
+                Analyze how different user segments use specific features.
+            </p>,
+        href: "/platform/feature-self-service-data-exploration",
+        cta: "Learn more",
+        backgroundNode: <img src='features_usage.png' className="w-[calc(100%-3rem)] mx-6 border rounded-[0.25rem] [mask-image:linear-gradient(to_bottom,white,transparent)]" />,
     },
     {
         name: "Customer-facing Dashboards",
@@ -51,6 +61,18 @@ export const features_bg = [
         href: "/platform/feature-monitoring",
         cta: "Learn more",
         backgroundNode: <img src='features_monitoring.png' className="w-[calc(100%-3rem)] mx-6 border rounded-[0.25rem] [mask-image:linear-gradient(to_bottom,white,transparent)]" />,
+    }
+];
+
+export const features = [
+    {
+        name: "Company-level Analytics for B2B SaaS",
+        descriptionNode:
+            <p className="pointer-events-none max-w-lg font-light">
+                Track, monitor, and analyze the data of each individual company that uses your SaaS platform.
+            </p>,
+        href: "/platform/feature-company-level-analytics",
+        cta: "Learn more",
     },
     {
         name: "Scalable to Any Number of Users",
@@ -63,37 +85,9 @@ export const features_bg = [
     }
 ];
 
-export const features = [
-    {
-        name: "Event Autocapture for Google Analytics",
-        descriptionNode:
-            <p className="max-w-lg font-light">
-                Autocapture lets you track all events in your website or app automatically right into your Google Analytics account, no coding required. You don&apos;t have to chase your developers to track events!
-            </p>,
-        href: "/platform/feature-event-autocapture",
-        cta: "Learn more",
-    },
-    {
-        name: "Company-level Analytics for B2B SaaS",
-        descriptionNode:
-            <p className="max-w-lg font-light">
-                Track, monitor, and analyze the data of each individual company that uses your SaaS platform.
-            </p>,
-        href: "/platform/feature-company-level-analytics",
-        cta: "Learn more",
-    }
-];
-
 export function FeaturesSection() {
     return (
-        <>
-            <BentoGrid>
-                {
-                    features.map((feature) => (
-                        <BentoCard key={feature.name} {...feature} />
-                    ))
-                }
-            </BentoGrid>
+        <div className="mx-auto max-w-screen-xl px-4">
             <BentoGrid className="mt-[5px]">
                 {
                     features_bg.map((feature) => (
@@ -101,6 +95,13 @@ export function FeaturesSection() {
                     ))
                 }
             </BentoGrid>
-        </>
+            <BentoGrid>
+                {
+                    features.map((feature) => (
+                        <BentoCard key={feature.name} {...feature} />
+                    ))
+                }
+            </BentoGrid>
+        </div>
     );
 }

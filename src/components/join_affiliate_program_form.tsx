@@ -5,7 +5,7 @@ import { useState, useTransition } from "react";
 import { Input } from "../components/ui/input";
 import { Button } from "./ui/button";
 
-export function JoinWaitlistForm() {
+export function JoinAffiliateProgramForm() {
 
     const [isPending, startTransition] = useTransition();
     const [isSuccess, setIsSuccess] = useState(false);
@@ -37,16 +37,15 @@ export function JoinWaitlistForm() {
 
     return isSuccess
         ? (
-            <div className="bg-white leading-[3rem] px-5 shadow-sm rounded-md text-sm">Welcome to the waitlist! We&apos;ll keep you updated on when the beta version is available.</div>
+            <div className="bg-white leading-[3rem] px-5 shadow-sm rounded-md text-sm">Welcome to the Datopus Affiliate Program!We&apos;ll contact you within 3 business days.</div>
         )
         : (
-            <form onSubmit={submit} method="post">
-                <Input type="hidden" name="action" value="waitlist" />
-                <Input type="email" name="email" required placeholder="Enter your email address" className="
-bg-white" />
-                <Button disabled={isPending} type="submit" variant="default" className="max-[410px]:mt-2 ml-2 h-12 group text-white">
-                    Join Waitlist
-                    <ChevronRightIcon className="ml-1 size-4 transition-transform duration-300 group-hover:translate-x-1" />
+            <form onSubmit={submit} method="post" className="flex flex-col items-center max-w-screen-xl mx-auto gap-[0.5rem] md:flex-row">
+                <Input type="hidden" name="action" value="affiliate_program" />
+                <Input type="email" name="email" required placeholder="Enter your email address" className="bg-white text-black text-md" />
+                <Button disabled={isPending} type="submit" size="lg" variant="default" className="min-w-[220px] group text-md bg-[#ffa500] hover:bg-[#ffa500]">
+                    Join Affiliate Program
+                    <ChevronRightIcon className="inline ml-1 size-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </Button>
             </form>
         );

@@ -3,15 +3,27 @@
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { features, features_bg } from "../app/features_section";
 import { Button } from "./ui/button";
 import { ButtonScheduleDemo } from "./ui/button-schedule-demo";
+import { ChevronDownIcon } from "@radix-ui/react-icons";
 
 export function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isPlatformOpen, setIsPlatformOpen] = useState(false);
     const [isCaseStudiesOpen, setIsCaseStudiesOpen] = useState(false);
+
+    useEffect(() => {
+        const handleMouseLeave = (event: MouseEvent) => {
+            setIsPlatformOpen(false);
+            setIsCaseStudiesOpen(false);
+        };
+        document.addEventListener("mouseleave", handleMouseLeave);
+        return () => {
+            document.removeEventListener("mouseleave", handleMouseLeave);
+        };
+    }, []);
 
     return (
         <header className="fixed left-0 top-0 z-50 w-full border-b bg-white">
@@ -33,13 +45,14 @@ export function Header() {
                                 href="/#platform"
                                 onMouseEnter={() => setIsPlatformOpen(true)}
                                 onMouseLeave={(e) => {
-                                    if (!e.currentTarget.contains(e.relatedTarget as Node)) {
+                                    if ((e.relatedTarget instanceof Node) && !e.currentTarget.contains(e.relatedTarget as Node)) {
                                         setIsPlatformOpen(false);
                                     }
                                 }}
                             >
                                 <Button variant="ghost" className="h-[3.5rem]">
                                     Platform
+                                    <ChevronDownIcon className="w-4 h-4 ml-1" />
                                     <div className="hidden group-hover:block absolute left-0 bottom-0 bg-primary h-1 w-full"></div>
                                 </Button>
                             </Link>
@@ -48,7 +61,7 @@ export function Header() {
                                     className="absolute left-0 bg-white shadow-md p-2 w-max"
                                     onMouseEnter={() => setIsPlatformOpen(true)}
                                     onMouseLeave={(e) => {
-                                        if (!e.currentTarget.contains(e.relatedTarget as Node)) {
+                                        if ((e.relatedTarget instanceof Node) && !e.currentTarget.contains(e.relatedTarget as Node)) {
                                             setIsPlatformOpen(false);
                                         }
                                     }}
@@ -66,13 +79,14 @@ export function Header() {
                                 href="/case-studies"
                                 onMouseEnter={() => setIsCaseStudiesOpen(true)}
                                 onMouseLeave={(e) => {
-                                    if (!e.currentTarget.contains(e.relatedTarget as Node)) {
+                                    if ((e.relatedTarget instanceof Node) && !e.currentTarget.contains(e.relatedTarget as Node)) {
                                         setIsCaseStudiesOpen(false);
                                     }
                                 }}
                             >
                                 <Button variant="ghost" className="h-[3.5rem]">
                                     Case studies
+                                    <ChevronDownIcon className="w-4 h-4 ml-1" />
                                     <div className="hidden group-hover:block absolute left-0 bottom-0 bg-primary h-1 w-full"></div>
                                 </Button>
                             </Link>
@@ -81,7 +95,7 @@ export function Header() {
                                     className="absolute left-0 bg-white shadow-md p-2 w-max"
                                     onMouseEnter={() => setIsCaseStudiesOpen(true)}
                                     onMouseLeave={(e) => {
-                                        if (!e.currentTarget.contains(e.relatedTarget as Node)) {
+                                        if ((e.relatedTarget instanceof Node) && !e.currentTarget.contains(e.relatedTarget as Node)) {
                                             setIsCaseStudiesOpen(false);
                                         }
                                     }}

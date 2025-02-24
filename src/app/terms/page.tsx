@@ -10,7 +10,7 @@ export default function TermsPage() {
             <div className="mx-auto max-w-screen-xl px-4 space-y-6">
                 <section>
                     <h2 className="text-2xl font-semibold mb-4">Welcome to Datopus!</h2>
-                    <p className="leading-relaxed">These Terms of Service (&quot;Terms&quot;) govern your use of our product analytics platform (&quot;Service&quot;). By accessing or using the Service, you agree to be bound by these Terms. If you do not agree, do not use the Service.</p>
+                    <p className="leading-relaxed">These Terms of Service (&quot;Terms&quot;) govern your use of our feature analytics platform (&quot;Service&quot;). By accessing or using the Service, you agree to be bound by these Terms. If you do not agree, do not use the Service.</p>
                 </section>
                 <section>
                     <h2 className="text-xl font-semibold mb-2">1. Acceptance of Terms</h2>
@@ -18,7 +18,7 @@ export default function TermsPage() {
                 </section>
                 <section>
                     <h2 className="text-xl font-semibold mb-2">2. Description of Service</h2>
-                    <p className="leading-relaxed">Datopus provides tools for product analytics, user behavior tracking, and data visualization. Features and functionalities may be updated, modified, or removed at any time at our discretion.</p>
+                    <p className="leading-relaxed">Datopus provides tools for feature analytics, user behavior tracking, and data visualization. Features and functionalities may be updated, modified, or removed at any time at our discretion.</p>
                 </section>
                 <section>
                     <h2 className="text-xl font-semibold mb-2">3. Account Registration</h2>

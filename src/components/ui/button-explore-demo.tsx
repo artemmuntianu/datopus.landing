@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Icons } from "../icons";
 import { Button } from "./button";
 
-export function ButtonExploreDemo() {
+export function ButtonExploreDemo({ creditCardClass = "text-white"}) {
     return (
         <div>
             <div className="flex flex-col gap-[0.5rem] md:flex-row">
@@ -20,7 +20,7 @@ export function ButtonExploreDemo() {
                     </Link>
                 </Button>
             </div>
-            <p className="text-sm text-muted-foreground flex items-center justify-center gap-1 mt-1">
+            <p className={`text-sm flex items-center justify-center gap-1 mt-1 ${creditCardClass}`}>
                 {Icons.creditCard({ className: "size-4" })}
                 <span>No credit card needed</span>
             </p>

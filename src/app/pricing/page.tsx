@@ -1,8 +1,7 @@
-import BlurFade from "@/components/magicui/blur-fade";
 import { Icons } from "@/components/icons";
-import { ButtonScheduleDemo } from "../../components/ui/button-schedule-demo";
-import { Button } from "../../components/ui/button";
+import BlurFade from "@/components/magicui/blur-fade";
 import Link from "next/link";
+import { Button } from "../../components/ui/button";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -15,7 +14,7 @@ export default function PricingPage() {
                 </h1>
             </BlurFade>
             <div className="max-[950px]:grid-cols-1 mx-auto px-4 mb-4 grid max-w-screen-xl gap-3 grid-cols-3">
-                <BlurFade delay={BLUR_FADE_DELAY + 2 * 0.05} className="bg-white border border-gray-200 flex flex-col p-5 rounded-2xl">
+                <BlurFade delay={BLUR_FADE_DELAY + 2 * 0.05} className="bg-white flex flex-col p-5 rounded-xl shadow-md">
                     <section className="flex flex-col gap-3 h-full pb-5">
                         <div className="flex flex-col gap-3">
                             <div className="flex flex-col">
@@ -69,9 +68,9 @@ export default function PricingPage() {
                             <Link href="https://app.datopus.io/auth">Get started</Link>
                         </Button>
                     </div> 
-                    <div className="text-center text-sm mt-2 text-gray-600">30-day free trial</div>
+                    <div className="text-center text-sm mt-2 text-gray-600">14-day free trial</div>
                 </BlurFade>
-                <BlurFade delay={BLUR_FADE_DELAY + 3 * 0.05} className="bg-white border border-gray-200 flex flex-col p-5 rounded-2xl">
+                <BlurFade delay={BLUR_FADE_DELAY + 3 * 0.05} className="bg-white flex flex-col p-5 rounded-xl shadow-md">
                     <section className="flex flex-col gap-3 h-full pb-5">
                         <div className="flex flex-col gap-3">
                             <div className="flex flex-col">
@@ -117,9 +116,9 @@ export default function PricingPage() {
                             <Link href="https://app.datopus.io/auth">Get started</Link>
                         </Button>
                     </div> 
-                    <div className="text-center text-sm mt-2 text-gray-600">30-day free trial</div>
+                    <div className="text-center text-sm mt-2 text-gray-600">14-day free trial</div>
                 </BlurFade>
-                <BlurFade delay={BLUR_FADE_DELAY + 4 * 0.05} className="bg-white border border-gray-200 flex flex-col p-5 rounded-2xl">
+                <BlurFade delay={BLUR_FADE_DELAY + 4 * 0.05} className="bg-white flex flex-col p-5 rounded-xl shadow-md">
                     <section className="flex flex-col gap-3 h-full pb-5">
                         <div className="flex flex-col gap-3">
                             <div className="flex flex-col">
@@ -161,7 +160,7 @@ export default function PricingPage() {
                             <Link href="https://app.datopus.io/auth">Get started</Link>
                         </Button>
                     </div> 
-                    <div className="text-center text-sm mt-2 text-gray-600">30-day free trial</div>
+                    <div className="text-center text-sm mt-2 text-gray-600">14-day free trial</div>
                 </BlurFade>
             </div>
         </main>
