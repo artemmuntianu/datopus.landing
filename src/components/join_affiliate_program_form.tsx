@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { ChevronRightIcon } from "@radix-ui/react-icons";
 import { useState, useTransition } from "react";
@@ -37,10 +37,10 @@ export function JoinAffiliateProgramForm() {
 
     return isSuccess
         ? (
-            <div className="bg-white leading-[3rem] px-5 shadow-sm rounded-md text-sm">Welcome to the Datopus Affiliate Program!We&apos;ll contact you within 3 business days.</div>
+            <div className="max-w-screen-xl mx-auto text-lg p-6 bg-white text-black rounded-lg shadow-md">🎉<br/>Welcome to the Datopus Affiliate Program!<br/>We&apos;ll send you all the details of the program within 3 business days.</div>
         )
         : (
-            <form onSubmit={submit} method="post" className="flex flex-col items-center max-w-screen-xl mx-auto gap-[0.5rem] md:flex-row">
+            <form onSubmit={submit} method="post" className="max-w-screen-xl mx-auto flex flex-col items-center gap-[0.5rem] md:flex-row">
                 <Input type="hidden" name="action" value="affiliate_program" />
                 <Input type="email" name="email" required placeholder="Enter your email address" className="bg-white text-black text-md" />
                 <Button disabled={isPending} type="submit" size="lg" variant="default" className="min-w-[220px] group text-md bg-[#ffa500] hover:bg-[#ffa500]">
