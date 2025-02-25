@@ -47,15 +47,15 @@ export async function POST(req: NextRequest) {
                     }
                 }
                 break;
-            case 'waitlist':
+            case 'affiliate_program':
                 {
-                    if (data.waitlist_requested !== null)
+                    if (data.affiliate_requested !== null)
                         return Response.json({ msg: 'duplicate' });
 
                     let { error } = await sbClient
                         .from('landing_page_users')
                         .update({
-                            waitlist_requested: new Date().toISOString()
+                            affiliate_requested: new Date().toISOString()
                         })
                         .eq('email', email);
                     if (error) {
@@ -71,7 +71,7 @@ export async function POST(req: NextRequest) {
             .insert({
                 email,
                 demo_requested: action == 'demo' ? new Date().toISOString() : null,
-                waitlist_requested: action == 'waitlist' ? new Date().toISOString() : null
+                affiliate_requested: action == 'affiliate_program' ? new Date().toISOString() : null
             });
         if (error) {
             console.error(error);

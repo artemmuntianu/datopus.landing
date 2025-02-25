@@ -155,6 +155,7 @@ export function Header() {
                     <Link href="/case-studies" className="block py-2" onClick={() => setIsMenuOpen(false)}>Case studies</Link>
                     <Link href="/blog" className="block py-2" onClick={() => setIsMenuOpen(false)}>Blog</Link>
                     <Link href="https://docs.datopus.io" className="block py-2" onClick={() => setIsMenuOpen(false)}>Documentation</Link>
+                    <Link href="/affiliate" className="block py-2" onClick={() => setIsMenuOpen(false)}>Affiliate Program</Link>
                     <Link href="/pricing" className="block py-2" onClick={() => setIsMenuOpen(false)}>Pricing</Link>
                     <Link href="https://app.datopus.io/auth" className="block py-2" onClick={() => setIsMenuOpen(false)}>GET STARTED</Link>
                     <ButtonScheduleDemo />
