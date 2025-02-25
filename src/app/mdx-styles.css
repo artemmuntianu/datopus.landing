@@ -5,38 +5,44 @@
 
     .blog-article h1 {
         font-size: 2em;
-        font-weight: bold;
+        font-weight: 600;
         padding-bottom: 0.5em;
+        padding-top: 0.5em;
     }
 
     .blog-article h2 {
         font-size: 1.5em;
-        font-weight: bold;
+        font-weight: 600;
         padding-bottom: 0.5em;
+        padding-top: 0.5em;
     }
 
     .blog-article h3 {
         font-size: 1.17em;
-        font-weight: bold;
+        font-weight: 600;
         padding-bottom: 0.5em;
+        padding-top: 0.5em;
     }
 
     .blog-article h4 {
         font-size: 1.00em;
-        font-weight: bold;
+        font-weight: 600;
         padding-bottom: 0.5em;
+        padding-top: 0.5em;
     }
 
     .blog-article h5 {
         font-size: 0.83em;
-        font-weight: bold;
+        font-weight: 600;
         padding-bottom: 0.5em;
+        padding-top: 0.5em;
     }
 
     .blog-article h6 {
         font-size: 0.67em;
-        font-weight: bold;
+        font-weight: 600;
         padding-bottom: 0.5em;
+        padding-top: 0.5em;
     }
 
     .blog-article p {
