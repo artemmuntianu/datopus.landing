@@ -4,7 +4,7 @@ import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { features, features_bg } from "../app/features_section";
+import { features } from "../app/features_section";
 import { Button } from "./ui/button";
 import { ButtonScheduleDemo } from "./ui/button-schedule-demo";
 import { ChevronDownIcon } from "@radix-ui/react-icons";
@@ -67,8 +67,8 @@ export function Header() {
                                     }}
                                 >
                                     {
-                                        [...features_bg, ...features].map((feature, index) => (
-                                            <Link key={index} href={feature.href} className="block py-2 px-4 hover:text-primary" onClick={() => setIsPlatformOpen(false)}>{feature.name}</Link>
+                                        features.map((feature, index) => (
+                                            <Link key={index} href={feature.href} className="block py-2 px-4 hover:text-primary" onClick={() => setIsPlatformOpen(false)}>{feature.title}</Link>
                                         ))
                                     }
                                 </div>

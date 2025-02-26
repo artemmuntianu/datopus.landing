@@ -71,7 +71,7 @@ export function HowItWorksSection() {
                             </div>
                         </div>
                         <div className="flex w-full items-start">
-                            <p className="text-base font-normal text-gray-600 text-balance text-center">
+                            <p className="text-lg text-balance text-center">
                                 Install our script to track all user activity automatically.
                             </p>
                         </div>
@@ -230,7 +230,7 @@ export function HowItWorksSection() {
                             </svg>
                         </div>
                         <div className="flex w-full items-start">
-                            <p className="text-base font-normal text-gray-600 text-balance text-center">
+                            <p className="text-lg text-balance text-center">
                                 Use our analytics portal to gain valuable insights into user behavior.
                             </p>
                         </div>
@@ -254,7 +254,7 @@ export function HowItWorksSection() {
                             <RocketIcon className="absolute left-1/2 top-1/2 z-0 size-20 -translate-x-1/2 -translate-y-1/2 text-[gray]" />
                         </div>
                         <div className="flex w-full items-start">
-                            <p className="text-base font-normal text-gray-600 text-balance text-center">
+                            <p className="text-lg text-balance text-center">
                                 Turn insights into concrete steps to improve your product.
                             </p>
                         </div>

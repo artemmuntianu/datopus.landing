@@ -65,7 +65,7 @@ export default function PricingPage() {
                     </section>
                     <div className="flex justify-center">
                         <Button className="min-w-[50%]" variant="default" asChild>
-                            <Link href="https://app.datopus.io/auth">Get started</Link>
+                            <Link href="https://app.datopus.io/auth">Start free trial</Link>
                         </Button>
                     </div> 
                     <div className="text-center text-sm mt-2 text-gray-600">14-day free trial</div>
@@ -113,7 +113,7 @@ export default function PricingPage() {
                     </section>
                     <div className="flex justify-center">
                         <Button className="min-w-[50%]" variant="default" asChild>
-                            <Link href="https://app.datopus.io/auth">Get started</Link>
+                            <Link href="https://app.datopus.io/auth">Start free trial</Link>
                         </Button>
                     </div> 
                     <div className="text-center text-sm mt-2 text-gray-600">14-day free trial</div>
@@ -157,7 +157,7 @@ export default function PricingPage() {
                     </section>
                     <div className="flex justify-center">
                         <Button className="min-w-[50%]" variant="default" asChild>
-                            <Link href="https://app.datopus.io/auth">Get started</Link>
+                            <Link href="https://app.datopus.io/auth">Start free trial</Link>
                         </Button>
                     </div> 
                     <div className="text-center text-sm mt-2 text-gray-600">14-day free trial</div>
