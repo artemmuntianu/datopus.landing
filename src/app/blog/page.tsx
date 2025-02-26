@@ -3,6 +3,12 @@ import { getPosts } from "@/data/post";
 import { ChevronRightIcon } from "@radix-ui/react-icons";
 
 const BLUR_FADE_DELAY = 0.04;
+const images = [
+    "https://datopus.blob.core.windows.net/blog/what-is-product-feature-analytics.jpg",
+    "https://datopus.blob.core.windows.net/blog/boost-your-e-commerce-success-with-product-analytics.jpg",
+    "https://datopus.blob.core.windows.net/blog/product-analytics-vs-web-analytics-differences-benefits-and-examples.jpg",
+    "https://datopus.blob.core.windows.net/blog/user-flow-analysis-the-key-to-optimizing-your-digital-product.jpg"
+];
 
 export default async function BlogAllPosts() {
     const posts = await getPosts("content/blog");
@@ -36,7 +42,9 @@ export default async function BlogAllPosts() {
                                             </a>
                                         )
                                         : (
-                                            <div></div>
+                                            <a className="aspect-w-2 aspect-h-1 block overflow-hidden shadow rounded-2xl" href={`/blog/${post.slug}`}>
+                                                <img alt={post.metadata.title} src={images[id % 4]} className="max-h-[25rem] h-full w-full object-cover transition-all duration-200 group-hover:scale-110"></img>
+                                            </a>
                                         )
                                     }
 
