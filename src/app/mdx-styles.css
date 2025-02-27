@@ -3,6 +3,10 @@
     border-right-width: 1px;
 }
 
+    .blog-article b, .blog-article strong {
+        font-weight: 600;
+    }
+
     .blog-article h1 {
         font-size: 2em;
         font-weight: 600;
