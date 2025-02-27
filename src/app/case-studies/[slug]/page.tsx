@@ -3,9 +3,10 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { ButtonExploreDemo } from '../../../components/ui/button-explore-demo';
 import '../../mdx-styles.css';
+import RecommendedPosts from '../../../components/recommended_posts';
 
 const DATA = {
-    url: 'https://datopus.io',
+    url: 'https://www.datopus.io',
     name: 'Artem M',
     dirRelativePath: 'content/case-studies',
 }
@@ -93,6 +94,7 @@ export default async function UseCasesPost({
                 />
                 <h1 className='font-medium text-3xl my-8'>{post.metadata.title}</h1>
                 <article dangerouslySetInnerHTML={{ __html: post.source }}></article>
+                <RecommendedPosts post={post} allPosts={await getPosts(DATA.dirRelativePath)} baseUrl={`${DATA.url}/case-studies`} />
             </section>
             <section id="cta" className="w-full py-18 bg-blue-600">
                 <div className="flex flex-col items-center justify-center text-center my-[3.5rem]">

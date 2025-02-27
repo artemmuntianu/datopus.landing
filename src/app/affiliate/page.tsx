@@ -1,7 +1,12 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import { JoinAffiliateProgramForm } from "../../components/join_affiliate_program_form";
+import { Metadata } from "next";
 
 const BLUR_FADE_DELAY = 0.04;
+
+export const metadata: Metadata = {
+    title: 'Affiliate Program',
+}
 
 export default function AffiliatePage() {
     return (

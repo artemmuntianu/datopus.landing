@@ -1,11 +1,12 @@
 import { getPost, getPosts } from '@/data/post';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import RecommendedPosts from '../../../components/recommended_posts';
 import { ButtonExploreDemo } from '../../../components/ui/button-explore-demo';
 import '../../mdx-styles.css';
 
 const DATA = {
-    url: 'https://datopus.io',
+    url: 'https://www.datopus.io',
     name: 'Artem M',
     dirRelativePath: 'content/blog',
 }
@@ -93,6 +94,7 @@ export default async function BlogPost({
                 />
                 <h1 className='font-medium text-3xl my-8'>{post.metadata.title}</h1>
                 <article dangerouslySetInnerHTML={{ __html: post.source }}></article>
+                <RecommendedPosts post={post} allPosts={await getPosts(DATA.dirRelativePath)} baseUrl={`${DATA.url}/blog`} />
             </section>
             <section id="cta" className="w-full py-18 bg-blue-600">
                 <div className="flex flex-col items-center justify-center text-center my-[3.5rem]">

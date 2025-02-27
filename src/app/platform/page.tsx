@@ -1,8 +1,13 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import { getPosts } from "@/data/post";
 import { ChevronRightIcon } from "@radix-ui/react-icons";
+import { Metadata } from "next";
 
 const BLUR_FADE_DELAY = 0.04;
+
+export const metadata: Metadata = {
+    title: 'Platform Overview',
+}
 
 export default async function PlatformAllPosts() {
     const posts = await getPosts("content/platform");
@@ -11,7 +16,7 @@ export default async function PlatformAllPosts() {
         <main className="flex flex-col min-h-[100dvh] mt-[3.5rem] [background-image:linear-gradient(to_bottom,hsl(var(--primary)/10%),transparent)] [background-size:100%_50rem] [background-repeat:no-repeat]">
             <BlurFade delay={BLUR_FADE_DELAY}>
                 <h1 className="font-medium text-3xl text-center my-8">
-                    Datopus Platform
+                    Platform Overview
                 </h1>
             </BlurFade>
             <section className="max-w-screen-xl mx-auto px-4">

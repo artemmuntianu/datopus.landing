@@ -2,8 +2,13 @@ import { Icons } from "@/components/icons";
 import BlurFade from "@/components/magicui/blur-fade";
 import Link from "next/link";
 import { Button } from "../../components/ui/button";
+import { Metadata } from "next";
 
 const BLUR_FADE_DELAY = 0.04;
+
+export const metadata: Metadata = {
+    title: 'Pricing',
+}
 
 export default function PricingPage() {
     return (
@@ -25,15 +30,16 @@ export default function PricingPage() {
                                         <span className="align-baseline text-sm text-gray-600">/month</span>
                                     </div>
                                 </div>
-                                <p className="min-h-[30px] text-gray-600">Simple analytics</p>
+                                <p className="min-h-[30px] text-gray-600">Supercharged Google Analytics</p>
                             </div>
                         </div>
                         <div className="grid gap-2 text-gray-600">
                             <div className="flex items-center gap-2">
                                 <div>
                                     <span className="text-gray-900">Datasource</span>
-                                    <ul className="list-disc ml-6">
-                                        <li>Google Analytics</li>
+                                    <ul className="ml-6">
+                                        <li>{Icons.google_analytics({ className: "size-4 inline" })} Google Analytics</li>
+                                        <li>&nbsp;</li>
                                     </ul>
                                 </div>
                             </div>
@@ -47,19 +53,19 @@ export default function PricingPage() {
                             </div>
                             <div className="flex items-center gap-2">
                                 {Icons.check({ className: "size-4" })}
-                                <span>Events auto-capture</span>
+                                <span>Auto-track user actions</span>
                             </div>
                             <div className="flex items-center gap-2">
                                 {Icons.check({ className: "size-4" })}
-                                <span>No user, session or event limits</span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                                {Icons.check({ className: "size-4" })}
-                                <span>Dashboard</span>
+                                <span>Dashboards</span>
                             </div>
                             <div className="flex items-center gap-2">
                                 {Icons.check({ className: "size-4" })}
                                 <span>External reports</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                {Icons.check({ className: "size-4" })}
+                                <span>No user, session or event limits</span>
                             </div>
                         </div>
                     </section>
@@ -87,9 +93,10 @@ export default function PricingPage() {
                         <div className="grid gap-2 text-gray-600">
                             <div className="flex items-center gap-2">
                                 <div>
-                                    <span className="text-gray-900">Datasource</span>
-                                    <ul className="list-disc ml-6">
-                                        <li>Google Big Query</li>
+                                    <span className="text-gray-900">Datasources</span>
+                                    <ul className="ml-6">
+                                        <li>{Icons.google_analytics({ className: "size-4 inline" })} Google Analytics</li>
+                                        <li>{Icons.google_bigquery({ className: "size-4 inline" })} Google Big Query</li>
                                     </ul>
                                 </div>
                             </div>
@@ -99,11 +106,23 @@ export default function PricingPage() {
                             </div>
                             <div className="flex items-center gap-2">
                                 {Icons.check({ className: "size-4" })}
-                                <span>Feature reports</span>
+                                <span>Event-level reports</span>
                             </div>
                             <div className="flex items-center gap-2">
                                 {Icons.check({ className: "size-4" })}
-                                <span>Unlimited monitors</span>
+                                <span>User-level reports</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                {Icons.check({ className: "size-4" })}
+                                <span>Feature-level reports</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                {Icons.check({ className: "size-4" })}
+                                <span>Advanced dashboards</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                {Icons.check({ className: "size-4" })}
+                                <span>Monitoring & alerting</span>
                             </div>
                             <div className="flex items-center gap-2">
                                 {Icons.check({ className: "size-4" })}
@@ -135,15 +154,20 @@ export default function PricingPage() {
                         <div className="grid gap-2 text-gray-600">
                             <div className="flex items-center gap-2">
                                 <div>
-                                    <span className="text-gray-900">Datasource</span>
-                                    <ul className="list-disc ml-6">
-                                        <li>Google Big Query</li>
+                                    <span className="text-gray-900">Datasources</span>
+                                    <ul className="ml-6">
+                                        <li>{Icons.google_analytics({ className: "size-4 inline" })} Google Analytics</li>
+                                        <li>{Icons.google_bigquery({ className: "size-4 inline" })} Google Big Query</li>
                                     </ul>
                                 </div>
                             </div>
                             <hr />
                             <div className="flex items-center gap-2">
                                 <span className="text-gray-900">Everything in <b>Premium B2C</b>, and:</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                {Icons.check({ className: "size-4" })}
+                                <span>Company-level reports</span>
                             </div>
                             <div className="flex items-center gap-2">
                                 {Icons.check({ className: "size-4" })}

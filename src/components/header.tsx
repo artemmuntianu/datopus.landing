@@ -8,8 +8,10 @@ import { features } from "../app/features_section";
 import { Button } from "./ui/button";
 import { ButtonScheduleDemo } from "./ui/button-schedule-demo";
 import { ChevronDownIcon } from "@radix-ui/react-icons";
+import { usePathname } from 'next/navigation'
 
 export function Header() {
+    const pathname = usePathname();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isPlatformOpen, setIsPlatformOpen] = useState(false);
     const [isCaseStudiesOpen, setIsCaseStudiesOpen] = useState(false);
@@ -40,7 +42,7 @@ export function Header() {
                 {/* Desktop Menu */}
                 <nav className="hidden w-full md:flex md:flex-row">
                     <div className="flex gap-[0.5rem]">
-                        <div className="relative group">
+                        <div className={`relative group ${pathname.includes('/platform/') || pathname.endsWith('/platform') ? 'active' : ''}`}>
                             <Link
                                 href="/#platform"
                                 onMouseEnter={() => setIsPlatformOpen(true)}
@@ -50,10 +52,10 @@ export function Header() {
                                     }
                                 }}
                             >
-                                <Button variant="ghost" className="h-[3.5rem]">
+                                <Button variant="ghost" className={`h-[3.5rem] group-[.active]:text-primary`}>
                                     Platform
                                     <ChevronDownIcon className="w-4 h-4 ml-1" />
-                                    <div className="hidden group-hover:block absolute left-0 bottom-0 bg-primary h-1 w-full"></div>
+                                    <div className="hidden group-hover:block group-[.active]:block absolute left-0 bottom-0 bg-primary h-1 w-full"></div>
                                 </Button>
                             </Link>
                             {isPlatformOpen && (
@@ -74,7 +76,7 @@ export function Header() {
                                 </div>
                             )}
                         </div>
-                        <div className="relative group">
+                        <div className={`relative group ${pathname.includes('/case-studies/') || pathname.endsWith('/case-studies') ? 'active' : ''}`}>
                             <Link
                                 href="/case-studies"
                                 onMouseEnter={() => setIsCaseStudiesOpen(true)}
@@ -84,10 +86,10 @@ export function Header() {
                                     }
                                 }}
                             >
-                                <Button variant="ghost" className="h-[3.5rem]">
+                                <Button variant="ghost" className={`h-[3.5rem] group-[.active]:text-primary`}>
                                     Case studies
                                     <ChevronDownIcon className="w-4 h-4 ml-1" />
-                                    <div className="hidden group-hover:block absolute left-0 bottom-0 bg-primary h-1 w-full"></div>
+                                    <div className="hidden group-hover:block group-[.active]:block absolute left-0 bottom-0 bg-primary h-1 w-full"></div>
                                 </Button>
                             </Link>
                             {isCaseStudiesOpen && (
@@ -114,11 +116,11 @@ export function Header() {
                                 </Button>
                             </Link>
                         </div>
-                        <div className="relative group">
+                        <div className={`relative group ${pathname.includes('/blog/') || pathname.endsWith('/blog') ? 'active' : ''}`}>
                             <Link href="/blog">
-                                <Button variant="ghost" className="h-[3.5rem]">
+                                <Button variant="ghost" className={`h-[3.5rem] group-[.active]:text-primary`}>
                                     Blog
-                                    <div className="hidden group-hover:block absolute left-0 bottom-0 bg-primary h-1 w-full"></div>
+                                    <div className="hidden group-hover:block group-[.active]:block absolute left-0 bottom-0 bg-primary h-1 w-full"></div>
                                 </Button>
                             </Link>
                         </div>
@@ -132,11 +134,11 @@ export function Header() {
                         </div>
                     </div>
                     <div className="ml-auto h-[3.5rem] items-center flex gap-[0.5rem]">
-                        <div className="relative group">
+                        <div className={`relative group ${pathname.includes('/pricing/') || pathname.endsWith('/pricing') ? 'active' : ''}`}>
                             <Link href="/pricing">
-                                <Button variant="ghost" className="h-[3.5rem]">
+                                <Button variant="ghost" className={`h-[3.5rem] group-[.active]:text-primary`}>
                                     Pricing
-                                    <div className="hidden group-hover:block absolute left-0 bottom-0 bg-primary h-1 w-full"></div>
+                                    <div className="hidden group-hover:block group-[.active]:block absolute left-0 bottom-0 bg-primary h-1 w-full"></div>
                                 </Button>
                             </Link>
                         </div>

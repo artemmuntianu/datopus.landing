@@ -1,6 +1,7 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import { getPosts } from "@/data/post";
 import { ChevronRightIcon } from "@radix-ui/react-icons";
+import { Metadata } from "next";
 
 const BLUR_FADE_DELAY = 0.04;
 const images = [
@@ -10,6 +11,10 @@ const images = [
     "https://datopus.blob.core.windows.net/blog/user-flow-analysis-the-key-to-optimizing-your-digital-product.jpg"
 ];
 
+export const metadata: Metadata = {
+    title: 'Blog',
+}
+
 export default async function BlogAllPosts() {
     const posts = await getPosts("content/blog");
 
@@ -17,7 +22,7 @@ export default async function BlogAllPosts() {
         <main className="flex flex-col min-h-[100dvh] mt-[3.5rem] [background-image:linear-gradient(to_bottom,hsl(var(--primary)/10%),transparent)] [background-size:100%_50rem] [background-repeat:no-repeat]">
             <BlurFade delay={BLUR_FADE_DELAY}>
                 <h1 className="font-medium text-3xl text-center my-8">
-                    Datopus Blog
+                    Blog Posts
                 </h1>
             </BlurFade>
             <section className="max-w-screen-xl mx-auto px-4">

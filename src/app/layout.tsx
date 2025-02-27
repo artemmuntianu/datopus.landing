@@ -6,8 +6,8 @@ import './globals.css';
 import { CSPostHogProvider } from './providers';
 
 const DATA = {
-    url: 'https://datopus.io',
-    name: 'Datopus',
+    url: 'https://www.datopus.io',
+    name: 'Optimize Product Features for Success | Datopus',
     description: 'Datopus'
 }
 
