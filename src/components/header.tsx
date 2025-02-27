@@ -102,8 +102,14 @@ export function Header() {
                                         }
                                     }}
                                 >
+                                    <Link href="/case-studies/company-is-looking-for-ways-to-track-tons-of-user-actions-in-their-sports-tracker-web-app" className="block py-2 px-4 hover:text-primary" onClick={() => setIsCaseStudiesOpen(false)}>
+                                        TrackFit is looking for ways to track tons of user actions in their sports tracker web app
+                                    </Link>
+                                    <Link href="/case-studies/company-is-selecting-an-analytics-platform-for-its-online-store" className="block py-2 px-4 hover:text-primary" onClick={() => setIsCaseStudiesOpen(false)}>
+                                        Sportify is looking for analytics tool for their popular online sportswear store
+                                    </Link>
                                     <Link href="/case-studies/company-is-selecting-an-analytics-platform-for-its-multi-tenant-saas-product" className="block py-2 px-4 hover:text-primary" onClick={() => setIsCaseStudiesOpen(false)}>
-                                        Case Study: The company is looking for ways to reduce user churn in their multi-tenant SaaS product
+                                        AcmeTech is looking for ways to reduce user churn in their multi-tenant SaaS product
                                     </Link>
                                 </div>
                             )}
