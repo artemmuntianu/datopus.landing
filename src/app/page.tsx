@@ -134,7 +134,7 @@ export default function Page() {
                 <FAQSection />
             </section>
 
-            <section id="cta" className="w-full py-28 bg-blue-600">
+            <section id="cta" className="w-full py-14 bg-blue-600 md:py-28">
                 <div className="flex flex-col items-center justify-center text-center my-[3.5rem]">
                     <div className="mx-auto space-y-5 pb-6 text-center">
                         <h2 className="mx-auto mb-2 max-w-4xl text-balance text-5xl font-medium leading-tight tracking-tighter text-white">

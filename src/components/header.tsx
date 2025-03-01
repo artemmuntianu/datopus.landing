@@ -60,7 +60,7 @@ export function Header() {
                             </Link>
                             {isPlatformOpen && (
                                 <div
-                                    className="absolute left-0 bg-white shadow-md p-2 w-max"
+                                    className="absolute left-0 bg-white shadow-md w-max"
                                     onMouseEnter={() => setIsPlatformOpen(true)}
                                     onMouseLeave={(e) => {
                                         if ((e.relatedTarget instanceof Node) && !e.currentTarget.contains(e.relatedTarget as Node)) {
@@ -70,7 +70,7 @@ export function Header() {
                                 >
                                     {
                                         features.map((feature, index) => (
-                                            <Link key={index} href={feature.href} className="block py-2 px-4 hover:text-primary" onClick={() => setIsPlatformOpen(false)}>{feature.title}</Link>
+                                            <Link key={index} href={feature.href} className="block py-2 px-4 hover:text-white hover:bg-primary" onClick={() => setIsPlatformOpen(false)}>{feature.title}</Link>
                                         ))
                                     }
                                 </div>
@@ -94,7 +94,7 @@ export function Header() {
                             </Link>
                             {isCaseStudiesOpen && (
                                 <div
-                                    className="absolute left-0 bg-white shadow-md p-2 w-max"
+                                    className="absolute left-0 bg-white shadow-md w-max"
                                     onMouseEnter={() => setIsCaseStudiesOpen(true)}
                                     onMouseLeave={(e) => {
                                         if ((e.relatedTarget instanceof Node) && !e.currentTarget.contains(e.relatedTarget as Node)) {
@@ -102,13 +102,13 @@ export function Header() {
                                         }
                                     }}
                                 >
-                                    <Link href="/case-studies/company-is-looking-for-ways-to-track-tons-of-user-actions-in-their-sports-tracker-web-app" className="block py-2 px-4 hover:text-primary" onClick={() => setIsCaseStudiesOpen(false)}>
+                                    <Link href="/case-studies/company-is-looking-for-ways-to-track-tons-of-user-actions-in-their-sports-tracker-web-app" className="block py-2 px-4 hover:text-white hover:bg-primary" onClick={() => setIsCaseStudiesOpen(false)}>
                                         Optimize User Engagement: TrackFit&apos;s Analytics Solution for Sports Tracker Web App
                                     </Link>
-                                    <Link href="/case-studies/company-is-selecting-an-analytics-platform-for-its-online-store" className="block py-2 px-4 hover:text-primary" onClick={() => setIsCaseStudiesOpen(false)}>
+                                    <Link href="/case-studies/company-is-selecting-an-analytics-platform-for-its-online-store" className="block py-2 px-4 hover:text-white hover:bg-primary" onClick={() => setIsCaseStudiesOpen(false)}>
                                         Unlock E-Commerce Insights: Sportify Finds the Best Fit for E-Commerce Success
                                     </Link>
-                                    <Link href="/case-studies/company-is-selecting-an-analytics-platform-for-its-multi-tenant-saas-product" className="block py-2 px-4 hover:text-primary" onClick={() => setIsCaseStudiesOpen(false)}>
+                                    <Link href="/case-studies/company-is-selecting-an-analytics-platform-for-its-multi-tenant-saas-product" className="block py-2 px-4 hover:text-white hover:bg-primary" onClick={() => setIsCaseStudiesOpen(false)}>
                                         Optimize SaaS Product: Lessons from AcmeTech on User Churn Reduction in Multi-Tenant SaaS
                                     </Link>
                                 </div>

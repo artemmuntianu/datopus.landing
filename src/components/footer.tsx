@@ -1,73 +1,79 @@
-import { LinkedInLogoIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import Link from "next/link";
+import { Icons } from "./icons";
+import { LinkContactUs } from "./ui/button-schedule-demo";
 
 export function Footer() {
     return (
-        <footer className="border-t">
-            <div className="mx-auto flex max-w-screen-xl flex-col items-center justify-between bg-white px-4 py-8 md:flex-row">
-                <div className="flex flex-col items-center md:items-start">
+        <footer className="border-t bg-white px-4 py-8">
+            <div className="mx-auto max-w-screen-xl grid grid-cols-1 md:grid-cols-5 gap-8">
+                {/* Logo and Mission Statement */}
+                <div>
                     <Link href="/" title="Datopus" className="mb-4 flex items-center space-x-2">
                         <Image src="/logo.svg" alt="Datopus" width="28" height="32" />
                         <span className="text-xl font-bold">Datopus</span>
                     </Link>
-                    {/*<address className="text-muted-foreground text-sm not-italic"></address>*/}
+                    <p className="mt-2">On a mission to help businesses optimize product features for success.</p>
+                    <div className="mt-4 flex space-x-4">
+                        <a href="https://www.linkedin.com/company/datopus" target="_blank" rel="noopener noreferrer">
+                            {Icons.linkedin({ className: "size-6" })}
+                        </a>
+                        <a href="https://x.com/datopus" target="_blank" rel="noopener noreferrer">
+                            {Icons.x({ className: "size-6" })}
+                        </a>
+                    </div>
                 </div>
-                <div className="mt-8 grid grid-cols-2 gap-8 md:mt-0">
-                    <div>
-                        <ul>
-                            <li className="my-2">
-                                <Link href="/#platform" className="text-gray-600">Platform</Link>
-                            </li>
-                            <li className="my-2">
-                                <Link href="/case-studies" className="text-gray-600">Case studies</Link>
-                            </li>
-                            <li className="max-[1200px]:hidden my-2">
-                                <Link href="/#how-it-works" className="text-gray-600">How it works</Link>
-                            </li>
-                            <li className="my-2">
-                                <Link href="/blog" className="text-gray-600">Blog</Link>
-                            </li>
-                            <li className="my-2">
-                                <Link href="/pricing" className="text-gray-600">Pricing</Link>
-                            </li>
-                            <li className="my-2">
-                                <Link href="/affiliate" className="text-gray-600">Affiliate Program</Link>
-                            </li>
-                            <li className="my-2">
-                                <a href="https://docs.datopus.io" className="text-gray-600">Documentation</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <ul className="flex items-center justify-center space-x-4">
-                            <li className="my-2">
-                                <a href="https://www.linkedin.com/company/datopus" className="text-gray-600" target="_blank" rel="noopener noreferrer">
-                                    <LinkedInLogoIcon className="size-6" />
-                                </a>
-                            </li>
-                            <li className="my-2">
-                                <a href="https://x.com/datopus" className="text-gray-600" target="_blank" rel="noopener noreferrer">
-                                    <svg className="size-6" height="1em" width="1em" stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"></path>
-                                    </svg>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+
+                {/* Product Links */}
+                <div>
+                    <h3 className="font-semibold text-lg">PRODUCT</h3>
+                    <ul className="mt-2 text-lg leading-[2.5rem]">
+                        <li><Link href="/">Home</Link></li>
+                        <li><Link href="https://app.datopus.io/auth">Dashboard</Link></li>
+                        <li><Link href="/pricing">Pricing</Link></li>
+                    </ul>
+                </div>
+
+                {/* Compare Us */}
+                <div>
+                    <h3 className="font-semibold text-lg">COMPARE US</h3>
+                    <ul className="mt-2 text-lg leading-[2.5rem]">
+                        <li><Link href="/alternatives/datopus_vs_posthog">Datopus vs PostHog</Link></li>
+                        <li><Link href="/alternatives/datopus_vs_statsig">Datopus vs Statsig</Link></li>
+                        <li><Link href="/alternatives/datopus_vs_june">Datopus vs June</Link></li>
+                        <li><Link href="/alternatives/datopus_vs_mixpanel">Datopus vs Mixpanel</Link></li>
+                        <li><Link href="/alternatives/datopus_vs_woopra">Datopus vs Woopra</Link></li>
+                        <li><Link href="/alternatives/datopus_vs_amplitude">Datopus vs Amplitude</Link></li>
+                        <li><Link href="/alternatives/datopus_vs_googleanalytics">Datopus vs Google Analytics</Link></li>
+                    </ul>
+                </div>
+
+                {/* Resources */}
+                <div>
+                    <h3 className="font-semibold text-lg">RESOURCES</h3>
+                    <ul className="mt-2 text-lg leading-[2.5rem]">
+                        <li><Link href="/case-studies">Case studies</Link></li>
+                        <li><Link href="/blog">Blog</Link></li>
+                        <li><Link href="/affiliate">Our Affiliate Program</Link></li>
+                        <li><Link href="/terms">Terms of Service</Link></li>
+                        <li><Link href="/privacy-policy">Privacy Policy</Link></li>
+                    </ul>
+                </div>
+
+                {/* Support */}
+                <div>
+                    <h3 className="font-semibold text-lg">SUPPORT</h3>
+                    <ul className="mt-2 text-lg leading-[2.5rem]">
+                        <li><LinkContactUs /></li>
+                        <li><Link href="https://docs.datopus.io" target="_blank" rel="noopener noreferrer">Developer Docs</Link></li>
+                    </ul>
                 </div>
             </div>
-            <div className="mx-auto grid size-full max-w-screen-xl grid-cols-1 justify-between gap-1 border-t py-3 px-4 md:grid-cols-2">
-                <span className="text-muted-foreground text-xs tracking-tight">Copyright 2025 <Link href="/">Datopus</Link> - Optimize Product Features for Success</span>
-                <ul className="text-muted-foreground flex justify-start text-xs tracking-tight md:justify-end">
-                    <li className="mr-3 md:mx-4">
-                        <Link href="/terms">Terms</Link>
-                    </li>
-                    <li>
-                        <Link href="/privacy-policy">Privacy Policy</Link>
-                    </li>
-                </ul>
+
+            {/* Copyright */}
+            <div className="mx-auto max-w-screen-xl border-t py-3 text-xs text-center mt-8">
+                Copyright {new Date().getFullYear()} <Link href="/">Datopus</Link> - Optimize Product Features for Success
             </div>
         </footer>
-    )
+    );
 }

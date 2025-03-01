@@ -4,7 +4,7 @@ export function FAQSection() {
     return (
         <Accordion type="single" className="mx-auto max-w-screen-xl px-4">
             <AccordionItem value="1">
-                <AccordionTrigger className="text-md">
+                <AccordionTrigger className="text-lg">
                     How does Datopus differ from other analytics platforms?
                 </AccordionTrigger>
                 <AccordionContent className="text-lg font-normal indent-4">
@@ -15,7 +15,7 @@ export function FAQSection() {
                 </AccordionContent>
             </AccordionItem>
             <AccordionItem value="4">
-                <AccordionTrigger className="text-md">
+                <AccordionTrigger className="text-lg">
                     What are the steps to start using Datopus?
                 </AccordionTrigger>
                 <AccordionContent className="text-lg font-normal indent-4">
@@ -28,7 +28,7 @@ export function FAQSection() {
                 </AccordionContent>
             </AccordionItem>
             <AccordionItem value="7">
-                <AccordionTrigger className="text-md">
+                <AccordionTrigger className="text-lg">
                     What does Datopus track exactly?
                 </AccordionTrigger>
                 <AccordionContent className="text-lg font-normal indent-4">
@@ -36,7 +36,7 @@ export function FAQSection() {
                 </AccordionContent>
             </AccordionItem>
             <AccordionItem value="5">
-                <AccordionTrigger className="text-md">
+                <AccordionTrigger className="text-lg">
                     Does Datopus provide category analytics?
                 </AccordionTrigger>
                 <AccordionContent className="text-lg font-normal indent-4">
@@ -44,7 +44,7 @@ export function FAQSection() {
                 </AccordionContent>
             </AccordionItem>
             <AccordionItem value="6">
-                <AccordionTrigger className="text-md">
+                <AccordionTrigger className="text-lg">
                     I&apos;m more accustomed to tracking Page Views and Button Clicks. Is this possible with Datopus?
                 </AccordionTrigger>
                 <AccordionContent className="text-lg font-normal indent-4">
@@ -52,7 +52,7 @@ export function FAQSection() {
                 </AccordionContent>
             </AccordionItem>
             <AccordionItem value="2">
-                <AccordionTrigger className="text-md">
+                <AccordionTrigger className="text-lg">
                     What are the benefits of product feature analytics?
                 </AccordionTrigger>
                 <AccordionContent className="text-lg font-normal indent-4">
@@ -61,7 +61,7 @@ export function FAQSection() {
                 </AccordionContent>
             </AccordionItem>
             <AccordionItem value="3">
-                <AccordionTrigger className="text-md">
+                <AccordionTrigger className="text-lg">
                     What are the benefits of customer-facing analytics?
                 </AccordionTrigger>
                 <AccordionContent className="text-lg font-normal indent-4">
