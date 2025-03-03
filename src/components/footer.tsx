@@ -5,7 +5,7 @@ import { LinkContactUs } from "./ui/button-schedule-demo";
 
 export function Footer() {
     return (
-        <footer className="border-t bg-white px-4 py-8">
+        <footer id="footer" className="border-t bg-white px-4 py-8">
             <div className="mx-auto max-w-screen-xl grid grid-cols-1 md:grid-cols-5 gap-8">
                 {/* Logo and Mission Statement */}
                 <div>

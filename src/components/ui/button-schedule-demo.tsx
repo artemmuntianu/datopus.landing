@@ -15,7 +15,7 @@ export function ButtonScheduleDemo() {
 
 export function LinkContactUs() {
     return (
-        <Link href="javascript:void(0)" onClick={handleScheduleDemo}>Contact Us</Link>
+        <Link href="#footer" onClick={handleScheduleDemo}>Contact Us</Link>
     )
 }
 
