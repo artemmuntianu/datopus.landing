@@ -52,7 +52,7 @@ function FeatureTitleAndSubtitle({ feature, className }: { feature: any, classNa
                 <h3 className="text-4xl font-bold">
                     <span>{feature.title}</span>
                 </h3>
-                <p className="text-3xl font-light line-clamp-3 lg:line-clamp-none">
+                <p className="text-3xl font-light">
                     {feature.subtitle}
                 </p>
             </a>
