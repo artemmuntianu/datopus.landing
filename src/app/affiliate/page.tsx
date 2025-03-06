@@ -14,8 +14,8 @@ export default function AffiliatePage() {
             <BlurFade delay={BLUR_FADE_DELAY + 1 * BLUR_FADE_DELAY}>
                 {/* Hero Section */}
                 <section className="flex flex-col space-y-4 bg-blue-600 text-white py-20 px-4 text-center">
-                    <h1 className="text-4xl font-bold">Join the Datopus Affiliate Program</h1>
-                    <p className="mt-4 text-lg">Earn commissions by helping businesses implement modern analytics on their web apps.</p>
+                    <h1 className="text-4xl font-bold">Earn a lifetime salary by sharing Datopus</h1>
+                    <p className="mt-4 text-lg">Become an ambassador for Datopus, the most modern analytics platform on the market. Earn 50% of your affiliates&apos; payments. Right now.</p>
                     <JoinAffiliateProgramForm />
                 </section>
                 {/* Benefits */}
@@ -29,7 +29,7 @@ export default function AffiliatePage() {
                             </div>
                             <div className="p-6 bg-white rounded-lg shadow-md text-center">
                                 <h3 className="text-xl font-bold">High Commissions</h3>
-                                <p className="mt-2">Earn one-time payment of <code>$20</code> and <code>20%</code> in monthly commissions for each paying client you refer.</p>
+                                <p className="mt-2">Earn one-time payment of <code>$20</code> and <code>50%</code> for every payment you generate and offer <code>1 free month</code> of Datopus to all your affiliates.</p>
                             </div>
                         </div>
                     </section>
@@ -39,7 +39,7 @@ export default function AffiliatePage() {
                         <div className="grid md:grid-cols-3 gap-6 mt-8">
                             <div className="p-6 bg-white rounded-lg shadow-md text-center">
                                 <h3 className="text-xl font-bold">1. Sign Up</h3>
-                                <p className="mt-2">Apply and get approved as an analytics partner.</p>
+                                <p className="mt-2">Apply and get approved as an analytics partner. Get personalized referal link.</p>
                             </div>
                             <div className="p-6 bg-white rounded-lg shadow-md text-center">
                                 <h3 className="text-xl font-bold">2. Implement Analytics</h3>

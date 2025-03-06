@@ -138,6 +138,14 @@ export function Header() {
                                 </Button>
                             </Link>
                         </div>
+                        <div className="relative group">
+                            <Link href="/affiliate">
+                                <Button variant="ghost" className="h-[3.5rem]">
+                                    Affiliate
+                                    <div className="hidden group-hover:block absolute left-0 bottom-0 bg-primary h-1 w-full"></div>
+                                </Button>
+                            </Link>
+                        </div>
                     </div>
                     <div className="ml-auto h-[3.5rem] items-center flex gap-[0.5rem]">
                         <div className={`relative group ${pathname.includes('/pricing/') || pathname.endsWith('/pricing') ? 'active' : ''}`}>
