@@ -158,7 +158,7 @@ export function Header() {
                         </div>
                         <ButtonScheduleDemo />
                         <Button variant="default" asChild>
-                            <Link href="https://app.datopus.io/auth">GET STARTED</Link>
+                            <Link href="https://app.datopus.io/auth/sign-up">GET STARTED</Link>
                         </Button>
                     </div>
                 </nav>
@@ -173,7 +173,7 @@ export function Header() {
                     <Link href="https://docs.datopus.io" className="block py-2" onClick={() => setIsMenuOpen(false)}>Documentation</Link>
                     <Link href="/affiliate" className="block py-2" onClick={() => setIsMenuOpen(false)}>Affiliate Program</Link>
                     <Link href="/pricing" className="block py-2" onClick={() => setIsMenuOpen(false)}>Pricing</Link>
-                    <Link href="https://app.datopus.io/auth" className="block py-2" onClick={() => setIsMenuOpen(false)}>GET STARTED</Link>
+                    <Link href="https://app.datopus.io/auth/sign-up" className="block py-2" onClick={() => setIsMenuOpen(false)}>GET STARTED</Link>
                     <ButtonScheduleDemo />
                 </div>
             )}

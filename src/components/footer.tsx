@@ -29,7 +29,7 @@ export function Footer() {
                     <h3 className="font-semibold text-lg">PRODUCT</h3>
                     <ul className="mt-2 text-lg leading-[2.5rem]">
                         <li><Link href="/">Home</Link></li>
-                        <li><Link href="https://app.datopus.io/auth">Dashboard</Link></li>
+                        <li><Link href="https://app.datopus.io/auth/sign-up">Dashboard</Link></li>
                         <li><Link href="/pricing">Pricing</Link></li>
                     </ul>
                 </div>

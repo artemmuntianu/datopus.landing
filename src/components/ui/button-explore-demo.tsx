@@ -10,7 +10,7 @@ export function ButtonExploreDemo({ creditCardClass = "text-white"}) {
         <div>
             <div className="flex flex-col gap-[0.5rem] md:flex-row">
                 <Button size="lg" className="min-w-[220px] h-14 group text-md bg-[#ffa500] hover:bg-[#ffa500]" asChild>
-                    <Link href="https://app.datopus.io/auth">
+                    <Link href="https://app.datopus.io/auth/sign-up">
                         GET STARTED  <ChevronRightIcon className="inline ml-1 size-4 transition-transform duration-300 group-hover:translate-x-1" />
                     </Link>
                 </Button>
