@@ -2,6 +2,7 @@ import { Header } from '@/components/header';
 import { cn } from '@/lib/utils';
 import type { Metadata } from 'next';
 import { Footer } from '../components/footer';
+import PageTracker from '../components/page_tracker';
 import './globals.css';
 import { CSPostHogProvider } from './providers';
 
@@ -78,12 +79,14 @@ export default function RootLayout({
             <CSPostHogProvider>
                 <body
                     className={cn('min-h-screen bg-background font-sans antialiased mx-auto')}
+                    suppressHydrationWarning
                 >
                     <Header />
                     {children}
                     <Footer />
                 </body>
             </CSPostHogProvider>
+            <PageTracker />
         </html>
     )
 }
