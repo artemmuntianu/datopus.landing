@@ -126,20 +126,20 @@ export default function SubscriptionPlans() {
     return (
         <Tooltip.Provider>
             <div className="mx-auto px-4 mb-4 max-w-screen-xl w-full">
-                <div className="grid" style={{ gridTemplateColumns: "1fr auto 1fr" }}>
-                    <label htmlFor="toggle-period" className="justify-self-center items-center p-2 rounded-md cursor-pointer text-gray-800" style={{ gridColumn: 2 }}>
+                <div className="grid grid-cols-[auto_1fr] min-[950px]:grid-cols-[1fr_auto_1fr]">
+                    <label htmlFor="toggle-period" className="justify-self-center items-center p-2 rounded-md cursor-pointer text-gray-800 col-[1] min-[950px]:col-[2]">
                         <input id="toggle-period" type="checkbox" className="hidden peer" defaultChecked={period == 'yr'} onChange={e => setPeriod(e.target.checked ? 'yr' : 'mo')} />
                         <span className="px-4 py-2 rounded-l-md border bg-white peer-checked:bg-transparent">Monthly</span>
                         <span className="px-4 py-2 rounded-r-md border bg-transparent peer-checked:bg-white" style={{ borderLeft: "none" }}>Annual (-20%)</span>
                     </label>
-                    <label htmlFor="toggle-currency" className="justify-self-end items-center p-2 rounded-md cursor-pointer text-gray-800" style={{ gridColumn: 3 }}>
+                    <label htmlFor="toggle-currency" className="justify-self-end items-center p-2 rounded-md cursor-pointer text-gray-800 col-[2] min-[950px]:col-[3]">
                         <input id="toggle-currency" type="checkbox" className="hidden peer" defaultChecked={currency == 'eur'} onChange={e => setCurrency(e.target.checked ? 'eur' : 'usd')} />
                         <span className="px-4 py-2 rounded-l-md border bg-white peer-checked:bg-transparent">&#36;</span>
                         <span className="px-4 py-2 rounded-r-md border bg-transparent peer-checked:bg-white" style={{borderLeft: "none"}}>&#8364;</span>
                     </label>
                 </div>
             </div>
-            <div className="max-[950px]:grid-cols-1 mx-auto px-4 mb-4 grid max-w-screen-xl gap-3 grid-cols-3">
+            <div className="grid grid-cols-1 mx-auto px-4 mb-4 max-w-screen-xl gap-3 min-[950px]:grid-cols-3">
                 <BlurFade delay={BLUR_FADE_DELAY + 2 * 0.05} className="bg-white flex flex-col p-5 rounded-xl shadow-md">
                     <section className="flex flex-col gap-3 h-full pb-5">
                         <div className="flex flex-col gap-3">
@@ -147,7 +147,7 @@ export default function SubscriptionPlans() {
                                 <div className="flex justify-between">
                                     <div>
                                         <div>
-                                            <span className="align-baseline text-2xl font-semibold text-gray-900">{getPlanPrice('Collect', period, currency)}</span>
+                                            <span className="align-baseline text-4xl font-semibold text-gray-900">{getPlanPrice('Collect', period, currency)}</span>
                                             <span className="align-baseline text-sm text-gray-600">/month</span>
                                         </div>
                                         <div>
@@ -209,14 +209,14 @@ export default function SubscriptionPlans() {
                                 <div className="flex justify-between">
                                     <div>
                                         <div>
-                                            <span className="align-baseline text-2xl font-semibold text-gray-900">{getPlanPrice('Optimize', period, currency)}</span>
+                                            <span className="align-baseline text-4xl font-semibold text-gray-900">{getPlanPrice('Optimize', period, currency)}</span>
                                             <span className="align-baseline text-sm text-gray-600">/month</span>
                                         </div>
                                         <Tooltip.Root delayDuration={0}>
                                             <Tooltip.Trigger>
                                                 <div className="flex items-baseline gap-1">
                                                     <span className="align-baseline text-sm font-semibold text-gray-600">{getMTUPrice('Optimize', period, currency)}</span>
-                                                    <span className="align-baseline text-sm text-gray-600">/ extra MTU</span>
+                                                    <span className="align-baseline text-sm text-gray-600">/ MTU</span>
                                                     <QuestionMarkCircledIcon className="size-3 inline" />
                                                 </div>
                                             </Tooltip.Trigger>
@@ -250,7 +250,7 @@ export default function SubscriptionPlans() {
                             </div>
                             <div className="flex items-center gap-2">
                                 {Icons.check({ className: "size-4 text-[#ffa500]" })}
-                                <span>1,000 MTU included</span>
+                                <span>1,000 MTUs included</span>
                             </div>
                             <div className="flex items-center gap-2">
                                 {Icons.check({ className: "size-4 text-[#ffa500]" })}
@@ -292,14 +292,14 @@ export default function SubscriptionPlans() {
                                 <div className="flex justify-between">
                                     <div>
                                         <div>
-                                            <span className="align-baseline text-2xl font-semibold text-gray-900">{getPlanPrice('Scale', period, currency)}</span>
+                                            <span className="align-baseline text-4xl font-semibold text-gray-900">{getPlanPrice('Scale', period, currency)}</span>
                                             <span className="align-baseline text-sm text-gray-600">/month</span>
                                         </div>
                                         <Tooltip.Root delayDuration={0}>
                                             <Tooltip.Trigger>
                                                 <div className="flex items-baseline gap-1">
                                                     <span className="align-baseline text-sm font-semibold text-gray-600">{getMTUPrice('Scale', period, currency)}</span>
-                                                    <span className="align-baseline text-sm text-gray-600">/ extra MTU</span>
+                                                    <span className="align-baseline text-sm text-gray-600">/ MTU</span>
                                                     <QuestionMarkCircledIcon className="size-3 inline" />
                                                 </div>
                                             </Tooltip.Trigger>
