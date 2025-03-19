@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Icons } from "./icons";
-import { LinkContactUs } from "./ui/button-schedule-demo";
+import { HandleScheduleDemo } from "./ui/button-schedule-demo";
 
 export function Footer() {
     return (
@@ -64,7 +64,7 @@ export function Footer() {
                 <div>
                     <h3 className="font-semibold text-lg">SUPPORT</h3>
                     <ul className="mt-2 text-lg leading-[2.5rem]">
-                        <li><LinkContactUs /></li>
+                        <li><Link href="#footer" onClick={HandleScheduleDemo}>Contact Us</Link></li>
                         <li><Link href="https://docs.datopus.io" target="_blank" rel="noopener noreferrer">Developer Docs</Link></li>
                     </ul>
                 </div>

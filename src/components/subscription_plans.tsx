@@ -7,6 +7,7 @@ import * as Tooltip from '@radix-ui/react-tooltip';
 import Link from "next/link";
 import { useState } from "react";
 import { Button } from "./ui/button";
+import { HandleScheduleDemo } from "./ui/button-schedule-demo";
 
 interface PlanPrice {
     plan: string,
@@ -135,7 +136,7 @@ export default function SubscriptionPlans() {
                     <label htmlFor="toggle-currency" className="justify-self-end items-center p-2 rounded-md cursor-pointer text-gray-800 col-[2] min-[950px]:col-[3]">
                         <input id="toggle-currency" type="checkbox" className="hidden peer" defaultChecked={currency == 'eur'} onChange={e => setCurrency(e.target.checked ? 'eur' : 'usd')} />
                         <span className="px-4 py-2 rounded-l-md border bg-white peer-checked:bg-transparent">&#36;</span>
-                        <span className="px-4 py-2 rounded-r-md border bg-transparent peer-checked:bg-white" style={{borderLeft: "none"}}>&#8364;</span>
+                        <span className="px-4 py-2 rounded-r-md border bg-transparent peer-checked:bg-white" style={{ borderLeft: "none" }}>&#8364;</span>
                     </label>
                 </div>
             </div>
@@ -200,7 +201,7 @@ export default function SubscriptionPlans() {
                             <Link href="https://app.datopus.io/auth/sign-up">Start free trial</Link>
                         </Button>
                     </div>
-                    <div className="text-center text-sm mt-2 text-gray-600">30-day free trial</div>
+                    <div className="text-center text-sm mt-2 text-gray-600">&nbsp;</div>
                 </BlurFade>
                 <BlurFade delay={BLUR_FADE_DELAY + 3 * 0.05} className="bg-white flex flex-col p-5 rounded-xl shadow-md">
                     <section className="flex flex-col gap-3 h-full pb-5">
@@ -283,7 +284,7 @@ export default function SubscriptionPlans() {
                             <Link href="https://app.datopus.io/auth/sign-up">Start free trial</Link>
                         </Button>
                     </div>
-                    <div className="text-center text-sm mt-2 text-gray-600">14-day free trial</div>
+                    <div className="text-center text-sm mt-2 text-gray-600">30-day free trial</div>
                 </BlurFade>
                 <BlurFade delay={BLUR_FADE_DELAY + 4 * 0.05} className="bg-white flex flex-col p-5 rounded-xl shadow-md">
                     <section className="flex flex-col gap-3 h-full pb-5">
@@ -341,12 +342,12 @@ export default function SubscriptionPlans() {
                             </div>
                         </div>
                     </section>
-                    <div className="flex justify-center">
-                        <Button className="min-w-[50%]" variant="default" asChild>
-                            <Link href="https://app.datopus.io/auth/sign-up">Start free trial</Link>
+                    <div className="text-center">
+                        <Button className="min-w-[50%] inline-flex" variant="outline" onClick={HandleScheduleDemo}>
+                            Contact us
                         </Button>
+                        <div className="text-center text-sm mt-2 text-gray-600">&nbsp;</div>
                     </div>
-                    <div className="text-center text-sm mt-2 text-gray-600">14-day free trial</div>
                 </BlurFade>
             </div>
         </Tooltip.Provider>

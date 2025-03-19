@@ -1,14 +1,14 @@
 'use client'
 
+import { ChevronDownIcon } from "@radix-ui/react-icons";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from 'next/navigation';
 import { useEffect, useState } from "react";
 import { features } from "../app/features_section";
 import { Button } from "./ui/button";
-import { ButtonScheduleDemo } from "./ui/button-schedule-demo";
-import { ChevronDownIcon } from "@radix-ui/react-icons";
-import { usePathname } from 'next/navigation'
+import { HandleScheduleDemo } from "./ui/button-schedule-demo";
 
 export function Header() {
     const pathname = usePathname();
@@ -156,7 +156,9 @@ export function Header() {
                                 </Button>
                             </Link>
                         </div>
-                        <ButtonScheduleDemo />
+                        <Button variant="outline" onClick={HandleScheduleDemo}>
+                            Contact us
+                        </Button>
                         <Button variant="default" asChild>
                             <Link href="https://app.datopus.io/auth/sign-up">GET STARTED</Link>
                         </Button>
@@ -174,7 +176,9 @@ export function Header() {
                     <Link href="/affiliate" className="block py-2" onClick={() => setIsMenuOpen(false)}>Affiliate Program</Link>
                     <Link href="/pricing" className="block py-2" onClick={() => setIsMenuOpen(false)}>Pricing</Link>
                     <Link href="https://app.datopus.io/auth/sign-up" className="block py-2" onClick={() => setIsMenuOpen(false)}>GET STARTED</Link>
-                    <ButtonScheduleDemo />
+                    <Button variant="outline" onClick={HandleScheduleDemo}>
+                        Contact us
+                    </Button>
                 </div>
             )}
         </header>
