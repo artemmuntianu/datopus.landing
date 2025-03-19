@@ -20,80 +20,80 @@ const BLUR_FADE_DELAY = 0.04;
 
 const prices: PlanPrice[] = [
     {
-        plan: 'Pro',
+        plan: 'Collect',
         period: 'mo',
         currency: 'usd',
         planPrice: 19
     },
     {
-        plan: 'Pro',
+        plan: 'Collect',
         period: 'mo',
         currency: 'eur',
         planPrice: 17,
     },
     {
-        plan: 'Pro',
+        plan: 'Collect',
         period: 'yr',
         currency: 'usd',
         planPrice: 15,
     },
     {
-        plan: 'Pro',
+        plan: 'Collect',
         period: 'yr',
         currency: 'eur',
         planPrice: 13,
     },
     {
-        plan: 'Premium B2C',
+        plan: 'Optimize',
         period: 'mo',
         currency: 'usd',
         planPrice: 49,
         mtuPrice: 0.0005
     },
     {
-        plan: 'Premium B2C',
+        plan: 'Optimize',
         period: 'mo',
         currency: 'eur',
         planPrice: 45,
         mtuPrice: 0.0004
     },
     {
-        plan: 'Premium B2C',
+        plan: 'Optimize',
         period: 'yr',
         currency: 'usd',
         planPrice: 39,
         mtuPrice: 0.0005
     },
     {
-        plan: 'Premium B2C',
+        plan: 'Optimize',
         period: 'yr',
         currency: 'eur',
         planPrice: 36,
         mtuPrice: 0.0004
     },
     {
-        plan: 'Premium B2B',
+        plan: 'Scale',
         period: 'mo',
         currency: 'usd',
         planPrice: 99,
         mtuPrice: 0.0005
     },
     {
-        plan: 'Premium B2B',
+        plan: 'Scale',
         period: 'mo',
         currency: 'eur',
         planPrice: 91,
         mtuPrice: 0.0004
     },
     {
-        plan: 'Premium B2B',
+        plan: 'Scale',
         period: 'yr',
         currency: 'usd',
         planPrice: 79,
         mtuPrice: 0.0005
     },
     {
-        plan: 'Premium B2B',
+        plan: 'Scale',
         period: 'yr',
         currency: 'eur',
         planPrice: 72,
@@ -147,22 +147,22 @@ export default function SubscriptionPlans() {
                                 <div className="flex justify-between">
                                     <div>
                                         <div>
-                                            <span className="align-baseline text-2xl font-semibold text-gray-900">{getPlanPrice('Pro', period, currency)}</span>
+                                            <span className="align-baseline text-2xl font-semibold text-gray-900">{getPlanPrice('Collect', period, currency)}</span>
                                             <span className="align-baseline text-sm text-gray-600">/month</span>
                                         </div>
                                         <div>
-                                            <span className="align-baseline text-2xl font-semibold text-gray-900">&nbsp;</span>
+                                            <span className="align-baseline text-sm text-gray-600">&nbsp;</span>
                                         </div>
                                     </div>
-                                    <span className="align-baseline text-xl font-semibold text-primary">Pro</span>
+                                    <span className="align-baseline text-xl font-semibold text-primary">Collect</span>
                                 </div>
-                                <p className="min-h-[30px] text-gray-600">Supercharged Google Analytics</p>
+                                <p className="min-h-[50px] font-semibold">Supercharged Google Analytics</p>
                             </div>
                         </div>
                         <div className="grid gap-2 text-gray-600">
                             <div className="flex items-center gap-2">
                                 <div>
-                                    <span className="text-gray-900">Datasource</span>
+                                    <span className="text-gray-900">Datasources</span>
                                     <ul className="ml-6">
                                         <li>{Icons.google_analytics({ className: "size-4 inline" })} Google Analytics</li>
                                         <li>&nbsp;</li>
@@ -171,7 +171,7 @@ export default function SubscriptionPlans() {
                             </div>
                             <hr />
                             <div className="flex items-center gap-2">
-                                <span className="text-gray-900">Our <b>Pro</b> plan includes:</span>
+                                <span className="text-gray-900">Our <b>Collect</b> plan includes:</span>
                             </div>
                             <div className="flex items-center gap-2">
                                 {Icons.magicRect({ className: "size-4 text-[#ffa500]" })}
@@ -200,7 +200,7 @@ export default function SubscriptionPlans() {
                             <Link href="https://app.datopus.io/auth/sign-up">Start free trial</Link>
                         </Button>
                     </div>
-                    <div className="text-center text-sm mt-2 text-gray-600">14-day free trial</div>
+                    <div className="text-center text-sm mt-2 text-gray-600">30-day free trial</div>
                 </BlurFade>
                 <BlurFade delay={BLUR_FADE_DELAY + 3 * 0.05} className="bg-white flex flex-col p-5 rounded-xl shadow-md">
                     <section className="flex flex-col gap-3 h-full pb-5">
@@ -209,18 +209,18 @@ export default function SubscriptionPlans() {
                                 <div className="flex justify-between">
                                     <div>
                                         <div>
-                                            <span className="align-baseline text-2xl font-semibold text-gray-900">{getPlanPrice('Premium B2C', period, currency)}</span>
+                                            <span className="align-baseline text-2xl font-semibold text-gray-900">{getPlanPrice('Optimize', period, currency)}</span>
                                             <span className="align-baseline text-sm text-gray-600">/month</span>
                                         </div>
                                         <Tooltip.Root delayDuration={0}>
                                             <Tooltip.Trigger>
                                                 <div className="flex items-baseline gap-1">
-                                                    <span className="align-baseline text-2xl font-semibold text-gray-900">{getMTUPrice('Premium B2C', period, currency)}</span>
+                                                    <span className="align-baseline text-sm font-semibold text-gray-600">{getMTUPrice('Optimize', period, currency)}</span>
                                                     <span className="align-baseline text-sm text-gray-600">/ extra MTU</span>
-                                                    <QuestionMarkCircledIcon className="size-4 inline" />
+                                                    <QuestionMarkCircledIcon className="size-3 inline" />
                                                 </div>
                                             </Tooltip.Trigger>
-                                            <Tooltip.Content>
+                                            <Tooltip.Content side="bottom">
                                                 <div className="bg-white border-black border-[1px] border-solid rounded p-4">
                                                     MTU - Monthly Tracked Users<br />
                                                     10,000 MTU = $5
@@ -229,9 +229,9 @@ export default function SubscriptionPlans() {
                                             </Tooltip.Content>
                                         </Tooltip.Root>
                                     </div>
-                                    <span className="align-baseline text-xl font-semibold text-primary">Premium B2C</span>
+                                    <span className="align-baseline text-xl font-semibold text-primary">Optimize</span>
                                 </div>
-                                <p className="min-h-[30px] text-gray-600">Modern analytics, for web apps and websites</p>
+                                <p className="min-h-[50px] font-semibold">Modern analytics, for web apps and websites</p>
                             </div>
                         </div>
                         <div className="grid gap-2 text-gray-600">
@@ -246,7 +246,7 @@ export default function SubscriptionPlans() {
                             </div>
                             <hr />
                             <div className="flex items-center gap-2">
-                                <span className="text-gray-900">Everything in <b>Pro</b>, and:</span>
+                                <span className="text-gray-900">Everything in <b>Collect</b>, and:</span>
                             </div>
                             <div className="flex items-center gap-2">
                                 {Icons.check({ className: "size-4 text-[#ffa500]" })}
@@ -292,18 +292,18 @@ export default function SubscriptionPlans() {
                                 <div className="flex justify-between">
                                     <div>
                                         <div>
-                                            <span className="align-baseline text-2xl font-semibold text-gray-900">{getPlanPrice('Premium B2B', period, currency)}</span>
+                                            <span className="align-baseline text-2xl font-semibold text-gray-900">{getPlanPrice('Scale', period, currency)}</span>
                                             <span className="align-baseline text-sm text-gray-600">/month</span>
                                         </div>
                                         <Tooltip.Root delayDuration={0}>
                                             <Tooltip.Trigger>
                                                 <div className="flex items-baseline gap-1">
-                                                    <span className="align-baseline text-2xl font-semibold text-gray-900">{getMTUPrice('Premium B2B', period, currency)}</span>
+                                                    <span className="align-baseline text-sm font-semibold text-gray-600">{getMTUPrice('Scale', period, currency)}</span>
                                                     <span className="align-baseline text-sm text-gray-600">/ extra MTU</span>
-                                                    <QuestionMarkCircledIcon className="size-4 inline" />
+                                                    <QuestionMarkCircledIcon className="size-3 inline" />
                                                 </div>
                                             </Tooltip.Trigger>
-                                            <Tooltip.Content>
+                                            <Tooltip.Content side="bottom">
                                                 <div className="bg-white border-black border-[1px] border-solid rounded p-4">
                                                     MTU - Monthly Tracked Users<br />
                                                     10,000 MTU = $5
@@ -312,9 +312,9 @@ export default function SubscriptionPlans() {
                                             </Tooltip.Content>
                                         </Tooltip.Root>
                                     </div>
-                                    <span className="align-baseline text-xl font-semibold text-primary">Premium B2B</span>
+                                    <span className="align-baseline text-xl font-semibold text-primary">Scale</span>
                                 </div>
-                                <p className="min-h-[30px] text-gray-600">Company-level analytics, for multi-tenant web apps</p>
+                                <p className="min-h-[50px] font-semibold">Company-level analytics, for multi-tenant web apps</p>
                             </div>
                         </div>
                         <div className="grid gap-2 text-gray-600">
@@ -329,11 +329,7 @@ export default function SubscriptionPlans() {
                             </div>
                             <hr />
                             <div className="flex items-center gap-2">
-                                <span className="text-gray-900">Everything in <b>Premium B2C</b>, and:</span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                                {Icons.check({ className: "size-4 text-[#ffa500]" })}
-                                <span>1,000 MTU included</span>
+                                <span className="text-gray-900">Everything in <b>Optimize</b>, and:</span>
                             </div>
                             <div className="flex items-center gap-2">
                                 {Icons.check({ className: "size-4 text-[#ffa500]" })}
