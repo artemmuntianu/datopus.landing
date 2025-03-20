@@ -2,7 +2,6 @@ import { Header } from '@/components/header';
 import { cn } from '@/lib/utils';
 import type { Metadata } from 'next';
 import { Footer } from '../components/footer';
-import PageTracker from '../components/page_tracker';
 import './globals.css';
 import { CSPostHogProvider } from './providers';
 
@@ -56,7 +55,7 @@ export default function RootLayout({
     return (
         <html lang='en' suppressHydrationWarning>
             <head>
-                <script suppressHydrationWarning dangerouslySetInnerHTML={{
+                <script dangerouslySetInnerHTML={{
                     __html: `
                         var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
                         (function () {
@@ -68,7 +67,15 @@ export default function RootLayout({
                             s0.parentNode.insertBefore(s1, s0);
                         })();`
                 }} />
-                <script suppressHydrationWarning dangerouslySetInnerHTML={{
+                <script src="https://www.googletagmanager.com/gtag/js?id=G-V6CJMGTJPV" type="text/javascript" async></script>
+                <script dangerouslySetInnerHTML={{
+                    __html: `
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments)}
+                        gtag('js', new Date());
+                        gtag('config', 'G-V6CJMGTJPV');`
+                }} />
+                <script dangerouslySetInnerHTML={{
                     __html: `
 	                    ((d,a,t,o,p,u,s)=>{if(!d[p]){let e={view:p+":prevViewFeature",action0:p+":prevActionFeature0",action1:p+":prevActionFeature1"};Object.values(e).forEach(key=>t.setItem(key,"")),d.GlobalDatopusNamespace=d.GlobalDatopusNamespace||[],d.GlobalDatopusNamespace.push(p),d[p]=function(...args){["trackView","trackAction"].includes(args[0])&&(args.length<3&&Array.prototype.push.call(args,{}),"trackView"===args[0]?(args[2].prevFeature=t.getItem(e.view),t.setItem(e.view,args[1])):t.getItem(e.action1)===args[1]?args[2].prevFeature=t.getItem(e.action0):(args[2].prevFeature=t.getItem(e.action1),t.setItem(e.action0,args[2].prevFeature),t.setItem(e.action1,args[1]))),(d[p].q=d[p].q||[]).push(args)},d[p].q=d[p].q||[],u=a.createElement("script"),s=a.getElementsByTagName("script")[0],u.async=!0,u.src="https://datopus.blob.core.windows.net/scripts/ds.min.js",s.parentNode.insertBefore(u,s)}})(window,document,localStorage,0,"datopus");
 	                    window.datopus("newTracker", window.location.hostname);`
@@ -77,16 +84,12 @@ export default function RootLayout({
                 <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
             </head>
             <CSPostHogProvider>
-                <body
-                    className={cn('min-h-screen bg-background font-sans antialiased mx-auto')}
-                    suppressHydrationWarning
-                >
+                <body className={cn('min-h-screen bg-background font-sans antialiased mx-auto')}>
                     <Header />
                     {children}
                     <Footer />
                 </body>
             </CSPostHogProvider>
-            <PageTracker />
         </html>
     )
 }
