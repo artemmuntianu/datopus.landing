@@ -18,17 +18,15 @@ export default function Page() {
                 <div className="flex flex-col items-center justify-center text-center my-[3.5rem] px-4">
                     <div className="space-y-10">
                         <h1 className="max-[470px]:text-[4rem] text-[5rem] leading-none font-bold">
-                            Plug&Run<br />Feature Analytics
+                            Plug&Run<br />Product Analytics
                             {/*<WordRotate words={["for Product Team", "for Growth Team", "for Data Team", "for Devs"]} />*/}
                         </h1>
                         <h2 className="max-[470px]:text-[2rem] text-[3rem] leading-none">
-                            Modern analytics for modern digital products.
+                            Get modern analytics for your digital products.
                         </h2>
                     </div>
                     <p className="flex flex-col justify-center text-muted-foreground text-2xl/relaxed md:flex-row md:gap-[0.5rem] my-[3.5rem]">
-                        <span><code>+30%</code> conversions</span>
-                        <span><code>2x</code> retention</span>
-                        <span><code>-40%</code> churn</span>
+                        <span>We supercharge <span className='text-[#4285f4]'>G</span><span className='text-[#d93e31]'>o</span><span className='text-[#fbbc05]'>o</span><span className='text-[#4285f4]'>g</span><span className='text-[#34a853]'>l</span><span className='text-[#d93e31]'>e</span>&apos;s ecosystem with user behavior analysis tools.</span>
                     </p>
                     <div className="flex items-center justify-center gap-[0.5rem]">
                         <ButtonExploreDemo creditCardClass="text-muted-foreground" />
