@@ -30,7 +30,7 @@ const prices: PlanPrice[] = [
         plan: 'Collect',
         period: 'mo',
         currency: 'eur',
-        planPrice: 17,
+        planPrice: 19,
     },
     {
         plan: 'Collect',
@@ -42,7 +42,7 @@ const prices: PlanPrice[] = [
         plan: 'Collect',
         period: 'yr',
         currency: 'eur',
-        planPrice: 13,
+        planPrice: 15,
     },
     {
         plan: 'Optimize',
@@ -55,8 +55,8 @@ const prices: PlanPrice[] = [
         plan: 'Optimize',
         period: 'mo',
         currency: 'eur',
-        planPrice: 45,
-        mtuPrice: 0.0004
+        planPrice: 49,
+        mtuPrice: 0.0005
     },
     {
         plan: 'Optimize',
@@ -69,8 +69,8 @@ const prices: PlanPrice[] = [
         plan: 'Optimize',
         period: 'yr',
         currency: 'eur',
-        planPrice: 36,
-        mtuPrice: 0.0004
+        planPrice: 39,
+        mtuPrice: 0.0005
     },
     {
         plan: 'Scale',
@@ -83,8 +83,8 @@ const prices: PlanPrice[] = [
         plan: 'Scale',
         period: 'mo',
         currency: 'eur',
-        planPrice: 91,
-        mtuPrice: 0.0004
+        planPrice: 99,
+        mtuPrice: 0.0005
     },
     {
         plan: 'Scale',
@@ -97,8 +97,8 @@ const prices: PlanPrice[] = [
         plan: 'Scale',
         period: 'yr',
         currency: 'eur',
-        planPrice: 72,
-        mtuPrice: 0.0004
+        planPrice: 79,
+        mtuPrice: 0.0005
     }
 ];
 
