@@ -30,15 +30,15 @@ export async function POST(req: NextRequest) {
 
     if (data) {
         switch (action) {
-            case 'demo':
+            case 'startup_program':
                 {
-                    if (data.demo_requested !== null)
+                    if (data.startup_requested !== null)
                         return Response.json({ msg: 'duplicate' });
 
                     let { error } = await sbClient
                         .from('landing_page_users')
                         .update({
-                            demo_requested: new Date().toISOString()
+                            startup_requested: new Date().toISOString()
                         })
                         .eq('email', email);
                     if (error) {
@@ -70,7 +70,7 @@ export async function POST(req: NextRequest) {
             .from('landing_page_users')
             .insert({
                 email,
-                demo_requested: action == 'demo' ? new Date().toISOString() : null,
+                startup_requested: action == 'startup_program' ? new Date().toISOString() : null,
                 affiliate_requested: action == 'affiliate_program' ? new Date().toISOString() : null
             });
         if (error) {
