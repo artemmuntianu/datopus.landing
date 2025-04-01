@@ -42,7 +42,7 @@ export function JoinStartupProgramForm() {
                 Startup Program
             </h1>
             <p>
-                🎉 Use all features for <b>free</b> as long as you have fewer than <b>1,000 MTUs</b> (Monthly Tracked Users). After that, enjoy one-year <b>90% discount</b>. You will also get:<br />
+                🎉 Use all features for <b>free</b> as long as you have fewer than <b>1,000 MTUs</b> (Monthly Tracked Users). After that, enjoy one-year <b>50% discount</b>. You will also get:<br />
                 ✅Full support in setting up analytics tailored to your product.<br />
                 ✅3 sessions with a pro analyst for expert insights.<br />
                 ✅Tracking all user behavior directly in Google Analytics, with no GTM setup.<br />
