@@ -271,7 +271,15 @@ export default function SubscriptionPlans() {
                             </div>
                             <div className="flex items-center gap-2">
                                 {Icons.check({ className: "size-4 text-[#ffa500]" })}
-                                <span>Monitoring & alerting</span>
+                                <span>Monitoring & Alerting</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                {Icons.check({ className: "size-4 text-[#ffa500]" })}
+                                <span>Session Replay</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                {Icons.check({ className: "size-4 text-[#ffa500]" })}
+                                <span>Ask Data</span>
                             </div>
                             <div className="flex items-center gap-2">
                                 {Icons.check({ className: "size-4 text-[#ffa500]" })}
