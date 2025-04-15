@@ -42,7 +42,7 @@ export default function Page() {
                             animationStyle="fade"
                             videoSrc="https://www.youtube.com/embed/DjiYVJyy2vg?si=iZAcJ2QEeYwJ2gSV"
                             thumbnailSrc="/features_flow.png"
-                            thumbnailAlt="Datopus Feature Analytics Platform"
+                            thumbnailAlt="Datopus Feature Analysis Platform"
                         />
                     </ShineBorder>
                 </BlurFade>
@@ -63,7 +63,7 @@ export default function Page() {
             <section id="platform" className="py-16">
                 <div className="mb-5 mx-auto space-y-5 py-6 px-4 text-center">
                     <h2 className="mx-auto mb-2 max-w-4xl text-balance text-[48px] font-medium leading-tight tracking-tighter">
-                        Unlock the Power of Feature Analytics
+                        Unlock the Power of Feature Analysis
                     </h2>
                     <h2 className="mx-auto mb-2 max-w-4xl font-light text-2xl/relaxed">
                         Understand user behavior across the product journey with powerful custom reports, and address every product question - no coding required.

@@ -8,7 +8,7 @@ export function FAQSection() {
                     How does Datopus differ from other analytics platforms?
                 </AccordionTrigger>
                 <AccordionContent className="text-lg font-normal indent-4">
-                    <p className="pt-1">At the heart of Datopus&apos;s philosophy is the belief that feature analytics should be easily integrated into a company&apos;s existing processes and understandable to all employees, executives and investors. We achieve this by organizing analytics around product features.</p>
+                    <p className="pt-1">At the heart of Datopus&apos;s philosophy is the belief that feature analysis should be easily integrated into a company&apos;s existing processes and understandable to all employees, executives and investors. We achieve this by organizing analytics around product features.</p>
                     <p className="pt-1">Any application can be decomposed into a set of product features. A feature can consist of other features and/or controls, such as buttons, forms, links, etc.</p>
                     <p className="pt-1">In this way, Datopus tracks how users interact with features and provides reports on their usage and the impact of each feature on critical metrics such as <u>User Conversion Rate</u> and <u>User Churn Rate</u>. This is a radical difference from the commonly used Page Views and Button Clicks.</p>
                     <p className="pt-1">Datopus customers gain a completely new perspective on their digital product.</p>
@@ -53,10 +53,10 @@ export function FAQSection() {
             </AccordionItem>
             <AccordionItem value="2">
                 <AccordionTrigger className="text-lg">
-                    What are the benefits of product feature analytics?
+                    What are the benefits of product feature analysis?
                 </AccordionTrigger>
                 <AccordionContent className="text-lg font-normal indent-4">
-                    <p className="pt-1">Product feature analytics is the process of collecting, analyzing, and interpreting data about how users interact with and use specific features within a product.</p>
+                    <p className="pt-1">Product feature analysis is the process of collecting, analyzing, and interpreting data about how users interact with and use specific features within a product.</p>
                     <p className="pt-1">It helps product teams understand which features are valuable to users, how well they perform, and where there might be opportunities for improvement.</p>
                 </AccordionContent>
             </AccordionItem>
