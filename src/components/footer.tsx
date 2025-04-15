@@ -13,7 +13,7 @@ export function Footer() {
                         <Image src="/logo.svg" alt="Datopus" width="28" height="32" />
                         <span className="text-xl font-bold">Datopus</span>
                     </Link>
-                    <p className="mt-2">On a mission to help businesses optimize product features for success.</p>
+                    <p className="mt-2">On a mission to help businesses optimize digital products for success.</p>
                     <div className="mt-4 flex space-x-4">
                         <a href="https://www.linkedin.com/company/datopus" target="_blank" rel="noopener noreferrer">
                             {Icons.linkedin({ className: "size-6" })}
@@ -72,7 +72,7 @@ export function Footer() {
 
             {/* Copyright */}
             <div className="mx-auto max-w-screen-xl border-t py-3 text-xs text-center mt-8">
-                Copyright {new Date().getFullYear()} <Link href="/">Datopus</Link> - Optimize Product Features for Success
+                Copyright {new Date().getFullYear()} <Link href="/">Datopus</Link> - Optimize Digital Products for Success
             </div>
         </footer>
     );

@@ -7,7 +7,7 @@ import { CSPostHogProvider } from './providers';
 
 const DATA = {
     url: 'https://www.datopus.io',
-    name: 'Optimize Product Features for Success | Datopus',
+    name: 'Optimize Digital Products for Success | Datopus',
     description: 'Datopus'
 }
 
