@@ -56,8 +56,7 @@ export function JoinStartupProgramForm() {
                             <div className="text-lg p-6 text-black text-center mx-auto">
                                 🎉<br />
                                 <b>Welcome to the Datopus Startup Program!</b><br />
-                                <a href="https://app.datopus.io/auth/sign-up" className="text-primary underline">Sign up</a> and get automatically enrolled in our Startup Program.<br />
-                                We&apos;ll send you all the details of the program within 3 business days.
+                                <a href="https://app.datopus.io/auth/sign-up" className="text-primary underline">Sign up</a>, and we will automatically upgrade your subscription to the Startup Program.
                             </div>
                         )
                         : (
