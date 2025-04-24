@@ -1,0 +1,314 @@
+.blog-article {
+    border-left-width: 1px;
+    border-right-width: 1px;
+    line-height: 1.7;
+    color: hsl(var(--foreground));
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    max-width: 100%;
+    padding: 1rem;
+}
+
+    .blog-article b, .blog-article strong {
+        font-weight: 700;
+        color: hsl(var(--foreground));
+    }
+
+    .blog-article h1, .blog-article h2, .blog-article h3, .blog-article h4, .blog-article h5, .blog-article h6 {
+        font-weight: 700;
+        line-height: 1.3;
+        letter-spacing: -0.015em;
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+        color: hsl(var(--foreground));
+        scroll-margin-top: 100px;
+    }
+
+    .blog-article h1 {
+        font-size: 2.5rem;
+        padding-bottom: 0.5em;
+        padding-top: 0.5em;
+        border-bottom: 1px solid hsla(var(--border) / 0.5);
+    }
+
+    .blog-article h2 {
+        font-size: 1.875rem;
+        padding-bottom: 0.5em;
+        padding-top: 0.5em;
+        border-bottom: 1px solid hsla(var(--border) / 0.2);
+    }
+
+    .blog-article h3 {
+        font-size: 1.5rem;
+        padding-bottom: 0.5em;
+        padding-top: 0.5em;
+    }
+
+    .blog-article h4 {
+        font-size: 1.25rem;
+        padding-bottom: 0.5em;
+        padding-top: 0.5em;
+    }
+
+    .blog-article h5 {
+        font-size: 1.1rem;
+        padding-bottom: 0.5em;
+        padding-top: 0.5em;
+    }
+
+    .blog-article h6 {
+        font-size: 1rem;
+        padding-bottom: 0.5em;
+        padding-top: 0.5em;
+    }
+
+    .blog-article p {
+        margin: 1.2em 0;
+        padding: 0;
+    }
+
+    .blog-article a {
+        color: hsl(var(--primary));
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 2px;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .blog-article a:hover {
+        text-decoration-thickness: 2px;
+    }
+
+    .blog-article blockquote {
+        border-left: 4px solid hsl(var(--primary) / 0.7);
+        margin: 1.5em 0;
+        padding: 0.6em 1.2em;
+        background-color: hsl(var(--muted) / 0.3);
+        border-radius: 0.25rem;
+        font-style: italic;
+    }
+
+    .blog-article blockquote p {
+        margin: 0.5em 0;
+    }
+
+    .blog-article code {
+        background-color: hsl(var(--muted) / 0.5);
+        padding: 0.2em 0.4em;
+        border-radius: 0.25rem;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        font-size: 0.9em;
+    }
+
+    .blog-article pre {
+        background-color: hsl(var(--muted) / 0.5);
+        border-radius: 0.5rem;
+        padding: 1rem;
+        overflow-x: auto;
+        margin: 1.5em 0;
+    }
+
+    .blog-article pre code {
+        background-color: transparent;
+        padding: 0;
+        font-size: 0.9em;
+        line-height: 1.6;
+    }
+
+    .blog-article ol {
+        list-style: decimal;
+        margin: 1.5em 0;
+        padding: 0 0 0 1.5em;
+    }
+
+    .blog-article ul {
+        list-style-type: disc;
+        margin: 1.5em 0;
+        padding: 0 0 0 1.5em;
+    }
+
+    .blog-article li {
+        margin: 0.5em 0;
+        padding-left: 0.5em;
+    }
+
+    .blog-article li > ul,
+    .blog-article li > ol {
+        margin: 0.5em 0;
+    }
+
+    .blog-article img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 2em auto;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    }
+
+    .blog-article img.blog-image {
+        --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+        border-radius: 1rem;
+        padding: 0px;
+    }
+
+    .blog-article img.blog-image-left {
+        margin: 1rem 1.5rem 1rem 0;
+        float: left;
+        max-width: 40%;
+    }
+
+    .blog-article img.blog-image-right {
+        margin: 1rem 0 1rem 1.5rem;
+        float: right;
+        max-width: 40%;
+    }
+
+    .blog-article iframe.blog-video {
+        --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+        border-radius: 1rem;
+        max-width: 100%;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        margin: 2em 0;
+    }
+
+    .blog-article table {
+        border-collapse: collapse;
+        table-layout: fixed;
+        width: 100%;
+        margin: 2em 0;
+        overflow-x: auto;
+        display: block;
+    }
+
+        .blog-article table th,
+        .blog-article table caption {
+            text-align: start;
+            font-weight: 600;
+        }
+
+        .blog-article table caption {
+            margin-block: 0.75rem;
+            font-style: italic;
+        }
+
+        .blog-article table thead th:not(:first-child),
+        .blog-article table td {
+            text-align: center;
+        }
+
+        .blog-article table thead {
+            border-block-end: 2px solid hsla(var(--border), 0.8);
+            background: hsl(var(--muted) / 0.7);
+        }
+
+        .blog-article table tfoot {
+            border-block: 2px solid hsla(var(--border), 0.8);
+            background: hsl(var(--muted) / 0.7);
+        }
+
+        .blog-article table th,
+        .blog-article table td {
+            border: 1px solid hsla(var(--border), 0.5);
+            padding: 0.75rem;
+            vertical-align: top;
+        }
+
+            .blog-article table th:first-child {
+                position: sticky;
+                inset-inline-start: 0;
+                border-inline-end: none;
+            }
+
+        .blog-article table tbody th {
+            background: hsl(var(--background) / 0.8);
+        }
+
+        .blog-article table thead th,
+        .blog-article table tfoot th {
+            background: hsl(var(--muted) / 0.7);
+        }
+
+        .blog-article table thead th {
+            vertical-align: bottom;
+        }
+
+        .blog-article table td:first-of-type,
+        .blog-article table :where(thead, tfoot) th:nth-child(2) {
+            text-align: start;
+        }
+
+        .blog-article table th:first-of-type {
+            width: 10rem;
+        }
+
+        .blog-article table th:first-child::after {
+            content: '';
+            position: absolute;
+            inset-block-start: 0;
+            inset-inline-end: 0;
+            width: 1px;
+            height: 100%;
+            background: hsla(var(--border), 0.5);
+        }
+
+    /* Styles for captions (caption) to images */
+    .blog-article figure {
+        margin: 2em 0;
+    }
+
+    .blog-article figcaption {
+        text-align: center;
+        font-size: 0.875rem;
+        color: hsl(var(--muted-foreground));
+        margin-top: 0.5rem;
+        font-style: italic;
+    }
+
+    /* Style for highlighting important information */
+    .blog-article .note {
+        background-color: hsl(var(--primary) / 0.1);
+        border-left: 4px solid hsl(var(--primary));
+        padding: 1rem;
+        margin: 1.5em 0;
+        border-radius: 0.25rem;
+    }
+
+    .blog-article .warning {
+        background-color: hsl(38, 92%, 50% / 0.1);
+        border-left: 4px solid hsl(38, 92%, 50%);
+        padding: 1rem;
+        margin: 1.5em 0;
+        border-radius: 0.25rem;
+    }
+
+@media (min-width: 768px) {
+    .blog-article {
+        font-size: 1.125rem;
+    }
+
+    .md\:max-w-25 {
+        max-width: 25rem;
+    }
+
+    .md\:max-w-35 {
+        max-width: 35rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .blog-article {
+        font-size: 1rem;
+    }
+
+    .blog-article img.blog-image-left,
+    .blog-article img.blog-image-right {
+        float: none;
+        margin: 1.5em auto;
+        max-width: 100%;
+    }
+}
