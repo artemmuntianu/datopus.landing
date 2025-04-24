@@ -64,7 +64,7 @@ export function Footer() {
                 <div>
                     <h3 className="font-semibold text-lg">SUPPORT</h3>
                     <ul className="mt-2 text-lg leading-[2.5rem]">
-                        <li><Link href="#footer" onClick={HandleScheduleDemo}>Contact Us</Link></li>
+                        <li><Link href="/contact">Contact Us</Link></li>
                         <li><Link href="https://docs.datopus.io" target="_blank" rel="noopener noreferrer">Developer Docs</Link></li>
                     </ul>
                 </div>

@@ -7,7 +7,6 @@ import * as Tooltip from '@radix-ui/react-tooltip';
 import Link from "next/link";
 import { useState } from "react";
 import { Button } from "./ui/button";
-import { HandleScheduleDemo } from "./ui/button-schedule-demo";
 
 interface PlanPrice {
     plan: string,
@@ -351,8 +350,8 @@ export default function SubscriptionPlans() {
                         </div>
                     </section>
                     <div className="text-center">
-                        <Button className="min-w-[50%] inline-flex" variant="outline" onClick={HandleScheduleDemo}>
-                            Contact us
+                        <Button className="min-w-[50%] inline-flex" variant="outline" asChild>
+                            <Link href="/contact">Contact us</Link>
                         </Button>
                         <div className="text-center text-sm mt-2 text-gray-600">&nbsp;</div>
                     </div>
