@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import { Footer } from '../components/footer';
 import './globals.css';
 import { CSPostHogProvider } from './providers';
+import { CookieConsent } from '@/components/cookie-consent';
 
 const DATA = {
     url: 'https://www.datopus.io',
@@ -88,6 +89,7 @@ export default function RootLayout({
                     <Header />
                     {children}
                     <Footer />
+                    <CookieConsent />
                 </body>
             </CSPostHogProvider>
         </html>
