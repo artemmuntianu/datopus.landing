@@ -452,17 +452,17 @@ export function WhatWeCanDoSection() {
                         <div className="space-y-4">
                             <div className="flex items-center gap-4 p-3 bg-neutral-50 rounded-lg">
                                 <div className="text-xs text-neutral-400">○</div>
-                                <span>Button Click: "Start Trial"</span>
+                                <span>Button Click: &quot;Start Trial&quot;</span>
                                 <span className="ml-auto text-sm text-neutral-500">2s ago</span>
                             </div>
                             <div className="flex items-center gap-4 p-3 bg-neutral-50 rounded-lg">
                                 <div className="text-xs text-neutral-400">○</div>
-                                <span>Page View: "/features"</span>
+                                <span>Page View: &quot;/features&quot;</span>
                                 <span className="ml-auto text-sm text-neutral-500">5s ago</span>
                             </div>
                             <div className="flex items-center gap-4 p-3 bg-neutral-50 rounded-lg">
                                 <div className="text-xs text-neutral-400">○</div>
-                                <span>Form Submit: "Contact"</span>
+                                <span>Form Submit: &quot;Contact&quot;</span>
                                 <span className="ml-auto text-sm text-neutral-500">30s ago</span>
                             </div>
                         </div>
