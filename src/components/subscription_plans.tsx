@@ -125,22 +125,22 @@ export default function SubscriptionPlans() {
 
     return (
         <Tooltip.Provider>
-            <div className="mx-auto px-4 mb-4 max-w-screen-xl w-full">
+            <div className="mx-auto px-4 mb-4 max-w-screen-xl w-full" data-ds-feature="pricing-toggles">
                 <div className="grid grid-cols-[auto_1fr] min-[950px]:grid-cols-[1fr_auto_1fr]">
-                    <label htmlFor="toggle-period" className="justify-self-center items-center p-2 rounded-md cursor-pointer text-gray-800 col-[1] min-[950px]:col-[2]">
+                    <label htmlFor="toggle-period" className="justify-self-center items-center p-2 rounded-md cursor-pointer text-gray-800 col-[1] min-[950px]:col-[2]" data-ds-feature="billing-period-toggle">
                         <input id="toggle-period" type="checkbox" className="hidden peer" defaultChecked={period == 'yr'} onChange={e => setPeriod(e.target.checked ? 'yr' : 'mo')} />
                         <span className="px-4 py-2 rounded-l-md border bg-white peer-checked:bg-transparent">Monthly</span>
                         <span className="px-4 py-2 rounded-r-md border bg-transparent peer-checked:bg-white" style={{ borderLeft: "none" }}>Annual (-20%)</span>
                     </label>
-                    <label htmlFor="toggle-currency" className="justify-self-end items-center p-2 rounded-md cursor-pointer text-gray-800 col-[2] min-[950px]:col-[3]">
+                    <label htmlFor="toggle-currency" className="justify-self-end items-center p-2 rounded-md cursor-pointer text-gray-800 col-[2] min-[950px]:col-[3]" data-ds-feature="currency-toggle">
                         <input id="toggle-currency" type="checkbox" className="hidden peer" defaultChecked={currency == 'eur'} onChange={e => setCurrency(e.target.checked ? 'eur' : 'usd')} />
                         <span className="px-4 py-2 rounded-l-md border bg-white peer-checked:bg-transparent">&#36;</span>
                         <span className="px-4 py-2 rounded-r-md border bg-transparent peer-checked:bg-white" style={{ borderLeft: "none" }}>&#8364;</span>
                     </label>
                 </div>
             </div>
-            <div className="grid grid-cols-1 mx-auto px-4 mb-4 max-w-screen-xl gap-3 min-[950px]:grid-cols-3">
-                <BlurFade delay={BLUR_FADE_DELAY + 2 * 0.05} className="bg-white flex flex-col p-5 rounded-xl shadow-md">
+            <div className="grid grid-cols-1 mx-auto px-4 mb-4 max-w-screen-xl gap-3 min-[950px]:grid-cols-3" data-ds-feature="subscription-plans">
+                <BlurFade delay={BLUR_FADE_DELAY + 2 * 0.05} className="bg-white flex flex-col p-5 rounded-xl shadow-md" data-ds-feature="collect-plan">
                     <section className="flex flex-col gap-3 h-full pb-5">
                         <div className="flex flex-col gap-3">
                             <div className="flex flex-col gap-4">
@@ -159,7 +159,7 @@ export default function SubscriptionPlans() {
                                 <p className="min-h-[50px] font-semibold">Supercharged Google Analytics</p>
                             </div>
                         </div>
-                        <div className="grid gap-2 text-gray-600">
+                        <div className="grid gap-2 text-gray-600" data-ds-feature="collect-plan-features">
                             <div className="flex items-center gap-2">
                                 <div>
                                     <span className="text-gray-900">Datasources</span>
@@ -195,7 +195,7 @@ export default function SubscriptionPlans() {
                             </div>
                         </div>
                     </section>
-                    <div className="flex justify-center">
+                    <div className="flex justify-center" data-ds-feature="CTA: collect-plan">
                         <Button className="min-w-[50%]" variant="default" asChild>
                             <Link href="https://app.datopus.io/auth/sign-up">Start free trial</Link>
                         </Button>
@@ -286,7 +286,7 @@ export default function SubscriptionPlans() {
                             </div>
                         </div>
                     </section>
-                    <div className="flex justify-center">
+                    <div className="flex justify-center" data-ds-feature="CTA: optimize-plan">
                         <Button className="min-w-[50%]" variant="default" asChild>
                             <Link href="https://app.datopus.io/auth/sign-up">Start free trial</Link>
                         </Button>
@@ -349,7 +349,7 @@ export default function SubscriptionPlans() {
                             </div>
                         </div>
                     </section>
-                    <div className="text-center">
+                    <div className="text-center" data-ds-feature="CTA: scale-plan">
                         <Button className="min-w-[50%] inline-flex" variant="outline" asChild>
                             <Link href="/contact">Contact us</Link>
                         </Button>

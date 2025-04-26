@@ -44,6 +44,7 @@ export function CookieConsent() {
                     <Button
                         onClick={handleAccept}
                         className="w-24"
+                        data-ds-feature="CTA: accept-cookies"
                     >
                         Accept
                     </Button>
@@ -51,6 +52,7 @@ export function CookieConsent() {
                         variant="outline"
                         onClick={handleReject}
                         className="w-24"
+                        data-ds-feature="CTA: reject-cookies"
                     >
                         Reject
                     </Button>

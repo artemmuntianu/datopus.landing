@@ -2,8 +2,8 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 export function FAQSection() {
     return (
-        <Accordion type="single" className="mx-auto max-w-screen-xl px-4">
-            <AccordionItem value="1">
+        <Accordion type="single" className="mx-auto max-w-screen-xl px-4" data-ds-feature="faq-accordion">
+            <AccordionItem value="1" data-ds-feature="faq-item-difference">
                 <AccordionTrigger className="text-lg">
                     How does Datopus differ from other analytics platforms?
                 </AccordionTrigger>
@@ -14,7 +14,7 @@ export function FAQSection() {
                     <p className="pt-1">Datopus customers gain a completely new perspective on their digital product.</p>
                 </AccordionContent>
             </AccordionItem>
-            <AccordionItem value="4">
+            <AccordionItem value="4" data-ds-feature="faq-item-steps">
                 <AccordionTrigger className="text-lg">
                     What are the steps to start using Datopus?
                 </AccordionTrigger>
@@ -27,7 +27,7 @@ export function FAQSection() {
                     <p className="pt-1">Datopus simplifies the integration process by requiring developers to add a specific HTML attribute to identify features and then include a small snippet of code.</p>
                 </AccordionContent>
             </AccordionItem>
-            <AccordionItem value="7">
+            <AccordionItem value="7" data-ds-feature="faq-item-tracking">
                 <AccordionTrigger className="text-lg">
                     What does Datopus track exactly?
                 </AccordionTrigger>
@@ -35,7 +35,7 @@ export function FAQSection() {
                     <p className="pt-1">Datopus watches for any activity happening inside a specific HTML element that marked with a special tag <code>[data-ds-feature]</code>. It looks at all the smaller parts within this element and records what they do. These events include clicks, mouse movements, form submissions, or any other user interactions within that designated area.</p>
                 </AccordionContent>
             </AccordionItem>
-            <AccordionItem value="5">
+            <AccordionItem value="5" data-ds-feature="faq-item-category">
                 <AccordionTrigger className="text-lg">
                     Does Datopus provide category analytics?
                 </AccordionTrigger>
@@ -43,7 +43,7 @@ export function FAQSection() {
                     <p className="pt-1">We&apos;ve created a special feature for businesses that sell to other businesses. This feature allows you to analyze how individual businesses or groups of businesses use the different parts of your product.</p>
                 </AccordionContent>
             </AccordionItem>
-            <AccordionItem value="6">
+            <AccordionItem value="6" data-ds-feature="faq-item-traditional">
                 <AccordionTrigger className="text-lg">
                     I&apos;m more accustomed to tracking Page Views and Button Clicks. Is this possible with Datopus?
                 </AccordionTrigger>
@@ -51,7 +51,7 @@ export function FAQSection() {
                     <p className="pt-1">Yes, that&apos;s entirely possible. Pages and buttons are considered standard features, so tracking their usage within our platform will be straightforward.</p>
                 </AccordionContent>
             </AccordionItem>
-            <AccordionItem value="2">
+            <AccordionItem value="2" data-ds-feature="faq-item-benefits">
                 <AccordionTrigger className="text-lg">
                     What are the benefits of product feature analysis?
                 </AccordionTrigger>
@@ -60,7 +60,7 @@ export function FAQSection() {
                     <p className="pt-1">It helps product teams understand which features are valuable to users, how well they perform, and where there might be opportunities for improvement.</p>
                 </AccordionContent>
             </AccordionItem>
-            <AccordionItem value="3">
+            <AccordionItem value="3" data-ds-feature="faq-item-customer-analytics">
                 <AccordionTrigger className="text-lg">
                     What are the benefits of customer-facing analytics?
                 </AccordionTrigger>

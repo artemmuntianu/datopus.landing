@@ -5,8 +5,8 @@ import React from 'react';
 
 export default function ContactPage() {
     return (
-        <main className="flex flex-col min-h-[100dvh] mt-[3.5rem]">
-            <div className="w-full [background-image:linear-gradient(to_bottom,hsl(var(--primary)/10%),transparent)] [background-size:100%_50rem] [background-repeat:no-repeat] py-16">
+        <main className="flex flex-col min-h-[100dvh] mt-[3.5rem]" data-ds-feature="contact-page">
+            <div className="w-full [background-image:linear-gradient(to_bottom,hsl(var(--primary)/10%),transparent)] [background-size:100%_50rem] [background-repeat:no-repeat] py-16" data-ds-feature="contact-hero">
                 <div className="container mx-auto px-4">
                     <h1 className="font-bold text-4xl md:text-5xl text-center mb-6">
                         Contact Us
@@ -20,12 +20,12 @@ export default function ContactPage() {
             <div className="container mx-auto px-4 py-12">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     {/* Contact Information */}
-                    <div className="lg:col-span-1">
+                    <div className="lg:col-span-1" data-ds-feature="contact-info">
                         <div className="bg-background rounded-lg border p-6 h-full">
                             <h2 className="text-2xl font-semibold mb-6">Get in Touch</h2>
 
                             <div className="space-y-6">
-                                <div className="flex items-start">
+                                <div className="flex items-start" data-ds-feature="email-info">
                                     <div className="flex-shrink-0 mt-1">
                                         <Mail className="h-5 w-5 text-primary" />
                                     </div>
@@ -39,7 +39,7 @@ export default function ContactPage() {
                                     </div>
                                 </div>
 
-                                <div className="flex items-start">
+                                <div className="flex items-start" data-ds-feature="phone-info">
                                     <div className="flex-shrink-0 mt-1">
                                         <Phone className="h-5 w-5 text-primary" />
                                     </div>
@@ -53,7 +53,7 @@ export default function ContactPage() {
                                     </div>
                                 </div>
 
-                                <div className="flex items-start">
+                                <div className="flex items-start" data-ds-feature="address-info">
                                     <div className="flex-shrink-0 mt-1">
                                         <MapPin className="h-5 w-5 text-primary" />
                                     </div>
@@ -69,7 +69,7 @@ export default function ContactPage() {
                             <hr className="my-8 border-t border-border" />
 
                             <h3 className="text-xl font-medium mb-4">Why Schedule a Call?</h3>
-                            <ul className="space-y-3 text-muted-foreground">
+                            <ul className="space-y-3 text-muted-foreground" data-ds-feature="benefits-list">
                                 <li className="flex items-start">
                                     <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-primary/10 text-primary text-xs font-bold mr-3 mt-0.5">✓</span>
                                     <span>Get a personalized demo of Datopus</span>
@@ -89,7 +89,7 @@ export default function ContactPage() {
                             </ul>
                         </div>
                     </div>
-                    <div className="lg:col-span-2 flex flex-col rounded-lg border">
+                    <div className="lg:col-span-2 flex flex-col rounded-lg border" data-ds-feature="calendly-scheduler">
                         <h2 className="text-2xl font-semibold pt-6 px-6">Schedule a Call</h2>
                         <iframe
                             src="https://calendly.com/artem-datopus/30min?embed_domain=datopus.io&embed_type=Inline"
