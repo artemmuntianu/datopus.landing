@@ -4,13 +4,14 @@ import { ArrowLeft, ArrowRight, Calendar, Clock, Facebook, Linkedin, Share2, Twi
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { Icons } from '../../../components/icons';
 import RecommendedPosts from '../../../components/recommended_posts';
 import { ButtonExploreDemo } from '../../../components/ui/button-explore-demo';
 import './mdx-styles.css';
 
 const DATA = {
     url: 'https://www.datopus.io',
-    name: 'Artem M',
+    name: 'Artem Muntianu',
     dirRelativePath: 'content/blog',
 }
 
@@ -273,12 +274,14 @@ export default async function BlogPost({
                         <div className="mb-8 p-4 border rounded-lg">
                             <h3 className="font-medium mb-4">About the author</h3>
                             <div className="flex items-center">
-                                <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center overflow-hidden mr-3">
-                                    <span className="text-lg font-bold">{DATA.name.charAt(0)}</span>
+                                <div className="mr-3">
+                                    <a href="https://www.linkedin.com/in/artematdatopus" target="_blank" rel="noopener noreferrer">
+                                        {Icons.linkedin({ className: "size-6" })}
+                                    </a>
                                 </div>
                                 <div>
                                     <p className="font-medium">{DATA.name}</p>
-                                    <p className="text-sm text-muted-foreground">Author</p>
+                                    <p className="text-sm text-muted-foreground">Highly skilled professional with extensive experience in creating high-loaded analytics systems.</p>
                                 </div>
                             </div>
                         </div>

@@ -7,7 +7,7 @@ import RecommendedPosts from '../../../components/recommended_posts';
 
 const DATA = {
     url: 'https://www.datopus.io',
-    name: 'Artem M',
+    name: 'Artem Muntianu',
     dirRelativePath: 'content/platform',
 }
 

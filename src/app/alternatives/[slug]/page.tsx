@@ -7,7 +7,7 @@ import '../../mdx-styles.css';
 
 const DATA = {
     url: 'https://www.datopus.io',
-    name: 'Artem M',
+    name: 'Artem Muntianu',
     dirRelativePath: 'content/alternatives',
 }
 
