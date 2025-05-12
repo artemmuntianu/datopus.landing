@@ -6,9 +6,9 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { ChevronRightIcon } from '@radix-ui/react-icons';
 import { useSearchParams } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 
-export default function TailoredDemoPage() {
+function TailoredDemoContent() {
     const searchParams = useSearchParams();
     const name = searchParams.get('name') || 'there';
     const [website, setWebsite] = useState('');
@@ -170,5 +170,22 @@ export default function TailoredDemoPage() {
                 </div>
             </div>
         </main>
+    );
+}
+
+export default function TailoredDemoPage() {
+    return (
+        <Suspense fallback={
+            <main className="flex flex-col min-h-[100dvh] mt-[3.5rem] [background-image:linear-gradient(to_bottom,hsl(var(--primary)/10%),transparent)] [background-size:100%_50rem] [background-repeat:no-repeat]">
+                <div className="mx-auto w-full max-w-screen-xl px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+                    <div className="flex flex-col items-center justify-center text-center mb-8 sm:mb-12">
+                        <div className="h-8 w-8 border-2 border-primary border-t-transparent rounded-full animate-spin"></div>
+                        <p className="text-lg font-medium mt-4">Loading...</p>
+                    </div>
+                </div>
+            </main>
+        }>
+            <TailoredDemoContent />
+        </Suspense>
     );
 } 
