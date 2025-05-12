@@ -3,7 +3,7 @@ import { createSupabaseClient } from "../../../lib/supabase/server";
 import { NextRequest } from "next/server";
 
 export async function POST(req: NextRequest) {
-    const { email, action } = await req.json();
+    const { email, action, website } = await req.json();
     const sbClient = createSupabaseClient();
 
     let authResp = await sbClient
@@ -64,14 +64,34 @@ export async function POST(req: NextRequest) {
                     }
                 }
                 break;
+            case 'demo_request':
+                {
+                    if (data.demo_requested !== null)
+                        return Response.json({ msg: 'duplicate' });
+
+                    let { error } = await sbClient
+                        .from('landing_page_users')
+                        .update({
+                            demo_requested: new Date().toISOString(),
+                            website: website
+                        })
+                        .eq('email', email);
+                    if (error) {
+                        console.error(error);
+                        return Response.error();
+                    }
+                }
+                break;
         }
     } else {
         let { error } = await sbClient
             .from('landing_page_users')
             .insert({
-                email,
+                email: email,
+                website: website,
                 startup_requested: action == 'startup_program' ? new Date().toISOString() : null,
-                affiliate_requested: action == 'affiliate_program' ? new Date().toISOString() : null
+                affiliate_requested: action == 'affiliate_program' ? new Date().toISOString() : null,
+                demo_requested: action == 'demo_request' ? new Date().toISOString() : null,
             });
         if (error) {
             console.error(error);

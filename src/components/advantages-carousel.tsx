@@ -1,13 +1,12 @@
 "use client";
 
-import { features } from "@/app/features_section";
+import { whatWeCanDo } from "@/app/whatwecando_section";
 import { cn } from "@/lib/utils";
 import { ArrowLeftIcon, ArrowRightIcon, PauseIcon, PlayIcon } from "@radix-ui/react-icons";
 import { AnimatePresence, motion } from "framer-motion";
-import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
-export function FeatureCarousel() {
+export function AdvantagesCarousel() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [direction, setDirection] = useState(0);
     const [isPaused, setIsPaused] = useState(false);
@@ -41,12 +40,12 @@ export function FeatureCarousel() {
 
     const nextSlide = () => {
         setDirection(1);
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % features.length);
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % whatWeCanDo.length);
     };
 
     const prevSlide = () => {
         setDirection(-1);
-        setCurrentIndex((prevIndex) => (prevIndex - 1 + features.length) % features.length);
+        setCurrentIndex((prevIndex) => (prevIndex - 1 + whatWeCanDo.length) % whatWeCanDo.length);
     };
 
     const goToSlide = (index: number) => {
@@ -84,14 +83,14 @@ export function FeatureCarousel() {
         };
     }, [currentIndex, isPaused]);
 
-    const feature = features[currentIndex];
+    const currentFeature = whatWeCanDo[currentIndex];
 
     return (
         <div className="mx-auto w-full px-4 py-12">
             <div className="relative w-full max-w-[1200px] mx-auto h-[600px] overflow-hidden rounded-xl bg-gradient-to-br from-primary/5 to-primary/10 p-4 sm:p-6 md:p-8 shadow-lg">
                 {!isPaused && (
                     <div className="absolute top-0 left-0 w-full h-[2px] bg-gray-100">
-                        <div
+                        <div 
                             key={key}
                             className="h-full bg-primary/25 origin-left"
                             style={{
@@ -108,7 +107,6 @@ export function FeatureCarousel() {
                         to { transform: scaleX(1); }
                     }
                 `}</style>
-
                 <div className="flex justify-end mb-4 sm:mb-6 md:mb-8 space-x-2 sm:space-x-4">
                     <button
                         onClick={prevSlide}
@@ -149,15 +147,11 @@ export function FeatureCarousel() {
                             className="w-full lg:w-1/2 flex flex-col justify-center h-full"
                         >
                             <div className="h-full flex flex-col justify-center px-2 sm:px-4">
-                                <h3 className="text-2xl sm:text-3xl font-bold mb-2 sm:mb-4">{feature.title}</h3>
-                                <p className="text-lg sm:text-xl font-light mb-4 sm:mb-6">{feature.subtitle}</p>
-                                <Link
-                                    href={feature.href}
-                                    className="inline-flex items-center text-primary hover:text-primary/80 font-semibold"
-                                >
-                                    Learn More
-                                    <ArrowRightIcon className="ml-2 h-4 w-4" />
-                                </Link>
+                                <h3 className="text-2xl sm:text-3xl font-bold mb-2 sm:mb-4">{currentFeature.title}</h3>
+                                <p className="text-lg sm:text-xl font-light mb-4 sm:mb-6">{currentFeature.subtitle}</p>
+                                <div className="py-4 sm:py-6">
+                                    {currentFeature.subtitleItems}
+                                </div>
                             </div>
                         </motion.div>
                     </AnimatePresence>
@@ -172,20 +166,8 @@ export function FeatureCarousel() {
                             exit="exit"
                             className="w-full lg:w-1/2 flex items-center justify-center h-full"
                         >
-                            <div className="w-full h-[calc(100%-1rem)] sm:h-[calc(100%-1.5rem)] md:h-[calc(100%-2rem)]">
-                                {feature.imgSrc ? (
-                                    <img
-                                        src={feature.imgSrc}
-                                        alt={feature.title}
-                                        className="bg-white rounded-lg shadow-lg max-h-[400px] object-contain w-full h-full"
-                                    />
-                                ) : feature.videoSrc ? (
-                                    <iframe
-                                        className="bg-white rounded-lg shadow-lg w-full h-full"
-                                        src={feature.videoSrc}
-                                        allow="fullscreen"
-                                    />
-                                ) : null}
+                            <div className="bg-white rounded-lg p-4 sm:p-6 shadow-md w-full h-[calc(100%-1rem)] sm:h-[calc(100%-1.5rem)] md:h-[calc(100%-2rem)]">
+                                {currentFeature.explainer}
                             </div>
                         </motion.div>
                     </AnimatePresence>
@@ -193,7 +175,7 @@ export function FeatureCarousel() {
 
                 {/* Navigation dots */}
                 <div className="absolute bottom-2 sm:bottom-4 left-1/2 -translate-x-1/2 flex space-x-1.5 sm:space-x-2">
-                    {features.map((_, index) => (
+                    {whatWeCanDo.map((_, index) => (
                         <button
                             key={index}
                             onClick={() => goToSlide(index)}
