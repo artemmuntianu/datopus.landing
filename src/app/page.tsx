@@ -1,23 +1,19 @@
 "use client";
 
 import { FeatureCarousel } from "@/components/feature-carousel";
-import BlurFade from "@/components/magicui/blur-fade";
 import { FadeInSection } from "@/components/ui/fade-in-section";
 import { AnimatedMotifs } from "../components/ui/animated-motifs";
 import { ButtonExploreDemo } from "../components/ui/button-explore-demo";
-import HeroVideoDialog from "../components/ui/hero-video-dialog";
 import { FAQSection } from "./faq_section";
 import { HowItWorksSection } from "./howitworks_section";
 import { SecurityStandardsSection } from "./security_standards_section";
 import { WhatWeCanDoSection } from "./whatwecando_section";
 
-const BLUR_FADE_DELAY = 0.02;
-
 export default function Page() {
     return (
         <main className="flex flex-col min-h-[100dvh] mt-[3.5rem] space-y-10 [background-image:linear-gradient(to_bottom,hsl(var(--primary)/10%),transparent)] [background-size:100%_50rem] [background-repeat:no-repeat]" data-ds-feature="homepage-main">
             <FadeInSection
-                className="max-w-screen-xl mx-auto relative"
+                className="max-w-screen-xl mx-auto relative min-h-[100dvh-3.5rem]"
                 direction="up"
                 delay={0.2}
             >
@@ -37,15 +33,54 @@ export default function Page() {
                             <ButtonExploreDemo creditCardClass="text-muted-foreground" />
                         </div>
                     </div>
-                    <BlurFade delay={BLUR_FADE_DELAY * 1} yOffset={0}>
-                        <HeroVideoDialog
-                            className="block"
-                            animationStyle="fade"
-                            videoSrc="https://www.youtube.com/embed/DjiYVJyy2vg?si=iZAcJ2QEeYwJ2gSV"
-                            thumbnailSrc="/features_flow.png"
-                            thumbnailAlt="Datopus Feature Analysis Platform"
-                        />
-                    </BlurFade>
+                </section>
+            </FadeInSection>
+
+            <FadeInSection className="max-w-screen-xl mx-auto my-16 px-4">
+                <section className="flex flex-col items-center">
+                    <div className="overflow-x-auto w-full">
+                        <table className="min-w-full bg-transparent rounded-xl text-lg">
+                            <thead>
+                                <tr>
+                                    <th className="py-4 px-6 md:text-2xl text-sm font-bold text-center border-b">Datopus</th>
+                                    <th className="py-4 px-6 text-primary md:text-xl text-sm font-bold text-center border-b">VS</th>
+                                    <th className="py-4 px-6 text-muted-foreground md:text-2xl text-sm font-bold text-center border-b">Other platforms</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td className="py-4 px-6 md:text-lg text-sm text-center font-semibold">Easy Plug&amp;Run</td>
+                                    <td className="py-4 px-6 md:text-lg text-sm text-center font-light bg-gray-100">Setup</td>
+                                    <td className="py-4 px-6 md:text-lg text-sm text-center font-semibold text-muted-foreground">Complex</td>
+                                </tr>
+                                <tr className="bg-gray-50">
+                                    <td className="py-4 px-6 md:text-lg text-sm text-center font-semibold">Cheaper</td>
+                                    <td className="py-4 px-6 md:text-lg text-sm text-center font-light bg-gray-100">Pricing</td>
+                                    <td className="py-4 px-6 md:text-lg text-sm text-center font-semibold text-muted-foreground">Expensive</td>
+                                </tr>
+                                <tr>
+                                    <td className="py-4 px-6 md:text-lg text-sm text-center font-semibold">You own data</td>
+                                    <td className="py-4 px-6 md:text-lg text-sm text-center font-light bg-gray-100">Data Ownership</td>
+                                    <td className="py-4 px-6 md:text-lg text-sm text-center font-semibold text-muted-foreground">Vendor owns data</td>
+                                </tr>
+                                <tr className="bg-gray-50">
+                                    <td className="py-4 px-6 md:text-lg text-sm text-center font-semibold">B2B SaaS oriented</td>
+                                    <td className="py-4 px-6 md:text-lg text-sm text-center font-light bg-gray-100">Purpose</td>
+                                    <td className="py-4 px-6 md:text-lg text-sm text-center font-semibold text-muted-foreground">General purpose</td>
+                                </tr>
+                                <tr>
+                                    <td className="py-4 px-6 md:text-lg text-sm text-center font-semibold">Advanced tracking</td>
+                                    <td className="py-4 px-6 md:text-lg text-sm text-center font-light bg-gray-100">Tracking</td>
+                                    <td className="py-4 px-6 md:text-lg text-sm text-center font-semibold text-muted-foreground">Usual tracking</td>
+                                </tr>
+                                <tr className="bg-gray-50">
+                                    <td className="py-4 px-6 md:text-lg text-sm text-center font-semibold">Augments Google ecosystem</td>
+                                    <td className="py-4 px-6 md:text-lg text-sm text-center font-light bg-gray-100">Ecosystem</td>
+                                    <td className="py-4 px-6 md:text-lg text-sm text-center font-semibold text-muted-foreground">No ecosystem</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </section>
             </FadeInSection>
 
