@@ -1,8 +1,138 @@
+import { Icons, SuperchargeIcons } from "@/components/icons";
+import { FadeInSection } from "@/components/ui/fade-in-section";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
-import { FadeInSection } from "@/components/ui/fade-in-section";
+
+function CircleWithIcon({ children, label }: { children: React.ReactNode; label?: string }) {
+    return (
+        <div className="flex flex-col items-center justify-center w-20 h-20 rounded-full bg-white border border-neutral-200 shadow-sm p-2">
+            <div className="flex items-center justify-center mb-1">
+                {children}
+            </div>
+            {label && (
+                <div className="text-[10px] text-center leading-tight text-neutral-600">
+                    {label}
+                </div>
+            )}
+        </div>
+    );
+}
 
 export const whatWeCanDo = [
+    {
+        title: "Lighten your workload — we've got it covered",
+        subtitle: "We integrate Google products automatically, optimizing for cost and impact — all based on proven best practices.",
+        subtitleItems:
+            <div className="space-y-4">
+                <div className="flex items-center gap-4">
+                    <div className="text-neutral-700">⚡</div>
+                    <div>
+                        <h3>Automated Integration</h3>
+                        <p className="text-sm text-neutral-600">Seamlessly connect Google Analytics, Google Cloud, Google AI, and other tools with zero manual configuration</p>
+                    </div>
+                </div>
+                <div className="flex items-center gap-4">
+                    <div className="text-neutral-700">🎯</div>
+                    <div>
+                        <h3>Optimized Performance</h3>
+                        <p className="text-sm text-neutral-600">Leverage AI-powered insights and automated optimizations to maximize your marketing ROI</p>
+                    </div>
+                </div>
+            </div>,
+        id: "supercharge-tools",
+        explainer:
+            <div className="flex items-center justify-center min-h-[320px]">
+                <div className="relative w-[320px] h-[320px]">
+                    {(() => {
+                        const RADIUS = 140; // px
+                        const CENTER = 160; // px
+                        const colors = [
+                            '#FF3B30',
+                            '#FF9500',
+                            '#FFCC00',
+                            '#34C759',
+                            '#007AFF',
+                            '#5856D6',
+                        ];
+
+                        // Add connecting lines
+                        const lines = SuperchargeIcons.map((_, i) => {
+                            const angle = (i / SuperchargeIcons.length) * 2 * Math.PI - Math.PI / 2;
+                            const x = CENTER + RADIUS * Math.cos(angle);
+                            const y = CENTER + RADIUS * Math.sin(angle);
+
+                            return (
+                                <svg
+                                    key={`line-${i}`}
+                                    className="absolute top-0 left-0 w-full h-full"
+                                    style={{
+                                        animation: `pulse-${i} 2s infinite`,
+                                        animationDelay: `${i * 0.2}s`
+                                    }}
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <line
+                                        x1={CENTER}
+                                        y1={CENTER}
+                                        x2={x}
+                                        y2={y}
+                                        stroke={colors[i]}
+                                        strokeWidth="2.5"
+                                        strokeDasharray="6 4"
+                                        className="opacity-70"
+                                    />
+                                </svg>
+                            );
+                        });
+
+                        // Add keyframes for each line's animation
+                        const keyframes = SuperchargeIcons.map((_, i) => (
+                            <style key={`keyframe-${i}`}>
+                                {`
+                                    @keyframes pulse-${i} {
+                                        0% { opacity: 0.5; }
+                                        50% { opacity: 0.9; }
+                                        100% { opacity: 0.5; }
+                                    }
+                                `}
+                            </style>
+                        ));
+
+                        return (
+                            <>
+                                {keyframes}
+                                {lines}
+                                {SuperchargeIcons.map(({ icon, label }, i) => {
+                                    const angle = (i / SuperchargeIcons.length) * 2 * Math.PI - Math.PI / 2;
+                                    const x = CENTER + RADIUS * Math.cos(angle);
+                                    const y = CENTER + RADIUS * Math.sin(angle);
+                                    return (
+                                        <div
+                                            key={i}
+                                            className="absolute"
+                                            style={{
+                                                left: x,
+                                                top: y,
+                                                transform: "translate(-50%, -50%)"
+                                            }}
+                                        >
+                                            <CircleWithIcon label={label}>
+                                                {icon}
+                                            </CircleWithIcon>
+                                        </div>
+                                    );
+                                })}
+                                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                                    <CircleWithIcon>
+                                        <Icons.magicRect className="size-8" />
+                                    </CircleWithIcon>
+                                </div>
+                            </>
+                        );
+                    })()}
+                </div>
+            </div>,
+    },
     {
         title: "Chat with your data",
         subtitle: "Instantly query your analytics in plain language. Ask Data lets you get answers, build charts, and uncover insights without writing a single SQL query.",
@@ -573,6 +703,29 @@ export function WhatWeCanDoSection() {
                             Start free trial
                             <ArrowRightIcon className="h-4 w-4" />
                         </Link>
+                    </div>
+                </section>
+            </FadeInSection>
+
+            {/* Feature 7 */}
+            <FadeInSection direction="up" delay={0.7}>
+                <section id="autotracking" className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div className="space-y-6">
+                        <h2 className="text-4xl">{whatWeCanDo[6].title}</h2>
+                        <p className="text-lg text-neutral-600">{whatWeCanDo[6].subtitle}</p>
+                        <div className="py-6">
+                            {whatWeCanDo[6].subtitleItems}
+                        </div>
+                        <Link
+                            href="https://app.datopus.io/auth/sign-up"
+                            className="px-6 py-3 bg-primary text-white rounded-lg inline-flex items-center gap-2"
+                        >
+                            Start free trial
+                            <ArrowRightIcon className="h-4 w-4" />
+                        </Link>
+                    </div>
+                    <div className="bg-neutral-100 rounded-xl p-6">
+                        {whatWeCanDo[6].explainer}
                     </div>
                 </section>
             </FadeInSection>
