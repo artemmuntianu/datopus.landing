@@ -8,6 +8,8 @@ import { FAQSection } from "./faq_section";
 import { HowItWorksSection } from "./howitworks_section";
 import { SecurityStandardsSection } from "./security_standards_section";
 import { WhatWeCanDoSection } from "./whatwecando_section";
+import { BrandsSection } from "./brands_section";
+import { VSSection } from "./vs_section";
 
 export default function Page() {
     return (
@@ -15,7 +17,6 @@ export default function Page() {
             <FadeInSection
                 className="max-w-screen-xl mx-auto relative min-h-[100dvh-3.5rem]"
                 direction="up"
-                delay={0.2}
             >
                 <section id="hero" data-ds-feature="hero-section">
                     <div className="flex flex-col items-center justify-center text-center my-[3.5rem] px-4 relative z-10">
@@ -34,54 +35,15 @@ export default function Page() {
                         </div>
                     </div>
                 </section>
+                <BrandsSection />
             </FadeInSection>
 
-            <FadeInSection className="max-w-screen-xl mx-auto my-16 px-4">
-                <section className="flex flex-col items-center">
-                    <div className="overflow-x-auto w-full">
-                        <table className="min-w-full bg-transparent rounded-xl text-lg">
-                            <thead>
-                                <tr>
-                                    <th className="py-4 px-6 md:text-2xl text-sm font-bold text-center border-b">Datopus</th>
-                                    <th className="py-4 px-6 text-primary md:text-xl text-sm font-bold text-center border-b">VS</th>
-                                    <th className="py-4 px-6 text-muted-foreground md:text-2xl text-sm font-bold text-center border-b">Other platforms</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td className="py-4 px-6 md:text-lg text-sm text-center font-semibold">Easy Plug&amp;Run</td>
-                                    <td className="py-4 px-6 md:text-lg text-sm text-center font-light bg-gray-100">Setup</td>
-                                    <td className="py-4 px-6 md:text-lg text-sm text-center font-semibold text-muted-foreground">Complex</td>
-                                </tr>
-                                <tr className="bg-gray-50">
-                                    <td className="py-4 px-6 md:text-lg text-sm text-center font-semibold">Cheaper</td>
-                                    <td className="py-4 px-6 md:text-lg text-sm text-center font-light bg-gray-100">Pricing</td>
-                                    <td className="py-4 px-6 md:text-lg text-sm text-center font-semibold text-muted-foreground">Expensive</td>
-                                </tr>
-                                <tr>
-                                    <td className="py-4 px-6 md:text-lg text-sm text-center font-semibold">You own data</td>
-                                    <td className="py-4 px-6 md:text-lg text-sm text-center font-light bg-gray-100">Data Ownership</td>
-                                    <td className="py-4 px-6 md:text-lg text-sm text-center font-semibold text-muted-foreground">Vendor owns data</td>
-                                </tr>
-                                <tr className="bg-gray-50">
-                                    <td className="py-4 px-6 md:text-lg text-sm text-center font-semibold">B2B SaaS oriented</td>
-                                    <td className="py-4 px-6 md:text-lg text-sm text-center font-light bg-gray-100">Purpose</td>
-                                    <td className="py-4 px-6 md:text-lg text-sm text-center font-semibold text-muted-foreground">General purpose</td>
-                                </tr>
-                                <tr>
-                                    <td className="py-4 px-6 md:text-lg text-sm text-center font-semibold">Advanced tracking</td>
-                                    <td className="py-4 px-6 md:text-lg text-sm text-center font-light bg-gray-100">Tracking</td>
-                                    <td className="py-4 px-6 md:text-lg text-sm text-center font-semibold text-muted-foreground">Usual tracking</td>
-                                </tr>
-                                <tr className="bg-gray-50">
-                                    <td className="py-4 px-6 md:text-lg text-sm text-center font-semibold">Augments Google ecosystem</td>
-                                    <td className="py-4 px-6 md:text-lg text-sm text-center font-light bg-gray-100">Ecosystem</td>
-                                    <td className="py-4 px-6 md:text-lg text-sm text-center font-semibold text-muted-foreground">No ecosystem</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </section>
+            <FadeInSection
+                className="max-w-screen-xl mx-auto my-16 px-4"
+                direction="up"
+                delay={0.1}
+            >
+                <VSSection />
             </FadeInSection>
 
             <FadeInSection
