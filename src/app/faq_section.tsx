@@ -25,7 +25,7 @@ export function FAQSection() {
                     How can I contribute to Datopus?
                 </AccordionTrigger>
                 <AccordionContent className="text-lg font-normal indent-4">
-                    <p className="pt-1">We welcome contributions from our community! Here's how you can help:</p>
+                    <p className="pt-1">We welcome contributions from our community! Here&apos;s how you can help:</p>
                     <ul className="list-disc pl-12 indent-0">
                         <li>Submit bug reports and feature requests on GitHub</li>
                         <li>Contribute code improvements and new features</li>
@@ -42,7 +42,7 @@ export function FAQSection() {
                     How does Datopus differ from other analytics platforms?
                 </AccordionTrigger>
                 <AccordionContent className="text-lg font-normal indent-4">
-                    <p className="pt-1">As an open-source platform, Datopus believes that feature analysis should be transparent, community-driven, and easily integrated into a company's existing processes. We achieve this by organizing analytics around product features and maintaining full transparency in our methods.</p>
+                    <p className="pt-1">As an open-source platform, Datopus believes that feature analysis should be transparent, community-driven, and easily integrated into a company&apos;s existing processes. We achieve this by organizing analytics around product features and maintaining full transparency in our methods.</p>
                     <p className="pt-1">Any application can be decomposed into a set of product features. A feature can consist of other features and/or controls, such as buttons, forms, links, etc.</p>
                     <p className="pt-1">In this way, Datopus tracks how users interact with features and provides reports on their usage and the impact of each feature on critical metrics such as <u>User Conversion Rate</u> and <u>User Churn Rate</u>. This is a radical difference from the commonly used Page Views and Button Clicks.</p>
                     <p className="pt-1">Datopus customers gain a completely new perspective on their digital product, backed by a thriving open-source community.</p>
