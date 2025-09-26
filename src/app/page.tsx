@@ -28,11 +28,12 @@ export default function Page() {
                             </h2>
                         </div>
                         <p className="flex flex-col justify-center text-muted-foreground text-2xl/relaxed md:flex-row md:gap-[0.5rem] my-[3.5rem]" data-ds-feature="hero-subheading">
-                            <span>Supercharge <span className='text-[#4285f4]'>G</span><span className='text-[#d93e31]'>o</span><span className='text-[#fbbc05]'>o</span><span className='text-[#4285f4]'>g</span><span className='text-[#34a853]'>l</span><span className='text-[#d93e31]'>e</span>&apos;s ecosystem with essential analysis tools</span>
+                            <span>Supercharge <span className='text-[#4285f4]'>G</span><span className='text-[#d93e31]'>o</span><span className='text-[#fbbc05]'>o</span><span className='text-[#4285f4]'>g</span><span className='text-[#34a853]'>l</span><span className='text-[#d93e31]'>e</span>&apos;s ecosystem with transparent, community-driven analytics</span>
                         </p>
                         <div className="flex items-center justify-center gap-[0.5rem]" data-ds-feature="hero-cta">
                             <ButtonExploreDemo creditCardClass="text-muted-foreground" />
                         </div>
+                        <p className="mt-6 text-sm text-muted-foreground">Open source under MIT license. View on <a href="https://github.com/artemmuntianu/datopus.pub.ui" target="_blank" className="underline hover:text-primary">GitHub</a></p>
                     </div>
                 </section>
                 <BrandsSection />
