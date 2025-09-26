@@ -20,83 +20,31 @@ const BLUR_FADE_DELAY = 0.04;
 
 const prices: PlanPrice[] = [
     {
-        plan: 'Collect',
-        period: 'mo',
-        currency: 'usd',
-        planPrice: 19
-    },
-    {
-        plan: 'Collect',
-        period: 'mo',
-        currency: 'eur',
-        planPrice: 19,
-    },
-    {
-        plan: 'Collect',
-        period: 'yr',
-        currency: 'usd',
-        planPrice: 15,
-    },
-    {
-        plan: 'Collect',
-        period: 'yr',
-        currency: 'eur',
-        planPrice: 15,
-    },
-    {
-        plan: 'Optimize',
+        plan: 'Scale',
         period: 'mo',
         currency: 'usd',
         planPrice: 49,
         mtuPrice: 0.0005
     },
     {
-        plan: 'Optimize',
+        plan: 'Scale',
         period: 'mo',
         currency: 'eur',
         planPrice: 49,
         mtuPrice: 0.0005
     },
     {
-        plan: 'Optimize',
+        plan: 'Scale',
         period: 'yr',
         currency: 'usd',
         planPrice: 39,
         mtuPrice: 0.0005
     },
     {
-        plan: 'Optimize',
+        plan: 'Scale',
         period: 'yr',
         currency: 'eur',
         planPrice: 39,
-        mtuPrice: 0.0005
-    },
-    {
-        plan: 'Scale',
-        period: 'mo',
-        currency: 'usd',
-        planPrice: 99,
-        mtuPrice: 0.0005
-    },
-    {
-        plan: 'Scale',
-        period: 'mo',
-        currency: 'eur',
-        planPrice: 99,
-        mtuPrice: 0.0005
-    },
-    {
-        plan: 'Scale',
-        period: 'yr',
-        currency: 'usd',
-        planPrice: 79,
-        mtuPrice: 0.0005
-    },
-    {
-        plan: 'Scale',
-        period: 'yr',
-        currency: 'eur',
-        planPrice: 79,
         mtuPrice: 0.0005
     }
 ];
@@ -106,6 +54,7 @@ export default function SubscriptionPlans() {
     const [currency, setCurrency] = useState('usd');
 
     const getPlanPrice = (plan: string, period: string, currency: string) => {
+        if (plan === 'Community' || plan === 'Startup') return 'Free';
         return (
             <>
                 {currency == 'usd' ? <span>&#36;</span> : <span>&#8364;</span>}
@@ -140,137 +89,35 @@ export default function SubscriptionPlans() {
                 </div>
             </div>
             <div className="grid grid-cols-1 mx-auto px-4 mb-4 max-w-screen-xl gap-3 min-[950px]:grid-cols-3" data-ds-feature="subscription-plans">
-                <BlurFade delay={BLUR_FADE_DELAY + 2 * 0.05} className="bg-white flex flex-col p-5 rounded-xl shadow-md" data-ds-feature="collect-plan">
+                <BlurFade delay={BLUR_FADE_DELAY + 2 * 0.05} className="bg-white flex flex-col p-5 rounded-xl shadow-md border-2 border-purple-200" data-ds-feature="community-plan">
                     <section className="flex flex-col gap-3 h-full pb-5">
                         <div className="flex flex-col gap-3">
                             <div className="flex flex-col gap-4">
                                 <div className="flex justify-between">
                                     <div>
                                         <div>
-                                            <span className="align-baseline text-4xl font-semibold text-gray-900">{getPlanPrice('Collect', period, currency)}</span>
-                                            <span className="align-baseline text-sm text-gray-600">/month</span>
+                                            <span className="align-baseline text-4xl font-semibold text-gray-900">{getPlanPrice('Community', period, currency)}</span>
                                         </div>
                                         <div>
                                             <span className="align-baseline text-sm text-gray-600">&nbsp;</span>
                                         </div>
                                     </div>
-                                    <span className="align-baseline text-xl font-semibold text-primary">Collect</span>
+                                    <span className="align-baseline text-xl font-semibold text-primary">Community</span>
                                 </div>
-                                <p className="min-h-[50px] font-semibold">Supercharged Google Analytics</p>
-                            </div>
-                        </div>
-                        <div className="grid gap-2 text-gray-600" data-ds-feature="collect-plan-features">
-                            <div className="flex items-center gap-2">
-                                <div>
-                                    <span className="text-gray-900">Datasources</span>
-                                    <ul className="ml-6">
-                                        <li>{Icons.google_analytics({ className: "size-4 inline" })} Google Analytics</li>
-                                        <li>&nbsp;</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <hr />
-                            <div className="flex items-center gap-2">
-                                <span className="text-gray-900">Our <b>Collect</b> plan includes:</span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                                {Icons.magicRect({ className: "size-4 text-[#ffa500]" })}
-                                <span>White glove service</span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                                {Icons.check({ className: "size-4 text-[#ffa500]" })}
-                                <span>Auto-track user actions</span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                                {Icons.check({ className: "size-4 text-[#ffa500]" })}
-                                <span>Dashboards</span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                                {Icons.check({ className: "size-4 text-[#ffa500]" })}
-                                <span>External reports</span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                                {Icons.check({ className: "size-4 text-[#ffa500]" })}
-                                <span>No user, session or event limits</span>
-                            </div>
-                        </div>
-                    </section>
-                    <div className="flex justify-center" data-ds-feature="CTA: collect-plan">
-                        <Button className="min-w-[50%]" variant="default" asChild>
-                            <Link href="https://app.datopus.io/auth/sign-up">Start free trial</Link>
-                        </Button>
-                    </div>
-                    <div className="text-center text-sm mt-2 text-gray-600">&nbsp;</div>
-                </BlurFade>
-                <BlurFade delay={BLUR_FADE_DELAY + 3 * 0.05} className="bg-white flex flex-col p-5 rounded-xl shadow-md">
-                    <section className="flex flex-col gap-3 h-full pb-5">
-                        <div className="flex flex-col gap-3">
-                            <div className="flex flex-col gap-4">
-                                <div className="flex justify-between">
-                                    <div>
-                                        <div>
-                                            <span className="align-baseline text-4xl font-semibold text-gray-900">{getPlanPrice('Optimize', period, currency)}</span>
-                                            <span className="align-baseline text-sm text-gray-600">/month</span>
-                                        </div>
-                                        <Tooltip.Root delayDuration={0}>
-                                            <Tooltip.Trigger>
-                                                <div className="flex items-baseline gap-1">
-                                                    <span className="align-baseline text-sm font-semibold text-gray-600">{getMTUPrice('Optimize', period, currency)}</span>
-                                                    <span className="align-baseline text-sm text-gray-600">/ MTU</span>
-                                                    <QuestionMarkCircledIcon className="size-3 inline" />
-                                                </div>
-                                            </Tooltip.Trigger>
-                                            <Tooltip.Content side="bottom">
-                                                <div className="bg-white border-black border-[1px] border-solid rounded p-4">
-                                                    MTU - Monthly Tracked Users<br />
-                                                    10,000 MTU = $5
-                                                </div>
-                                                <Tooltip.Arrow />
-                                            </Tooltip.Content>
-                                        </Tooltip.Root>
-                                    </div>
-                                    <span className="align-baseline text-xl font-semibold text-primary">Optimize</span>
-                                </div>
-                                <p className="min-h-[50px] font-semibold">Modern analytics, for web apps and websites</p>
+                                <p className="min-h-[50px] font-semibold">Self-hosted analytics solution</p>
                             </div>
                         </div>
                         <div className="grid gap-2 text-gray-600">
                             <div className="flex items-center gap-2">
-                                <div>
-                                    <span className="text-gray-900">Datasources</span>
-                                    <ul className="ml-6">
-                                        <li>{Icons.google_analytics({ className: "size-4 inline" })} Google Analytics</li>
-                                        <li>{Icons.google_bigquery({ className: "size-4 inline" })} Google Big Query</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <hr />
-                            <div className="flex items-center gap-2">
-                                <span className="text-gray-900">Everything in <b>Collect</b>, and:</span>
+                                <span className="text-gray-900">Features:</span>
                             </div>
                             <div className="flex items-center gap-2">
                                 {Icons.check({ className: "size-4 text-[#ffa500]" })}
-                                <span>1,000 MTUs included</span>
+                                <span>Self-hosted deployment</span>
                             </div>
                             <div className="flex items-center gap-2">
                                 {Icons.check({ className: "size-4 text-[#ffa500]" })}
-                                <span>Event-level reports</span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                                {Icons.check({ className: "size-4 text-[#ffa500]" })}
-                                <span>User-level reports</span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                                {Icons.check({ className: "size-4 text-[#ffa500]" })}
-                                <span>Feature-level reports</span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                                {Icons.check({ className: "size-4 text-[#ffa500]" })}
-                                <span>Advanced dashboards</span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                                {Icons.check({ className: "size-4 text-[#ffa500]" })}
-                                <span>Monitoring & Alerting</span>
+                                <span>Chat with Data (AI)</span>
                             </div>
                             <div className="flex items-center gap-2">
                                 {Icons.check({ className: "size-4 text-[#ffa500]" })}
@@ -278,22 +125,77 @@ export default function SubscriptionPlans() {
                             </div>
                             <div className="flex items-center gap-2">
                                 {Icons.check({ className: "size-4 text-[#ffa500]" })}
-                                <span>Ask Data</span>
+                                <span>Visual Tagging</span>
                             </div>
                             <div className="flex items-center gap-2">
                                 {Icons.check({ className: "size-4 text-[#ffa500]" })}
-                                <span>24 months data retention</span>
+                                <span>Monitoring & Alerting</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                {Icons.check({ className: "size-4 text-[#ffa500]" })}
+                                <span>Feature and Company-level reports</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                {Icons.check({ className: "size-4 text-[#ffa500]" })}
+                                <span>Many more</span>
                             </div>
                         </div>
                     </section>
-                    <div className="flex justify-center" data-ds-feature="CTA: optimize-plan">
+                    <div className="flex justify-center" data-ds-feature="CTA: community-plan">
                         <Button className="min-w-[50%]" variant="default" asChild>
-                            <Link href="https://app.datopus.io/auth/sign-up">Start free trial</Link>
+                            <Link href="https://github.com/artemmuntianu/datopus.pub.ui" target="_blank">GitHub</Link>
                         </Button>
                     </div>
-                    <div className="text-center text-sm mt-2 text-gray-600">30-day free trial</div>
+                    <div className="text-center text-sm mt-2 text-gray-600">&nbsp;</div>
                 </BlurFade>
-                <BlurFade delay={BLUR_FADE_DELAY + 4 * 0.05} className="bg-white flex flex-col p-5 rounded-xl shadow-md">
+                <BlurFade delay={BLUR_FADE_DELAY + 3 * 0.05} className="bg-white flex flex-col p-5 rounded-xl shadow-md border-2 border-blue-200">
+                    <section className="flex flex-col gap-3 h-full pb-5">
+                        <div className="flex flex-col gap-3">
+                            <div className="flex flex-col gap-4">
+                                <div className="flex justify-between">
+                                    <div>
+                                        <div>
+                                            <span className="align-baseline text-4xl font-semibold text-gray-900">{getPlanPrice('Startup', period, currency)}</span>
+                                        </div>
+                                        <Tooltip.Root delayDuration={0}>
+                                            <Tooltip.Trigger>
+                                                <div className="flex items-baseline gap-1">
+                                                    <span className="align-baseline text-sm font-semibold text-gray-600">Up to 1,000</span>
+                                                    <span className="align-baseline text-sm text-gray-600"> MTU</span>
+                                                    <QuestionMarkCircledIcon className="size-3 inline" />
+                                                </div>
+                                            </Tooltip.Trigger>
+                                            <Tooltip.Content side="bottom">
+                                                <div className="bg-white border-black border-[1px] border-solid rounded p-4">
+                                                    MTU - Monthly Tracked Users
+                                                </div>
+                                                <Tooltip.Arrow />
+                                            </Tooltip.Content>
+                                        </Tooltip.Root>
+                                    </div>
+                                    <span className="align-baseline text-xl font-semibold text-primary">Startup</span>
+                                </div>
+                                <p className="min-h-[50px] font-semibold">Cloud-hosted analytics for startups</p>
+                            </div>
+                        </div>
+                        <div className="grid gap-2 text-gray-600">
+                            <div className="flex items-center gap-2">
+                                <span className="text-gray-900">Everything in <b>Community</b>, and:</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                {Icons.check({ className: "size-4 text-[#ffa500]" })}
+                                <span>Cloud-hosted by us</span>
+                            </div>
+                        </div>
+                    </section>
+                    <div className="flex justify-center" data-ds-feature="CTA: startup-plan">
+                        <Button className="min-w-[50%]" variant="default" asChild>
+                            <Link href="/startup-program">Apply now</Link>
+                        </Button>
+                    </div>
+                    <div className="text-center text-sm mt-2 text-gray-600">Subject to eligibility</div>
+                </BlurFade>
+                <BlurFade delay={BLUR_FADE_DELAY + 4 * 0.05} className="bg-white flex flex-col p-5 rounded-xl shadow-md border-2 border-green-200">
                     <section className="flex flex-col gap-3 h-full pb-5">
                         <div className="flex flex-col gap-3">
                             <div className="flex flex-col gap-4">
@@ -322,39 +224,29 @@ export default function SubscriptionPlans() {
                                     </div>
                                     <span className="align-baseline text-xl font-semibold text-primary">Scale</span>
                                 </div>
-                                <p className="min-h-[50px] font-semibold">Company-level analytics, for multi-tenant web apps</p>
+                                <p className="min-h-[50px] font-semibold">Cloud analytics for growing businesses</p>
                             </div>
                         </div>
                         <div className="grid gap-2 text-gray-600">
                             <div className="flex items-center gap-2">
-                                <div>
-                                    <span className="text-gray-900">Datasources</span>
-                                    <ul className="ml-6">
-                                        <li>{Icons.google_analytics({ className: "size-4 inline" })} Google Analytics</li>
-                                        <li>{Icons.google_bigquery({ className: "size-4 inline" })} Google Big Query</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <hr />
-                            <div className="flex items-center gap-2">
-                                <span className="text-gray-900">Everything in <b>Optimize</b>, and:</span>
+                                <span className="text-gray-900">Everything in <b>Community</b>, and:</span>
                             </div>
                             <div className="flex items-center gap-2">
                                 {Icons.check({ className: "size-4 text-[#ffa500]" })}
-                                <span>Company-level reports</span>
+                                <span>Cloud-hosted by us</span>
                             </div>
                             <div className="flex items-center gap-2">
                                 {Icons.check({ className: "size-4 text-[#ffa500]" })}
-                                <span>Customer-facing dashboard</span>
+                                <span>White glove service</span>
                             </div>
                         </div>
                     </section>
-                    <div className="text-center" data-ds-feature="CTA: scale-plan">
-                        <Button className="min-w-[50%] inline-flex" variant="outline" asChild>
-                            <Link href="/contact">Contact us</Link>
+                    <div className="flex justify-center" data-ds-feature="CTA: scale-plan">
+                        <Button className="min-w-[50%]" variant="default" asChild>
+                            <Link href="https://app.datopus.io/auth/sign-up">Start free trial</Link>
                         </Button>
-                        <div className="text-center text-sm mt-2 text-gray-600">&nbsp;</div>
                     </div>
+                    <div className="text-center text-sm mt-2 text-gray-600">30-day free trial</div>
                 </BlurFade>
             </div>
         </Tooltip.Provider>

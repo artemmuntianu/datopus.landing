@@ -3,7 +3,6 @@
 import { ChevronRightIcon } from "@radix-ui/react-icons";
 import { useState, useTransition } from "react";
 import { Input } from "../components/ui/input";
-import BlurFade from "./magicui/blur-fade";
 import { Button } from "./ui/button";
 
 export function JoinStartupProgramForm() {
@@ -37,45 +36,32 @@ export function JoinStartupProgramForm() {
     }
 
     return (
-        <BlurFade delay={0.05} className="mx-auto p-4 mb-4 max-w-screen-md w-full bg-white rounded-xl shadow-md">
-            <h1 className="font-semibold text-2xl text-center my-4 text-primary">
-                Startup Program
-            </h1>
-            <p>
-                🎉 Use all features for <b>free</b> as long as you have fewer than <b>1,000 MTUs</b> (Monthly Tracked Users). After that, enjoy one-year <b>50% discount</b>. You will also get:<br />
-                ✅Full support in setting up analytics tailored to your product.<br />
-                ✅One session with a pro analyst for expert insights.<br />
-                ✅Tracking all user behavior directly in Google Analytics, with no Google Tag Manager setup.<br />
-                ✅Advanced analysis tools.<br />
-                ❗Don&apos;t miss your chance to setup analytics properly, optimize marketing and remarketing, reduce churn, and boost conversions!
-            </p>
-            <div className="my-4">
-                {
-                    isSuccess
-                        ? (
-                            <div className="text-lg p-6 text-black text-center mx-auto">
-                                🎉<br />
-                                <b>Welcome to the Datopus Startup Program!</b><br />
-                                <a href="https://app.datopus.io/auth/sign-up" className="text-primary underline">Sign up</a>, and we will automatically upgrade your subscription to the Startup Program.
-                            </div>
-                        )
-                        : (
-                            <>
-                                <p className="my-4 text-lg text-center">Join now and become a data-driven startup</p>
-                                <div className="flex">
-                                    <form onSubmit={submit} method="post" className="max-w-screen-xl mx-auto flex flex-col items-center gap-[0.5rem] md:flex-row">
-                                        <Input type="hidden" name="action" value="startup_program" />
-                                        <Input type="email" name="email" required placeholder="Enter your email address" className="bg-white text-black text-md" />
-                                        <Button disabled={isPending} type="submit" size="lg" variant="default" className="min-w-[220px] group text-md bg-[#ffa500] hover:bg-[#ffa500]">
-                                            Join Startup Program
-                                            <ChevronRightIcon className="inline ml-1 size-4 transition-transform duration-300 group-hover:translate-x-1" />
-                                        </Button>
-                                    </form>
-                                </div>
-                            </>
-                        )
-                }
-            </div>
-        </BlurFade>
+        <div className="my-4">
+        {
+            isSuccess
+                ? (
+                    <div className="text-lg p-6 text-black text-center mx-auto">
+                        🎉<br />
+                        <b>Welcome to the Datopus Startup Program!</b><br />
+                        <a href="https://app.datopus.io/auth/sign-up" className="text-primary underline">Sign up with your email</a> and we will automatically upgrade your subscription to the Startup Program.
+                    </div>
+                )
+                : (
+                    <>
+                        <p className="my-4 text-lg text-center">Join now and become a data-driven startup</p>
+                        <div className="flex">
+                            <form onSubmit={submit} method="post" className="max-w-screen-xl mx-auto flex flex-col items-center gap-[0.5rem] md:flex-row">
+                                <Input type="hidden" name="action" value="startup_program" />
+                                <Input type="email" name="email" required placeholder="Enter your email address" className="bg-white text-black text-md" />
+                                <Button disabled={isPending} type="submit" size="lg" variant="default" className="min-w-[220px] group text-md bg-[#ffa500] hover:bg-[#ffa500]">
+                                    Join Startup Program
+                                    <ChevronRightIcon className="inline ml-1 size-4 transition-transform duration-300 group-hover:translate-x-1" />
+                                </Button>
+                            </form>
+                        </div>
+                    </>
+                )
+        }
+        </div>
     );
 }

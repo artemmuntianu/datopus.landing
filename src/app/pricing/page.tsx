@@ -1,6 +1,5 @@
 import { Metadata } from "next";
-import { JoinStartupProgramForm } from "../../components/join_startup_program_form";
-import SubscriptionPlans from "../../components/subscription_plans";
+import SubscriptionPlans from "@/components/subscription_plans";
 
 export const metadata: Metadata = {
     title: 'Pricing',
@@ -13,9 +12,6 @@ export default function PricingPage() {
                 Pricing
             </h1>
             <SubscriptionPlans />
-            <div id="startup_program" className="py-8 mx-4" data-ds-feature="startup-program-section">
-                <JoinStartupProgramForm />
-            </div>
         </main>
     )
 }

@@ -5,8 +5,8 @@ import { FadeInSection } from "@/components/ui/fade-in-section";
 import { AnimatedMotifs } from "../components/ui/animated-motifs";
 import { ButtonExploreDemo } from "../components/ui/button-explore-demo";
 import { FAQSection } from "./faq_section";
-import { HowItWorksSection } from "./howitworks_section";
 import { SecurityStandardsSection } from "./security_standards_section";
+import { ConsultingServicesSection } from "./consulting_services_section";
 import { WhatWeCanDoSection } from "./whatwecando_section";
 import { BrandsSection } from "./brands_section";
 import { VSSection } from "./vs_section";
@@ -22,13 +22,13 @@ export default function Page() {
                     <div className="flex flex-col items-center justify-center text-center my-[3.5rem] px-4 relative z-10">
                         <AnimatedMotifs />
                         <div className="space-y-10" data-ds-feature="hero-headline">
-                            <h1 className="text-muted-foreground text-2xl/relaxed">Know impact of your product and marketing investments</h1>
-                            <h2 className="max-[470px]:text-[2.5rem] text-[4rem] leading-[1.1] font-bold bg-gradient-to-r from-[#ffa500] via-[#ff8c00] to-[#ffa500] bg-clip-text text-transparent animate-gradient drop-shadow-[0_2px_4px_rgba(255,165,0,0.3)]">
-                                Turn user behaviour insights into decisions
+                            <h1 className="text-muted-foreground text-2xl/relaxed">Know impact of your marketing investments</h1>
+                            <h2 className="max-[470px]:text-[2.5rem] text-[4rem] leading-[1.5] font-bold bg-gradient-to-r from-[#ffa500] via-[#ff8c00] to-[#ffa500] bg-clip-text text-transparent animate-gradient drop-shadow-[0_2px_4px_rgba(255,165,0,0.3)]">
+                                Open-Source Analytics Platform
                             </h2>
                         </div>
                         <p className="flex flex-col justify-center text-muted-foreground text-2xl/relaxed md:flex-row md:gap-[0.5rem] my-[3.5rem]" data-ds-feature="hero-subheading">
-                            <span>We supercharge <span className='text-[#4285f4]'>G</span><span className='text-[#d93e31]'>o</span><span className='text-[#fbbc05]'>o</span><span className='text-[#4285f4]'>g</span><span className='text-[#34a853]'>l</span><span className='text-[#d93e31]'>e</span>&apos;s ecosystem with user behavior analysis tools</span>
+                            <span>Supercharge <span className='text-[#4285f4]'>G</span><span className='text-[#d93e31]'>o</span><span className='text-[#fbbc05]'>o</span><span className='text-[#4285f4]'>g</span><span className='text-[#34a853]'>l</span><span className='text-[#d93e31]'>e</span>&apos;s ecosystem with essential analysis tools</span>
                         </p>
                         <div className="flex items-center justify-center gap-[0.5rem]" data-ds-feature="hero-cta">
                             <ButtonExploreDemo creditCardClass="text-muted-foreground" />
@@ -57,7 +57,7 @@ export default function Page() {
                             WHAT DATOPUS CAN DO FOR YOU?
                         </h2>
                         <h2 className="mx-auto mb-2 max-w-4xl font-light text-2xl/relaxed">
-                            Understand user behavior and address every product question - no coding required.
+                            Understand user behavior - no coding required.
                         </h2>
                     </div>
                     <div data-ds-feature="what-we-can-do-container">
@@ -82,10 +82,30 @@ export default function Page() {
                 direction="up"
                 delay={0.1}
             >
+                <section id="consulting" data-ds-feature="consulting-section">
+                    <div className="mx-auto space-y-5 py-6 px-4 text-center" data-ds-feature="consulting-heading">
+                        <h2 className="mx-auto mb-2 max-w-4xl text-balance text-[48px] font-medium leading-tight">
+                            Premium Consulting & Support Services
+                        </h2>
+                        <h2 className="mx-auto mb-2 max-w-4xl font-light text-2xl/relaxed">
+                            Get expert help with implementation, customization, and ongoing support for your analytics platform
+                        </h2>
+                    </div>
+                    <div data-ds-feature="consulting-content">
+                        <ConsultingServicesSection />
+                    </div>
+                </section>
+            </FadeInSection>
+
+            <FadeInSection
+                className="py-16 bg-[hsl(var(--primary)/5%)]"
+                direction="up"
+                delay={0.1}
+            >
                 <section id="security-standards" data-ds-feature="security-section">
                     <div className="mb-5 mx-auto space-y-5 py-6 px-4 text-center" data-ds-feature="security-heading">
                         <h2 className="mx-auto mb-2 max-w-4xl text-balance text-[48px] font-medium leading-tight">
-                            We take our customers and their users&apos; data very seriously
+                            We take data very seriously
                         </h2>
                         <h2 className="mx-auto mb-2 max-w-4xl font-light text-2xl/relaxed">
                             As a vendor that processes millions of data points on a daily basis, our data is fully encrypted, managed, and stored by SOC-compliant vendors such as Microsoft Azure and Google Cloud.
@@ -93,23 +113,6 @@ export default function Page() {
                     </div>
                     <div data-ds-feature="security-standards-container">
                         <SecurityStandardsSection />
-                    </div>
-                </section>
-            </FadeInSection>
-
-            <FadeInSection
-                className="max-[1200px]:hidden py-16"
-                direction="up"
-                delay={0.1}
-            >
-                <section id="how-it-works" data-ds-feature="how-it-works-section">
-                    <div className="mx-auto space-y-5 py-6 px-4 text-center" data-ds-feature="how-it-works-heading">
-                        <h2 className="mx-auto mb-2 max-w-4xl text-balance text-[48px] font-medium leading-tight">
-                            Become a data-led company in 3 steps
-                        </h2>
-                    </div>
-                    <div data-ds-feature="how-it-works-content">
-                        <HowItWorksSection />
                     </div>
                 </section>
             </FadeInSection>

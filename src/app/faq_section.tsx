@@ -27,6 +27,21 @@ export function FAQSection() {
                     <p className="pt-1">Datopus simplifies the integration process by requiring developers to add a specific HTML attribute to identify features and then include a small snippet of code.</p>
                 </AccordionContent>
             </AccordionItem>
+            <AccordionItem value="8" data-ds-feature="faq-item-consulting">
+                <AccordionTrigger className="text-lg">
+                    What consulting and support services do you offer?
+                </AccordionTrigger>
+                <AccordionContent className="text-lg font-normal indent-4">
+                    <p className="pt-1">We offer comprehensive consulting and support services to help you maximize the value of your analytics platform:</p>
+                    <ul className="list-disc pl-12 indent-0">
+                        <li><strong>Implementation & Setup:</strong> Custom deployment, data integration, and team training</li>
+                        <li><strong>Analytics Consulting:</strong> Strategy development, KPI definition, and performance optimization</li>
+                        <li><strong>Custom Development:</strong> Tailored features, integrations, and API development</li>
+                        <li><strong>Ongoing Support:</strong> 24/7 technical support, updates, and issue resolution</li>
+                    </ul>
+                    <p className="pt-1">Contact us to discuss your specific needs and get a customized solution.</p>
+                </AccordionContent>
+            </AccordionItem>
             <AccordionItem value="7" data-ds-feature="faq-item-tracking">
                 <AccordionTrigger className="text-lg">
                     What does Datopus track exactly?

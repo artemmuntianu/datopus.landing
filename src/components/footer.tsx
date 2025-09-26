@@ -13,8 +13,11 @@ export function Footer() {
                         <Image src="/logo.svg" alt="Datopus" width="28" height="32" />
                         <span className="text-xl font-bold">Datopus</span>
                     </Link>
-                    <p className="mt-2">On a mission to help businesses optimize digital products for success.</p>
+                    <p className="mt-2">Open-source analytics platform helping businesses optimize digital products for success.</p>
                     <div className="mt-4 flex space-x-4" data-ds-feature="footer-social-links">
+                        <a href="https://github.com/artemmuntianu/datopus.pub.ui" target="_blank" rel="noopener noreferrer" data-ds-feature="github-link">
+                            {Icons.github({ className: "size-6" })}
+                        </a>
                         <a href="https://www.linkedin.com/company/datopus" target="_blank" rel="noopener noreferrer" data-ds-feature="linkedin-link">
                             {Icons.linkedin({ className: "size-6" })}
                         </a>
@@ -29,7 +32,7 @@ export function Footer() {
                     <h3 className="font-semibold text-lg">PRODUCT</h3>
                     <ul className="mt-2 text-lg leading-[2.5rem]">
                         <li><Link href="/" data-ds-feature="footer-home-link">Home</Link></li>
-                        <li><Link href="https://app.datopus.io/auth/sign-up" data-ds-feature="footer-dashboard-link">Dashboard</Link></li>
+                        <li><Link href="https://github.com/artemmuntianu/datopus.pub.ui" data-ds-feature="footer-github-link">GitHub</Link></li>
                         <li><Link href="/pricing" data-ds-feature="footer-pricing-link">Pricing</Link></li>
                     </ul>
                 </div>
@@ -65,14 +68,15 @@ export function Footer() {
                     <h3 className="font-semibold text-lg">SUPPORT</h3>
                     <ul className="mt-2 text-lg leading-[2.5rem]">
                         <li><Link href="/contact" data-ds-feature="footer-contact-link">Contact Us</Link></li>
-                        <li><Link href="https://docs.datopus.io" target="_blank" rel="noopener noreferrer" data-ds-feature="footer-docs-link">Developer Docs</Link></li>
+                        <li><Link href="https://docs.datopus.io" target="_blank" rel="noopener noreferrer" data-ds-feature="footer-docs-link">Documentation</Link></li>
+                        <li><Link href="https://github.com/artemmuntianu/datopus.pub.ui/issues" target="_blank" rel="noopener noreferrer" data-ds-feature="footer-issues-link">Report Issues</Link></li>
                     </ul>
                 </div>
             </div>
 
             {/* Copyright */}
             <div className="mx-auto max-w-screen-xl border-t py-3 text-xs text-center mt-8" data-ds-feature="footer-copyright">
-                Copyright {new Date().getFullYear()} <Link href="/">Datopus</Link> - Optimize Digital Products for Success
+                Copyright {new Date().getFullYear()} <Link href="/">Datopus</Link> - Open-Source Analytics Platform
             </div>
         </footer>
     );

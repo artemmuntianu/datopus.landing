@@ -22,7 +22,7 @@ export function VSSection() {
                             <td className="py-4 px-6 md:text-lg text-sm text-center font-semibold text-muted-foreground w-1/3">Complex</td>
                         </tr>
                         <tr className="bg-gray-50">
-                            <td className="py-4 px-6 md:text-lg text-sm text-center font-semibold w-1/3">Cheaper</td>
+                            <td className="py-4 px-6 md:text-lg text-sm text-center font-semibold w-1/3">Free</td>
                             <td className="py-4 px-6 md:text-lg text-sm text-center font-light bg-gray-100 w-1/6">Pricing</td>
                             <td className="py-4 px-6 md:text-lg text-sm text-center font-semibold text-muted-foreground w-1/3">Expensive</td>
                         </tr>
@@ -30,11 +30,6 @@ export function VSSection() {
                             <td className="py-4 px-6 md:text-lg text-sm text-center font-semibold w-1/3">You own data</td>
                             <td className="py-4 px-6 md:text-lg text-sm text-center font-light bg-gray-100 w-1/6">Data Ownership</td>
                             <td className="py-4 px-6 md:text-lg text-sm text-center font-semibold text-muted-foreground w-1/3">Vendor owns data</td>
-                        </tr>
-                        <tr className="bg-gray-50">
-                            <td className="py-4 px-6 md:text-lg text-sm text-center font-semibold w-1/3">B2B SaaS oriented</td>
-                            <td className="py-4 px-6 md:text-lg text-sm text-center font-light bg-gray-100 w-1/6">Purpose</td>
-                            <td className="py-4 px-6 md:text-lg text-sm text-center font-semibold text-muted-foreground w-1/3">General purpose</td>
                         </tr>
                         <tr>
                             <td className="py-4 px-6 md:text-lg text-sm text-center font-semibold w-1/3">Advanced tracking</td>

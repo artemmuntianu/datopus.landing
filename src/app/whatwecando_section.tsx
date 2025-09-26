@@ -634,7 +634,8 @@ export function WhatWeCanDoSection() {
                 </section>
             </FadeInSection>
 
-            {/* Feature 4 */}
+            {/** HIDDEN FEATURES FOR NOW **
+
             <FadeInSection direction="up" delay={0.4}>
                 <section id="drop-off-analysis" className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <div className="order-2 md:order-1">
@@ -658,8 +659,6 @@ export function WhatWeCanDoSection() {
                     </div>
                 </section>
             </FadeInSection>
-
-            {/* Feature 5 */}
             <FadeInSection direction="up" delay={0.5}>
                 <section id="autotracking" className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <div className="space-y-6">
@@ -681,8 +680,6 @@ export function WhatWeCanDoSection() {
                     </div>
                 </section>
             </FadeInSection>
-
-            {/* Feature 6 */}
             <FadeInSection direction="up" delay={0.6}>
                 <section id="data-driven" className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <div className="order-2 md:order-1">
@@ -706,8 +703,6 @@ export function WhatWeCanDoSection() {
                     </div>
                 </section>
             </FadeInSection>
-
-            {/* Feature 7 */}
             <FadeInSection direction="up" delay={0.7}>
                 <section id="autotracking" className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <div className="space-y-6">
@@ -729,6 +724,7 @@ export function WhatWeCanDoSection() {
                     </div>
                 </section>
             </FadeInSection>
+           */}
         </div>
     );
 } 
