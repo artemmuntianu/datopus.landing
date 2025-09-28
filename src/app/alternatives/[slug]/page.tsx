@@ -11,19 +11,18 @@ const DATA = {
     dirRelativePath: 'content/alternatives',
 }
 
+type Props = {
+    params: Promise<{ slug: string }>;
+}
+
 export async function generateStaticParams() {
     const posts = await getPosts(DATA.dirRelativePath);
     return posts.map((post) => ({ slug: post.slug }));
 }
 
-export async function generateMetadata({
-    params,
-}: {
-    params: {
-        slug: string;
-    }
-}): Promise<Metadata | undefined> {
-    let post = await getPost(DATA.dirRelativePath, params.slug);
+export async function generateMetadata(props: Props): Promise<Metadata> {
+    const { slug } = await props.params;
+    let post = await getPost(DATA.dirRelativePath, slug);
 
     let {
         title,
@@ -56,14 +55,9 @@ export async function generateMetadata({
     };
 }
 
-export default async function CompareUsPost({
-    params,
-}: {
-    params: {
-        slug: string;
-    }
-}) {
-    const post = await getPost(DATA.dirRelativePath, params.slug);
+export default async function CompareUsPost(props: Props) {
+    const { slug } = await props.params;
+    const post = await getPost(DATA.dirRelativePath, slug);
 
     if (!post) {
         notFound();

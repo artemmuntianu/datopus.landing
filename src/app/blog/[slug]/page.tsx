@@ -2,6 +2,7 @@ import NewsletterForm from '@/components/newsletter-form';
 import { getPost, getPosts } from '@/data/post';
 import { ArrowLeft, ArrowRight, Calendar, Clock, Facebook, Linkedin, Share2, Twitter } from 'lucide-react';
 import { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Icons } from '../../../components/icons';
@@ -13,6 +14,10 @@ const DATA = {
     url: 'https://www.datopus.io',
     name: 'Artem Muntianu',
     dirRelativePath: 'content/blog',
+}
+
+type Props = {
+    params: Promise<{ slug: string }>;
 }
 
 // Function to calculate reading time
@@ -50,14 +55,9 @@ export async function generateStaticParams() {
     return posts.map((post) => ({ slug: post.slug }));
 }
 
-export async function generateMetadata({
-    params,
-}: {
-    params: {
-        slug: string;
-    }
-}): Promise<Metadata | undefined> {
-    let post = await getPost(DATA.dirRelativePath, params.slug);
+export async function generateMetadata(props: Props): Promise<Metadata> {
+    const { slug } = await props.params;
+    let post = await getPost(DATA.dirRelativePath, slug);
 
     let {
         title,
@@ -90,14 +90,9 @@ export async function generateMetadata({
     };
 }
 
-export default async function BlogPost({
-    params,
-}: {
-    params: {
-        slug: string;
-    }
-}) {
-    const post = await getPost(DATA.dirRelativePath, params.slug);
+export default async function BlogPost(props: Props) {
+    const { slug } = await props.params;
+    const post = await getPost(DATA.dirRelativePath, slug);
     const allPosts = await getPosts(DATA.dirRelativePath);
 
     if (!post) {
@@ -182,11 +177,13 @@ export default async function BlogPost({
 
                     {/* Post image */}
                     {post.metadata.image && (
-                        <div className="mb-8 overflow-hidden rounded-lg">
-                            <img
+                        <div className="mb-8 overflow-hidden rounded-lg relative aspect-[16/9]">
+                            <Image
                                 src={post.metadata.image}
                                 alt={post.metadata.title}
-                                className="w-full h-auto object-cover"
+                                fill
+                                style={{ objectFit: 'cover' }}
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                             />
                         </div>
                     )}
