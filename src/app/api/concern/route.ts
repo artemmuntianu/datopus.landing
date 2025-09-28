@@ -4,7 +4,7 @@ import { NextRequest } from "next/server";
 
 export async function POST(req: NextRequest) {
     const { email, action, website } = await req.json();
-    const sbClient = createSupabaseClient();
+    const sbClient = await createSupabaseClient();
 
     let authResp = await sbClient
         .auth

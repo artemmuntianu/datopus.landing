@@ -1,8 +1,8 @@
 import { createServerClient } from '@supabase/ssr'
 import { cookies } from 'next/headers'
 
-export function createSupabaseClient() {
-    const cookieStore = cookies()
+export async function createSupabaseClient() {
+    const cookieStore = await cookies();
 
     return createServerClient(
         'https://vqetvtgvpvvecktdmvfu.supabase.co',
@@ -25,5 +25,5 @@ export function createSupabaseClient() {
                 }
             }
         }
-    )
+    );
 }
